@@ -1,2 +1,7 @@
 .venv/
 .env
+.idea/
+# Python cache files
+__pycache__/
+# Byte-compiled files
+migrations/

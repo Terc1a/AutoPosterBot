@@ -25,7 +25,7 @@ JSON_URL = os.getenv("JSON_URL")
 
 # Загрузка настроек из yaml
 options = 'vars.yaml'
-with open(options, 'r') as f:
+with open(options, encoding="utf-8") as f:
     yaml_data = yaml.load(f, Loader=yaml.FullLoader)
 
 
@@ -357,8 +357,7 @@ async def main():
 
     # И затем каждые 120 минут
     scheduler = AsyncIOScheduler()
-    timing = yaml_data['timings']['time_type']
-    scheduler.add_job(post_images_async, "interval", timing=yaml_data['timings']['time_scope'])
+    scheduler.add_job(post_images_async, "interval", minutes = yaml_data['timings']['time_scope'])
     scheduler.start()
 
     # Держим приложение живым
@@ -374,3 +373,5 @@ if __name__ == "__main__":
 # Сделать дашборд
 # Сделать парсинг данных из нескольких источников
 # Подумать как можно прикрутить парсинг видео, а не только фото
+# Сделать сервис аналитики постов в канале(количество просмотров/лайков/комментариев)
+# Сделать сервис аналитики самого канала(можно потом будет прикрутить интеграцию с TGStats и искать подписчиков моего канала в других каналах/чатах для того чтобы понимать интересы аудитории)
