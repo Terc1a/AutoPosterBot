@@ -6,3 +6,5 @@ __pycache__/
 # Byte-compiled files
 migrations/
 downloads/
+latest_post.json
+telegram_bot.db
