@@ -160,37 +160,153 @@ def fetch_images_data(api_url: str) -> list[dict]:
 # 6) Функция для Interrogate через Stable Diffusion API
 async def interrogate_deepbooru(image_bytes: bytes) -> tuple[list[str], str]:
     """
-    Отправляет изображение в SD для анализа через Deepbooru
+    Отправляет изображение в SD для анализа через доступные interrogate модели
     Возвращает (список тегов, промпт для interrogate)
     """
-    interrogate_prompt = "Analyze this image using Deepbooru model to extract tags"
+    interrogate_prompt = "deepbooru"
 
+    try:
+        # Конвертируем изображение в base64
+        image_base64 = base64.b64encode(image_bytes).decode('utf-8')
+
+        # Сначала пробуем deepdanbooru (часто установлен вместо deepbooru)
+        for model_name in ["deepdanbooru", "deepbooru", "clip", "interrogate"]:
+            try:
+                payload = {
+                    "image": f"data:image/png;base64,{image_base64}",
+                    "model": model_name
+                }
+
+                async with aiohttp.ClientSession() as session:
+                    async with session.post(
+                            f"{SD_URL}/sdapi/v1/interrogate",
+                            json=payload,
+                            headers={"Content-Type": "application/json"},
+                            timeout=aiohttp.ClientTimeout(total=120)
+                    ) as response:
+                        if response.status == 200:
+                            result = await response.json()
+                            caption = result.get("caption", "")
+
+                            # Проверяем, что получили валидный результат
+                            if caption and caption not in ["<error>", "", "None"]:
+                                logging.info(f"Успешно использована модель: {model_name}")
+
+                                # Обработка результата в зависимости от модели
+                                if model_name in ["deepbooru", "deepdanbooru"]:
+                                    # Теги через запятую
+                                    tags = [tag.strip() for tag in caption.split(",") if tag.strip()]
+                                else:
+                                    # CLIP возвращает описание, извлекаем ключевые слова
+                                    # Разбиваем по пробелам и берем существенные слова
+                                    words = caption.replace(",", " ").replace(".", " ").split()
+                                    tags = [word.strip() for word in words
+                                            if len(word.strip()) > 3 and not word.strip().lower() in
+                                                                             ["with", "that", "this", "from", "have",
+                                                                              "been", "were", "are"]]
+
+                                logging.info(f"Получено {len(tags)} тегов от {model_name}")
+                                return tags[:20], f"{model_name}_interrogate"  # Ограничиваем количество
+                            else:
+                                logging.warning(f"Модель {model_name} вернула пустой/ошибочный результат: {caption}")
+
+                        elif response.status == 404:
+                            logging.debug(f"Модель {model_name} не найдена, пробуем следующую...")
+                        else:
+                            error_text = await response.text()
+                            logging.debug(f"Ошибка с моделью {model_name}: {response.status} - {error_text}")
+
+            except Exception as e:
+                logging.debug(f"Ошибка при попытке использовать модель {model_name}: {e}")
+                continue
+
+        # Если ни одна модель не сработала
+        logging.error("Ни одна модель interrogate не доступна")
+        return [], "no_interrogate"
+
+    except Exception as e:
+        logging.error(f"Критическая ошибка при interrogate: {e}")
+        return [], "error"
+
+
+# Функция для получения доступных interrogate моделей
+async def get_available_interrogate_models():
+    """
+    Пытается определить, какие модели interrogate доступны
+    """
+    available_models = []
+
+    try:
+        # Создаем тестовое изображение (1x1 белый пиксель)
+        test_image = base64.b64encode(
+            b'\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x01\x00\x00\x00\x01'
+            b'\x08\x06\x00\x00\x00\x1f\x15\xc4\x89\x00\x00\x00\rIDATx\x9cc\xf8\x0f'
+            b'\x00\x00\x01\x01\x00\x05\x00\x00\x00\x00IEND\xaeB`\x82'
+        ).decode('utf-8')
+
+        for model in ["deepdanbooru", "deepbooru", "clip", "interrogate"]:
+            try:
+                payload = {
+                    "image": f"data:image/png;base64,{test_image}",
+                    "model": model
+                }
+
+                async with aiohttp.ClientSession() as session:
+                    async with session.post(
+                            f"{SD_URL}/sdapi/v1/interrogate",
+                            json=payload,
+                            timeout=aiohttp.ClientTimeout(total=10)
+                    ) as response:
+                        if response.status == 200:
+                            available_models.append(model)
+
+            except:
+                pass
+
+        return available_models
+
+    except Exception as e:
+        logging.error(f"Ошибка при проверке моделей: {e}")
+        return []
+
+
+# Альтернативная функция с использованием tagger (если установлен)
+async def interrogate_with_tagger(image_bytes: bytes) -> tuple[list[str], str]:
+    """
+    Использует расширение Tagger для SD WebUI (если установлено)
+    """
     try:
         image_base64 = base64.b64encode(image_bytes).decode('utf-8')
 
+        # Эндпоинт для Tagger extension
         payload = {
             "image": f"data:image/png;base64,{image_base64}",
-            "model": "deepbooru"
+            "threshold": 0.35  # Порог уверенности
         }
 
         async with aiohttp.ClientSession() as session:
             async with session.post(
-                    f"{SD_URL}/sdapi/v1/interrogate",
+                    f"{SD_URL}/tagger/v1/interrogate",
                     json=payload,
                     timeout=aiohttp.ClientTimeout(total=60)
             ) as response:
                 if response.status == 200:
                     result = await response.json()
-                    tags_string = result.get("caption", "")
-                    tags = [tag.strip() for tag in tags_string.split(",") if tag.strip()]
-                    return tags, interrogate_prompt
-                else:
-                    logging.error(f"SD API error: {response.status}")
-                    return [], interrogate_prompt
+                    # Tagger возвращает словарь с тегами и их весами
+                    tags_dict = result.get("tags", {})
+                    # Сортируем по весу и берем топ теги
+                    sorted_tags = sorted(tags_dict.items(), key=lambda x: x[1], reverse=True)
+                    tags = [tag for tag, weight in sorted_tags if weight > 0.35][:20]
+
+                    if tags:
+                        logging.info(f"Tagger вернул {len(tags)} тегов")
+                        return tags, "tagger_extension"
+
+        return [], "tagger_not_available"
 
     except Exception as e:
-        logging.error(f"Ошибка при interrogate: {e}")
-        return [], interrogate_prompt
+        logging.debug(f"Tagger extension недоступен: {e}")
+        return [], "tagger_error"
 
 
 # 7) Функция для обработки тегов через LM Studio
@@ -200,8 +316,9 @@ async def process_tags_with_lm(tags: list[str]) -> tuple[str, str]:
     Возвращает (обработанный текст, промпт)
     """
     tags_str = ", ".join(tags)
+    print(tags_str)
 # переписать промпт так чтобы вместо тега подставлялся ? как в SQL-запросах
-    prompt = f"""Ты - помощник для создания описаний изображений. 
+    prompt = f"""Ты - пишешь текст для хентай-манги. 
 На основе следующих тегов создай краткое, но информативное описание изображения на русском языке.
 Теги: {tags_str}
 
@@ -238,6 +355,8 @@ async def process_tags_with_lm(tags: list[str]) -> tuple[str, str]:
 
 
 # 8) Обновленная функция отправки изображений
+# Обновленная часть post_images_async:
+
 async def post_images_async():
     try:
         images = fetch_images_data(JSON_URL)
@@ -251,30 +370,43 @@ async def post_images_async():
             resp.raise_for_status()
             image_bytes = resp.content
 
-            # 1. Получаем теги от Deepbooru
-            deepbooru_tags, interrogate_prompt = await interrogate_deepbooru(image_bytes)
-            logging.info(f"Deepbooru tags: {deepbooru_tags}")
+            # 1. Сначала пробуем Tagger extension (обычно дает лучшие результаты)
+            tags_from_ai, interrogate_method = await interrogate_with_tagger(image_bytes)
 
-            # 2. Объединяем оригинальные теги и теги от Deepbooru
-            all_tags = list(set(original_tags + deepbooru_tags))
+            # 2. Если Tagger не сработал, пробуем стандартный interrogate
+            if not tags_from_ai:
+                tags_from_ai, interrogate_method = await interrogate_deepbooru(image_bytes)
 
-            # 3. Обрабатываем теги через LM Studio
+            # Логируем результат
+            if tags_from_ai:
+                logging.info(f"Получено {len(tags_from_ai)} тегов через {interrogate_method}")
+                logging.info(f"Примеры тегов: {tags_from_ai[:5]}")
+            else:
+                logging.warning("Не удалось получить теги от AI, используем только оригинальные")
+
+            # 3. Объединяем оригинальные теги и теги от AI
+            all_tags = list(set(original_tags + tags_from_ai))
+
+            # 4. Обрабатываем теги через LM Studio (используем ВСЕ теги для лучшего описания)
             description, description_prompt = await process_tags_with_lm(all_tags)
             logging.info(f"LM Studio description: {description}")
 
-            # 4. Формируем финальную подпись
+            # 5. Формируем финальную подпись
             caption_parts = []
 
             if description:
                 caption_parts.append(description)
 
-            if all_tags:
-                hashtags = [f"#{tag.replace(' ', '_').replace('-', '_')}" for tag in all_tags[:10]]
+            # В подписи используем ТОЛЬКО оригинальные теги с waifu.fm
+            if original_tags:
+                # Ограничиваем количество хештегов
+                hashtags = [f"#{tag.replace(' ', '_').replace('-', '_')}"
+                            for tag in original_tags[:10]]
                 caption_parts.append("\n\n" + " ".join(hashtags))
 
             caption = "\n".join(caption_parts) if caption_parts else None
 
-            # 5. Отправляем в Telegram
+            # 6. Отправляем в Telegram
             bio = BytesIO(image_bytes)
             bio.name = os.path.basename(urlparse(img_url).path)
             bio.seek(0)
@@ -285,15 +417,15 @@ async def post_images_async():
                 caption=caption[:1024] if caption else None
             )
 
-            # 6. Сохраняем данные в базу
+            # 7. Сохраняем данные в базу
             post_id = await save_post_to_db(
                 image_url=img_url,
                 image_data=image_bytes,
                 description=description,
                 tags=all_tags,
-                interrogate_model="deepbooru",
-                interrogate_method="SD API v1/interrogate",
-                interrogate_prompt=interrogate_prompt,
+                interrogate_model=interrogate_method.split('_')[0] if interrogate_method else "none",
+                interrogate_method=interrogate_method,
+                interrogate_prompt="auto_interrogate",
                 description_model=LM_MODEL,
                 description_prompt=description_prompt
             )
@@ -331,15 +463,34 @@ async def main():
         resp = requests.get(f"{SD_URL}/sdapi/v1/options")
         if resp.status_code == 200:
             logging.info("✅ Stable Diffusion API доступен")
+
+            # Проверяем доступные модели interrogate
+            available_models = await get_available_interrogate_models()
+            if available_models:
+                logging.info(f"✅ Доступные модели interrogate: {', '.join(available_models)}")
+            else:
+                logging.warning("⚠️ Модели interrogate не обнаружены")
+
+            # Проверяем Tagger extension
+            try:
+                tagger_resp = requests.get(f"{SD_URL}/tagger/v1/")
+                if tagger_resp.status_code in [200, 404]:  # 404 означает что эндпоинт есть, но нужен POST
+                    logging.info("✅ Tagger extension возможно доступен")
+            except:
+                logging.info("ℹ️ Tagger extension не установлен")
+
         else:
             logging.warning("⚠️ Stable Diffusion API недоступен")
-    except:
-        logging.warning("⚠️ Не удалось подключиться к Stable Diffusion")
+    except Exception as e:
+        logging.warning(f"⚠️ Не удалось подключиться к Stable Diffusion: {e}")
 
     try:
         resp = requests.get(f"{LM_STUDIO_URL}/v1/models")
         if resp.status_code == 200:
             logging.info("✅ LM Studio API доступен")
+            models = resp.json().get("data", [])
+            if models:
+                logging.info(f"   Доступные модели: {[m['id'] for m in models]}")
         else:
             logging.warning("⚠️ LM Studio API недоступен")
     except:
@@ -355,9 +506,9 @@ async def main():
     # Один раз сразу после старта
     await post_images_async()
 
-    # И затем каждые 120 минут
+    # И затем каждые N минут
     scheduler = AsyncIOScheduler()
-    scheduler.add_job(post_images_async, "interval", minutes = yaml_data['timings']['time_scope'])
+    scheduler.add_job(post_images_async, "interval", minutes=yaml_data['timings']['time_scope'])
     scheduler.start()
 
     # Держим приложение живым
