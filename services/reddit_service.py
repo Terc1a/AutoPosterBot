@@ -1,13 +1,10 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import requests
 import json
 import os
 from urllib.parse import urlsplit, unquote
 from bs4 import BeautifulSoup
 
-USER_AGENT = "python:reddit.parser:v2.0 (by /u/yourusername)"
+USER_AGENT = "python:reddit.parser:v2.0 (by /u/Yar0v)"
 
 def download_media(url: str, folder: str = "downloads") -> str:
     """
@@ -73,49 +70,31 @@ def download_media(url: str, folder: str = "downloads") -> str:
 
     return filepath
 
-def fetch_latest_post(subreddit="hentai", output_file="latest_post.json"):
+def fetch_latest(subreddit: str):
     """
-    Берёт первый (hot) пост из /r/{subreddit} (через JSON API),
-    сохраняет JSON-данные, и если пост — не self, то скачивает media.
+    Возвращает dict с {'post_id', 'media_type', 'media_path'} для самого свежего поста (hot=1).
+    media_type: 'image', 'video', 'gif' или None.
     """
     api_url = f"https://www.reddit.com/r/{subreddit}.json?limit=1"
     headers = {"User-Agent": USER_AGENT}
-
-    resp = requests.get(api_url, headers=headers)
+    resp = requests.get(api_url, headers=headers, timeout=15)
     resp.raise_for_status()
-    payload = resp.json()
-    children = payload.get("data", {}).get("children", [])
+    children = resp.json().get("data", {}).get("children", [])
     if not children:
-        print("❗️ Нет доступных постов.")
-        return
+        return None
 
     post = children[0]["data"]
+    post_id = post["name"]
     is_self = post.get("is_self", False)
-    media_url = None
+    media_path = None
+    media_type = None
 
-    data = {
-        "post_id":     post.get("name"),
-        "title":       post.get("title"),
-        "author":      post.get("author"),
-        "post_url":    "https://reddit.com" + post.get("permalink", ""),
-        "created_utc": post.get("created_utc"),
-        "content_type": "text" if is_self else "link",
-        "content":     post.get("selftext") if is_self else (media_url := post.get("url"))
-    }
+    if not is_self:
+        url = post.get("url")
+        media_path = download_media(url)
+        ext = media_path.lower().split('.')[-1]
+        if ext in ("jpg", "jpeg", "png"): media_type = "image"
+        elif ext == "mp4":               media_type = "video"
+        elif ext == "gif":               media_type = "gif"
 
-    # 1) Сохраняем JSON
-    os.makedirs(os.path.dirname(output_file) or ".", exist_ok=True)
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
-    print(f"✅ JSON сохранён в «{output_file}»")
-
-    # 2) Если это не текст — скачиваем медиа
-    if not is_self and media_url:
-        try:
-            local_path = download_media(media_url)
-            print(f"✅ Медиа сохранено в «{local_path}»")
-        except Exception as e:
-            print(f"⚠️ Ошибка при скачивании медиа: {e}")
-
-if __name__ == "__main__":
-    fetch_latest_post()
+    return {"post_id": post_id, "media_type": media_type, "media_path": media_path}
