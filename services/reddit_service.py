@@ -48,59 +48,221 @@ def download_media(url: str, folder: str = "downloads", index: int = 0) -> str:
                         src = src_tag["src"]
                 if src:
                     logger.info(f"🔗 Найден прямой URL видео: {src}")
-                    return download_media(src, folder, index)
-
-            # Meta Open Graph: og:video или og:image
-            og = soup.find("meta", property="og:video") or soup.find("meta", property="og:image")
-            if og and og.has_attr("content"):
-                logger.info(f"🔗 Найден Open Graph URL: {og['content']}")
-                return download_media(og["content"], folder, index)
-
-            logger.error(f"❌ Не удалось найти медиа на HTML-странице: {url}")
-            raise ValueError(f"Не удалось найти медиа на HTML-странице: {url}")
-
-        # 2) Это файл — определяем расширение
-        path = unquote(urlsplit(resp.url).path)
-        base, ext = os.path.splitext(os.path.basename(path) or "file")
-
-        # Если расширения нет, берём из Content-Type
-        if not ext:
-            if "/" in ctype:
-                ext = "." + ctype.split("/")[1].split(";")[0]
+                    url = src
+                    # Обновляем content-type
+                    sub_resp = requests.head(url, headers=headers, timeout=10)
+                    ctype = sub_resp.headers.get("Content-Type", "video/mp4").lower()
             else:
-                ext = ""
+                # Попробуем найти изображение
+                img = soup.find("img")
+                if img and img.has_attr("src"):
+                    logger.debug("🖼️ Найден тег <img>")
+                    src = img["src"]
+                    logger.info(f"🔗 Найден прямой URL изображения: {src}")
+                    url = src
+                    # Обновляем content-type
+                    sub_resp = requests.head(url, headers=headers, timeout=10)
+                    ctype = sub_resp.headers.get("Content-Type", "image/jpeg").lower()
 
-        # Добавляем индекс к имени файла для множественных изображений
-        if index > 0:
-            filename = f"{base}_{index}{ext}"
+        # Загружаем файл
+        logger.debug(f"⬇️ Скачиваем файл по URL: {url}")
+        file_resp = requests.get(url, headers=headers, stream=True, timeout=30)
+        file_resp.raise_for_status()
+
+        # Определяем расширение файла
+        if "image/jpeg" in ctype or "image/jpg" in ctype:
+            ext = "jpeg"
+        elif "image/png" in ctype:
+            ext = "png"
+        elif "image/gif" in ctype:
+            ext = "gif"
+        elif "video/mp4" in ctype:
+            ext = "mp4"
         else:
-            filename = base + ext
+            # Пытаемся извлечь из URL
+            parsed_url = urlsplit(url)
+            filename = os.path.basename(unquote(parsed_url.path))
+            if "." in filename:
+                ext = filename.split(".")[-1].lower()
+            else:
+                ext = "jpg"  # По умолчанию
 
-        filepath = os.path.join(folder, filename)
+        # Генерируем имя файла
+        parsed_url = urlsplit(url)
+        base_name = os.path.basename(unquote(parsed_url.path))
+        if not base_name or "." not in base_name:
+            base_name = f"media_{index}.{ext}"
+        else:
+            # Убираем расширение и добавляем правильное
+            base_name = base_name.split(".")[0] + f".{ext}"
+
+        filepath = os.path.join(folder, base_name)
         logger.info(f"💾 Сохраняем как: {filepath}")
 
-        # 3) Скачиваем потоково
-        with requests.get(resp.url, headers=headers, stream=True) as r2:
-            r2.raise_for_status()
-            total_size = int(r2.headers.get('content-length', 0))
-            downloaded = 0
+        # Скачиваем с прогрессом
+        total_size = int(file_resp.headers.get('content-length', 0))
+        downloaded = 0
 
-            with open(filepath, "wb") as f:
-                for chunk in r2.iter_content(chunk_size=8192):
+        with open(filepath, "wb") as f:
+            for chunk in file_resp.iter_content(chunk_size=8192):
+                if chunk:
                     f.write(chunk)
                     downloaded += len(chunk)
                     if total_size > 0:
                         progress = (downloaded / total_size) * 100
-                        if progress % 25 < 0.1:  # Логируем каждые 25%
+                        if progress % 25 < 1:  # Логируем каждые 25%
                             logger.debug(f"⏬ Загружено: {progress:.1f}%")
 
-        file_size = os.path.getsize(filepath) / 1024 / 1024  # MB
-        logger.info(f"✅ Файл успешно скачан: {filepath} ({file_size:.2f} MB)")
+        size_mb = os.path.getsize(filepath) / 1024 / 1024
+        logger.info(f"✅ Файл успешно скачан: {filepath} ({size_mb:.2f} MB)")
         return filepath
 
     except Exception as e:
         logger.error(f"❌ Ошибка при скачивании медиа: {e}")
         raise
+
+
+def process_reddit_post_data(post: Dict) -> Optional[Dict]:
+    """
+    Обрабатывает данные одного поста Reddit и возвращает словарь с медиа-информацией.
+    
+    Args:
+        post: данные поста из Reddit API
+        
+    Returns:
+        Optional[Dict]: данные поста с медиа или None если пост не содержит медиа
+    """
+    post_id = post["name"]
+    title = post.get("title", "")
+    is_self = post.get("is_self", False)
+
+    logger.debug(f"📰 Обрабатываем пост: {post_id} - {title[:50]}...")
+
+    media_paths = []
+    media_type = None
+    is_gallery = False
+
+    if not is_self:
+        # Проверяем, это галерея?
+        if post.get("is_gallery", False):
+            logger.debug("🖼️ Обнаружена галерея изображений")
+            is_gallery = True
+            media_type = "gallery"
+
+            # Получаем метаданные галереи
+            gallery_data = post.get("gallery_data", {})
+            media_metadata = post.get("media_metadata", {})
+
+            if gallery_data and media_metadata:
+                items = gallery_data.get("items", [])
+                logger.debug(f"📸 Количество изображений в галерее: {len(items)}")
+
+                for idx, item in enumerate(items):
+                    media_id = item.get("media_id")
+                    if media_id and media_id in media_metadata:
+                        media_info = media_metadata[media_id]
+
+                        # Пытаемся получить прямую ссылку на изображение
+                        if "s" in media_info:
+                            # Получаем URL изображения
+                            if "u" in media_info["s"]:
+                                # URL в формате preview, нужно преобразовать
+                                preview_url = media_info["s"]["u"]
+                                # Заменяем preview.redd.it на i.redd.it и убираем параметры
+                                image_url = preview_url.replace("preview.redd.it", "i.redd.it")
+                                image_url = image_url.split("?")[0].replace("&amp;", "&")
+                            elif "gif" in media_info["s"]:
+                                image_url = media_info["s"]["gif"]
+                            else:
+                                continue
+
+                            logger.debug(f"🔗 URL изображения #{idx}: {image_url}")
+
+                            try:
+                                media_path = download_media(image_url, index=idx)
+                                media_paths.append(media_path)
+                            except Exception as e:
+                                logger.error(f"❌ Не удалось скачать изображение #{idx}: {e}")
+            else:
+                logger.debug("❌ Отсутствуют данные галереи")
+        else:
+            # Обычный пост с одним медиа
+            url = post.get("url")
+            logger.debug(f"📎 Обычный медиа-пост: {url}")
+
+            try:
+                media_path = download_media(url)
+                media_paths = [media_path]
+
+                # Определяем тип медиа
+                ext = media_path.lower().split('.')[-1]
+                if ext in ("jpg", "jpeg", "png"):
+                    media_type = "image"
+                elif ext == "mp4":
+                    media_type = "video"
+                elif ext == "gif":
+                    media_type = "gif"
+
+                logger.debug(f"📋 Тип медиа: {media_type}")
+            except Exception as e:
+                logger.debug(f"❌ Не удалось скачать медиа: {e}")
+
+    # Возвращаем результат только если есть медиа-файлы
+    if media_paths:
+        result = {
+            "post_id": post_id,
+            "title": title,
+            "media_type": media_type,
+            "media_paths": media_paths,
+            "is_gallery": is_gallery
+        }
+        logger.debug(f"✅ Пост обработан успешно. Файлов скачано: {len(media_paths)}")
+        return result
+    else:
+        logger.debug("📭 Пост не содержит медиа-файлов")
+        return None
+
+
+def fetch_latest_posts(subreddit: str, limit: int = 5) -> List[Dict]:
+    """
+    Возвращает список последних постов из subreddit.
+    
+    Args:
+        subreddit: название subreddit
+        limit: количество постов для получения (по умолчанию 5)
+        
+    Returns:
+        List[Dict]: список постов в том же формате, что и fetch_latest
+    """
+    logger.info(f"🔍 Получаем {limit} последних постов из r/{subreddit}")
+    api_url = f"https://www.reddit.com/r/{subreddit}.json?limit={limit}"
+    headers = {"User-Agent": USER_AGENT}
+
+    try:
+        resp = requests.get(api_url, headers=headers, timeout=15)
+        resp.raise_for_status()
+        data = resp.json()
+
+        children = data.get("data", {}).get("children", [])
+        if not children:
+            logger.warning(f"⚠️ Не найдено постов в r/{subreddit}")
+            return []
+
+        posts = []
+        for child in children:
+            post_data = process_reddit_post_data(child["data"])
+            if post_data:  # Только если пост содержит медиа
+                posts.append(post_data)
+        
+        logger.info(f"📊 Получено {len(posts)} медиа-постов из {len(children)} всего")
+        return posts
+
+    except requests.RequestException as e:
+        logger.error(f"❌ Ошибка при запросе к Reddit API: {e}")
+        return []
+    except Exception as e:
+        logger.error(f"❌ Неожиданная ошибка при парсинге постов: {e}")
+        return []
 
 
 def fetch_latest(subreddit: str) -> Optional[Dict]:
@@ -117,109 +279,5 @@ def fetch_latest(subreddit: str) -> Optional[Dict]:
         'is_gallery': bool
     }
     """
-    logger.info(f"🔍 Проверяем последний пост в r/{subreddit}")
-    api_url = f"https://www.reddit.com/r/{subreddit}.json?limit=1"
-    headers = {"User-Agent": USER_AGENT}
-
-    try:
-        resp = requests.get(api_url, headers=headers, timeout=15)
-        resp.raise_for_status()
-        data = resp.json()
-
-        children = data.get("data", {}).get("children", [])
-        if not children:
-            logger.warning(f"⚠️ Не найдено постов в r/{subreddit}")
-            return None
-
-        post = children[0]["data"]
-        post_id = post["name"]
-        title = post.get("title", "")
-        is_self = post.get("is_self", False)
-
-        logger.info(f"📰 Найден пост: {post_id} - {title[:50]}...")
-        logger.debug(f"📊 is_self: {is_self}, is_gallery: {post.get('is_gallery', False)}")
-
-        media_paths = []
-        media_type = None
-        is_gallery = False
-
-        if not is_self:
-            # Проверяем, это галерея?
-            if post.get("is_gallery", False):
-                logger.info("🖼️ Обнаружена галерея изображений")
-                is_gallery = True
-                media_type = "gallery"
-
-                # Получаем метаданные галереи
-                gallery_data = post.get("gallery_data", {})
-                media_metadata = post.get("media_metadata", {})
-
-                if gallery_data and media_metadata:
-                    items = gallery_data.get("items", [])
-                    logger.info(f"📸 Количество изображений в галерее: {len(items)}")
-
-                    for idx, item in enumerate(items):
-                        media_id = item.get("media_id")
-                        if media_id and media_id in media_metadata:
-                            media_info = media_metadata[media_id]
-
-                            # Пытаемся получить прямую ссылку на изображение
-                            if "s" in media_info:
-                                # Получаем URL изображения
-                                if "u" in media_info["s"]:
-                                    # URL в формате preview, нужно преобразовать
-                                    preview_url = media_info["s"]["u"]
-                                    # Заменяем preview.redd.it на i.redd.it и убираем параметры
-                                    image_url = preview_url.replace("preview.redd.it", "i.redd.it")
-                                    image_url = image_url.split("?")[0].replace("&amp;", "&")
-                                elif "gif" in media_info["s"]:
-                                    image_url = media_info["s"]["gif"]
-                                else:
-                                    continue
-
-                                logger.debug(f"🔗 URL изображения #{idx}: {image_url}")
-
-                                try:
-                                    media_path = download_media(image_url, index=idx)
-                                    media_paths.append(media_path)
-                                except Exception as e:
-                                    logger.error(f"❌ Не удалось скачать изображение #{idx}: {e}")
-                else:
-                    logger.error("❌ Отсутствуют данные галереи")
-            else:
-                # Обычный пост с одним медиа
-                url = post.get("url")
-                logger.info(f"📎 Обычный медиа-пост: {url}")
-
-                try:
-                    media_path = download_media(url)
-                    media_paths = [media_path]
-
-                    # Определяем тип медиа
-                    ext = media_path.lower().split('.')[-1]
-                    if ext in ("jpg", "jpeg", "png"):
-                        media_type = "image"
-                    elif ext == "mp4":
-                        media_type = "video"
-                    elif ext == "gif":
-                        media_type = "gif"
-
-                    logger.info(f"📋 Тип медиа: {media_type}")
-                except Exception as e:
-                    logger.error(f"❌ Не удалось скачать медиа: {e}")
-                    return None
-
-        result = {
-            "post_id": post_id,
-            "title": title,
-            "media_type": media_type,
-            "media_paths": media_paths,
-            "is_gallery": is_gallery
-        }
-
-        logger.info(f"✅ Пост обработан успешно. Файлов скачано: {len(media_paths)}")
-        return result
-
-    except Exception as e:
-        logger.error(f"❌ Ошибка при получении поста из r/{subreddit}: {e}")
-        return None
+    posts = fetch_latest_posts(subreddit, limit=1)
+    return posts[0] if posts else None
