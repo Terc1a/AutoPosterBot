@@ -1,6 +1,8 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.utils import timezone
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_POST
 from datetime import timedelta
 import os
 import sqlite3
@@ -30,6 +32,13 @@ def index(request):
         columns = cursor.fetchall()
         print(f"Структура post_logs: {columns}")
         
+        # Проверяем наличие поля marked и добавляем его если нет
+        column_names = [col[1] for col in columns]
+        if 'marked' not in column_names:
+            cursor.execute("ALTER TABLE post_logs ADD COLUMN marked INTEGER DEFAULT 0")
+            conn.commit()
+            print("Добавлено поле marked в таблицу post_logs")
+        
         # Дальнейший код
         today = timezone.now().date()
         
@@ -41,10 +50,41 @@ def index(request):
         # Общее количество постов
         total_posts = cursor.execute("SELECT COUNT(*) FROM post_logs").fetchone()[0]
         
+        # Помеченные посты
+        marked_posts = cursor.execute("SELECT COUNT(*) FROM post_logs WHERE marked = 1").fetchone()[0]
+        
+        # Успешные посты (не помеченные)
+        successful_posts = total_posts - marked_posts
+        
+        # Статистика по моделям
+        model_stats = cursor.execute("""
+            SELECT description_model, COUNT(*) as count, 
+                   AVG(CASE WHEN marked = 1 THEN 1.0 ELSE 0.0 END) * 100 as fail_rate
+            FROM post_logs 
+            WHERE description_model IS NOT NULL 
+            GROUP BY description_model 
+            ORDER BY count DESC LIMIT 5
+        """).fetchall()
+        
+        # Статистика тегов
+        tag_stats = cursor.execute("""
+            SELECT COUNT(*) as tagged_posts, 
+                   AVG(LENGTH(tags)) as avg_tag_length
+            FROM post_logs WHERE tags IS NOT NULL AND tags != ''
+        """).fetchone()
+        
         # Последняя активность
         last_activity = cursor.execute(
             "SELECT created_at FROM post_logs ORDER BY created_at DESC LIMIT 1"
         ).fetchone()
+        
+        # Последние посты для маркировки
+        recent_posts = cursor.execute("""
+            SELECT id, description, tags, created_at, marked
+            FROM post_logs 
+            ORDER BY created_at DESC 
+            LIMIT 20
+        """).fetchall()
         
         # Данные для графика (последние 7 дней)
         activity_data = cursor.execute("""
@@ -61,10 +101,17 @@ def index(request):
         context = {
             'posts_today': posts_today,
             'total_posts': total_posts,
+            'marked_posts': marked_posts,
+            'successful_posts': successful_posts,
+            'success_rate': round((successful_posts / total_posts * 100) if total_posts > 0 else 0, 1),
             'db_size': round(get_db_size(), 2),
             'last_activity': last_activity[0] if last_activity else 'Нет данных',
             'chart_labels': json.dumps(chart_labels),
             'chart_data': json.dumps(chart_data),
+            'model_stats': model_stats,
+            'tagged_posts': tag_stats[0] if tag_stats else 0,
+            'avg_tag_length': round(tag_stats[1], 1) if tag_stats and tag_stats[1] else 0,
+            'recent_posts': recent_posts,
         }
         
     except sqlite3.OperationalError as e:
@@ -73,12 +120,39 @@ def index(request):
             'error': f"Ошибка базы данных: {str(e)}",
             'posts_today': 0,
             'total_posts': 0,
+            'marked_posts': 0,
+            'successful_posts': 0,
+            'success_rate': 0,
             'db_size': round(get_db_size(), 2),
             'last_activity': 'Ошибка БД',
             'chart_labels': json.dumps([]),
             'chart_data': json.dumps([]),
+            'model_stats': [],
+            'tagged_posts': 0,
+            'avg_tag_length': 0,
+            'recent_posts': [],
         }
     finally:
         conn.close()
     
     return render(request, "dbd/index.html", context)
+
+@csrf_exempt
+@require_POST
+def mark_post(request):
+    try:
+        data = json.loads(request.body)
+        post_id = data.get('post_id')
+        marked = data.get('marked', 1)
+
+        db_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "telegram_bot.db")
+        conn = sqlite3.connect(db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute("UPDATE post_logs SET marked = ? WHERE id = ?", (marked, post_id))
+        conn.commit()
+        conn.close()
+        
+        return JsonResponse({'success': True})
+    except Exception as e:
+        return JsonResponse({'success': False, 'error': str(e)})

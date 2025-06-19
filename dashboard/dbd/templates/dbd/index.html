@@ -12,7 +12,7 @@
         <h1 class="mb-4">Панель управления ботом</h1>
         
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <div class="card mb-4">
                     <div class="card-body">
                         <h5 class="card-title">Постов за сутки</h5>
@@ -20,7 +20,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <div class="card mb-4">
                     <div class="card-body">
                         <h5 class="card-title">Всего постов</h5>
@@ -28,7 +28,23 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Помеченные</h5>
+                        <h2 class="card-text text-danger">{{ marked_posts }}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Успешность</h5>
+                        <h2 class="card-text text-success">{{ success_rate }}%</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
                 <div class="card mb-4">
                     <div class="card-body">
                         <h5 class="card-title">Размер БД</h5>
@@ -36,20 +52,96 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h5 class="card-title">Последняя активность</h5>
-                        <p class="card-text">{{ last_activity }}</p>
+                        <h5 class="card-title">Тегов</h5>
+                        <h2 class="card-text">{{ tagged_posts }}</h2>
+                        <small class="text-muted">ср. {{ avg_tag_length }} симв.</small>
                     </div>
                 </div>
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">График активности за неделю</h5>
+                        <canvas id="activityChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Статистика моделей</h5>
+                        <div class="table-responsive">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Модель</th>
+                                        <th>Постов</th>
+                                        <th>Ошибок</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for model in model_stats %}
+                                    <tr>
+                                        <td><small>{{ model.0|truncatechars:15 }}</small></td>
+                                        <td><span class="badge bg-primary">{{ model.1 }}</span></td>
+                                        <td><span class="badge bg-{% if model.2 > 10 %}danger{% elif model.2 > 5 %}warning{% else %}success{% endif %}">{{ model.2|floatformat:1 }}%</span></td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">График активности за неделю</h5>
-                <canvas id="activityChart"></canvas>
+                <h5 class="card-title">Последние посты и маркировка</h5>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Описание</th>
+                                <th>Теги</th>
+                                <th>Дата</th>
+                                <th>Статус</th>
+                                <th>Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for post in recent_posts %}
+                            <tr>
+                                <td>{{ post.0 }}</td>
+                                <td><small>{{ post.1|truncatechars:50 }}</small></td>
+                                <td><small class="text-muted">{{ post.2|truncatechars:30 }}</small></td>
+                                <td><small>{{ post.3|date:"d.m H:i" }}</small></td>
+                                <td>
+                                    {% if post.4 == 1 %}
+                                        <span class="badge bg-danger">Неудачный</span>
+                                    {% else %}
+                                        <span class="badge bg-success">Успешный</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if post.4 == 1 %}
+                                        <button class="btn btn-sm btn-success" onclick="markPost({{ post.0 }}, 0)">Отменить</button>
+                                    {% else %}
+                                        <button class="btn btn-sm btn-danger" onclick="markPost({{ post.0 }}, 1)">Пометить</button>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
@@ -76,6 +168,31 @@
                 }
             }
         });
+        
+        function markPost(postId, marked) {
+            fetch('{% url "mark_post" %}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    'post_id': postId,
+                    'marked': marked
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    location.reload();
+                } else {
+                    alert('Ошибка: ' + data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Ошибка сети');
+            });
+        }
     </script>
 </body>
 </html>
