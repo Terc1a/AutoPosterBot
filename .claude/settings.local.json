@@ -3,7 +3,11 @@
     "allow": [
       "Bash(find:*)",
       "Bash(grep:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(pip3 install:*)",
+      "Bash(ls:*)",
+      "Bash(sqlite3:*)",
+      "Bash(rm:*)"
     ],
     "deny": []
   }

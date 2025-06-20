@@ -40,3 +40,12 @@ async def save_post_to_db(**kwargs) -> int:
         cur = await db.execute(f"INSERT INTO post_logs ({cols}) VALUES ({qmarks})", vals)
         await db.commit()
         return cur.lastrowid
+
+async def get_marked_posts() -> list:
+    """Получает все помеченные посты для использования в качестве негативных примеров"""
+    async with aiosqlite.connect(DATABASE_PATH) as db:
+        cur = await db.execute(
+            "SELECT description FROM post_logs WHERE marked = 1 AND description IS NOT NULL ORDER BY created_at DESC LIMIT 10"
+        )
+        rows = await cur.fetchall()
+        return [row[0] for row in rows]
