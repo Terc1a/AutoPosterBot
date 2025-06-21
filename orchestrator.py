@@ -84,8 +84,7 @@ from services.db_service import init_db, is_reddit_processed, mark_reddit_proces
 with open("vars.yaml", encoding="utf-8") as f:
     cfg = yaml.load(f, Loader=yaml.FullLoader)
 
-SUBREDDIT = cfg["reddit"]["subreddit"]
-SUBREDDIT2 = cfg["reddit"].get("subreddit2", "")
+SUBREDDITS = cfg["reddit"]["subreddits"]
 INTERVAL_MIN = cfg["timings"]["time_scope"]
 USE_TAGGER = cfg.get("use_tagger", False)
 JSON_URL = os.getenv("JSON_URL")
@@ -355,25 +354,21 @@ async def process_cycle():
 
     start_time = datetime.now()
 
-    # Сначала проверяем основной subreddit
-    if await process_reddit_post(SUBREDDIT):
-        logger.info("✅ Пост из основного subreddit обработан успешно")
-        elapsed = (datetime.now() - start_time).total_seconds()
-        logger.info(f"⏱️ Время выполнения цикла: {elapsed:.1f} сек")
-        logger.info("=" * 60 + "\n")
-        return
-
-    # Если в основном не нашли, проверяем второй subreddit
-    if SUBREDDIT2:
-        logger.info(f"🔄 Проверяем запасной subreddit r/{SUBREDDIT2}...")
-        if await process_reddit_post(SUBREDDIT2):
-            logger.info("✅ Пост из запасного subreddit обработан успешно")
+    # Проходим по всем subreddit в порядке приоритета
+    for idx, subreddit in enumerate(SUBREDDITS):
+        logger.info(f"🔍 Проверяем subreddit #{idx + 1}/{len(SUBREDDITS)}: r/{subreddit}")
+        
+        if await process_reddit_post(subreddit):
+            logger.info(f"✅ Пост из r/{subreddit} обработан успешно")
             elapsed = (datetime.now() - start_time).total_seconds()
             logger.info(f"⏱️ Время выполнения цикла: {elapsed:.1f} сек")
             logger.info("=" * 60 + "\n")
             return
+        
+        logger.info(f"⚠️ Подходящих постов в r/{subreddit} не найдено, переходим к следующему...")
 
-    # Fallback на waifu.fm
+    # Если ни один subreddit не дал результата, переходим к waifu.fm
+    logger.info(f"📭 Ни один из {len(SUBREDDITS)} subreddit не дал подходящих постов")
     logger.info("🔄 Переходим к fallback источнику - waifu.fm...")
 
     try:
@@ -479,8 +474,7 @@ async def main():
     """Главная функция"""
     logger.info("🚀 Запуск бота TgPoster")
     logger.info(f"📋 Конфигурация:")
-    logger.info(f"   - Основной subreddit: r/{SUBREDDIT}")
-    logger.info(f"   - Запасной subreddit: r/{SUBREDDIT2}" if SUBREDDIT2 else "   - Запасной subreddit: не указан")
+    logger.info(f"   - Subreddits ({len(SUBREDDITS)}): {', '.join(f'r/{s}' for s in SUBREDDITS)}")
     logger.info(f"   - Интервал: {INTERVAL_MIN} минут")
     logger.info(f"   - Tagger: {'включен' if USE_TAGGER else 'выключен'}")
     logger.info(f"   - LM Model: {LM_MODEL}")

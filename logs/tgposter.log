@@ -10405,3 +10405,679 @@ asyncio.exceptions.CancelledError
 2025-06-21 22:00:02 - orchestrator - INFO - ✅ Бот запущен и работает!
 2025-06-21 22:00:02 - orchestrator - INFO - 🔄 Ожидание следующего цикла...
 
+2025-06-21 22:07:34 - orchestrator - INFO - 📝 Логирование настроено. Логи сохраняются в logs/tgposter.log
+2025-06-21 22:07:34 - orchestrator - INFO - 🚀 Запуск бота TgPoster
+2025-06-21 22:07:34 - orchestrator - INFO - 📋 Конфигурация:
+2025-06-21 22:07:34 - orchestrator - INFO -    - Subreddits (3): r/hentai, r/ecchi, r/muchihentai
+2025-06-21 22:07:34 - orchestrator - INFO -    - Интервал: 120 минут
+2025-06-21 22:07:34 - orchestrator - INFO -    - Tagger: выключен
+2025-06-21 22:07:34 - orchestrator - INFO -    - LM Model: saiga_nemo_12b_gguf
+2025-06-21 22:07:34 - orchestrator - INFO - 🗄️ Инициализация базы данных...
+2025-06-21 22:07:34 - orchestrator - INFO - ▶️ Запуск первого цикла обработки...
+2025-06-21 22:07:34 - orchestrator - INFO - ============================================================
+2025-06-21 22:07:34 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-21 22:07:34 - orchestrator - INFO - ============================================================
+2025-06-21 22:07:34 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-21 22:07:34 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-21 22:07:34 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-21 22:07:34 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lgznhx - Childhood friend was a girl...
+2025-06-21 22:07:34 - reddit_service - DEBUG - 🖼️ Обнаружена галерея изображений
+2025-06-21 22:07:34 - reddit_service - DEBUG - 📸 Количество изображений в галерее: 6
+2025-06-21 22:07:34 - reddit_service - DEBUG - 🔗 URL изображения #0: https://i.redd.it/k4r0b77ixa8f1.jpg
+2025-06-21 22:07:34 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/k4r0b77ixa8f1.jpg
+2025-06-21 22:07:34 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/k4r0b77ixa8f1.jpg
+2025-06-21 22:07:35 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:07:35 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/k4r0b77ixa8f1.jpg
+2025-06-21 22:07:35 - reddit_service - INFO - 💾 Сохраняем как: downloads\k4r0b77ixa8f1.jpeg
+2025-06-21 22:07:36 - reddit_service - DEBUG - ⏬ Загружено: 76.0%
+2025-06-21 22:07:36 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:07:36 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\k4r0b77ixa8f1.jpeg (0.50 MB)
+2025-06-21 22:07:36 - reddit_service - DEBUG - 🔗 URL изображения #1: https://i.redd.it/w600f67ixa8f1.jpg
+2025-06-21 22:07:36 - reddit_service - INFO - 📥 Начинаем скачивание медиа #1 с URL: https://i.redd.it/w600f67ixa8f1.jpg
+2025-06-21 22:07:36 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/w600f67ixa8f1.jpg
+2025-06-21 22:07:36 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:07:36 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/w600f67ixa8f1.jpg
+2025-06-21 22:07:36 - reddit_service - INFO - 💾 Сохраняем как: downloads\w600f67ixa8f1.jpeg
+2025-06-21 22:07:36 - reddit_service - DEBUG - ⏬ Загружено: 0.9%
+2025-06-21 22:07:36 - reddit_service - DEBUG - ⏬ Загружено: 25.0%
+2025-06-21 22:07:36 - reddit_service - DEBUG - ⏬ Загружено: 26.0%
+2025-06-21 22:07:36 - reddit_service - DEBUG - ⏬ Загружено: 50.1%
+2025-06-21 22:07:36 - reddit_service - DEBUG - ⏬ Загружено: 75.1%
+2025-06-21 22:07:36 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:07:36 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\w600f67ixa8f1.jpeg (0.84 MB)
+2025-06-21 22:07:36 - reddit_service - DEBUG - 🔗 URL изображения #2: https://i.redd.it/fv5fdb7ixa8f1.jpg
+2025-06-21 22:07:36 - reddit_service - INFO - 📥 Начинаем скачивание медиа #2 с URL: https://i.redd.it/fv5fdb7ixa8f1.jpg
+2025-06-21 22:07:36 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/fv5fdb7ixa8f1.jpg
+2025-06-21 22:07:37 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:07:37 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/fv5fdb7ixa8f1.jpg
+2025-06-21 22:07:37 - reddit_service - INFO - 💾 Сохраняем как: downloads\fv5fdb7ixa8f1.jpeg
+2025-06-21 22:07:37 - reddit_service - DEBUG - ⏬ Загружено: 25.3%
+2025-06-21 22:07:37 - reddit_service - DEBUG - ⏬ Загружено: 50.6%
+2025-06-21 22:07:37 - reddit_service - DEBUG - ⏬ Загружено: 76.0%
+2025-06-21 22:07:37 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:07:37 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\fv5fdb7ixa8f1.jpeg (0.59 MB)
+2025-06-21 22:07:37 - reddit_service - DEBUG - 🔗 URL изображения #3: https://i.redd.it/qx91f37ixa8f1.jpg
+2025-06-21 22:07:37 - reddit_service - INFO - 📥 Начинаем скачивание медиа #3 с URL: https://i.redd.it/qx91f37ixa8f1.jpg
+2025-06-21 22:07:37 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/qx91f37ixa8f1.jpg
+2025-06-21 22:07:38 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:07:38 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/qx91f37ixa8f1.jpg
+2025-06-21 22:07:38 - reddit_service - INFO - 💾 Сохраняем как: downloads\qx91f37ixa8f1.jpeg
+2025-06-21 22:07:38 - reddit_service - DEBUG - ⏬ Загружено: 25.2%
+2025-06-21 22:07:38 - reddit_service - DEBUG - ⏬ Загружено: 50.5%
+2025-06-21 22:07:38 - reddit_service - DEBUG - ⏬ Загружено: 75.7%
+2025-06-21 22:07:38 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:07:38 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\qx91f37ixa8f1.jpeg (0.68 MB)
+2025-06-21 22:07:38 - reddit_service - DEBUG - 🔗 URL изображения #4: https://i.redd.it/tjm0t77ixa8f1.jpg
+2025-06-21 22:07:38 - reddit_service - INFO - 📥 Начинаем скачивание медиа #4 с URL: https://i.redd.it/tjm0t77ixa8f1.jpg
+2025-06-21 22:07:38 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/tjm0t77ixa8f1.jpg
+2025-06-21 22:07:39 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:07:39 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/tjm0t77ixa8f1.jpg
+2025-06-21 22:07:39 - reddit_service - INFO - 💾 Сохраняем как: downloads\tjm0t77ixa8f1.jpeg
+2025-06-21 22:07:39 - reddit_service - DEBUG - ⏬ Загружено: 25.5%
+2025-06-21 22:07:39 - reddit_service - DEBUG - ⏬ Загружено: 51.0%
+2025-06-21 22:07:39 - reddit_service - DEBUG - ⏬ Загружено: 75.5%
+2025-06-21 22:07:39 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:07:39 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\tjm0t77ixa8f1.jpeg (0.77 MB)
+2025-06-21 22:07:39 - reddit_service - DEBUG - 🔗 URL изображения #5: https://i.redd.it/xl02u77ixa8f1.jpg
+2025-06-21 22:07:39 - reddit_service - INFO - 📥 Начинаем скачивание медиа #5 с URL: https://i.redd.it/xl02u77ixa8f1.jpg
+2025-06-21 22:07:39 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/xl02u77ixa8f1.jpg
+2025-06-21 22:07:40 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:07:40 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/xl02u77ixa8f1.jpg
+2025-06-21 22:07:40 - reddit_service - INFO - 💾 Сохраняем как: downloads\xl02u77ixa8f1.jpeg
+2025-06-21 22:07:40 - reddit_service - DEBUG - ⏬ Загружено: 0.9%
+2025-06-21 22:07:40 - reddit_service - DEBUG - ⏬ Загружено: 25.9%
+2025-06-21 22:07:40 - reddit_service - DEBUG - ⏬ Загружено: 50.9%
+2025-06-21 22:07:40 - reddit_service - DEBUG - ⏬ Загружено: 75.8%
+2025-06-21 22:07:40 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:07:40 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\xl02u77ixa8f1.jpeg (0.84 MB)
+2025-06-21 22:07:40 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 6
+2025-06-21 22:07:40 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lgxp31 - Swimming lessons with Asuna...
+2025-06-21 22:07:40 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/vrrg9w1tha8f1.jpeg
+2025-06-21 22:07:40 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/vrrg9w1tha8f1.jpeg
+2025-06-21 22:07:40 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/vrrg9w1tha8f1.jpeg
+2025-06-21 22:07:41 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:07:41 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/vrrg9w1tha8f1.jpeg
+2025-06-21 22:07:41 - reddit_service - INFO - 💾 Сохраняем как: downloads\vrrg9w1tha8f1.jpeg
+2025-06-21 22:07:41 - reddit_service - DEBUG - ⏬ Загружено: 25.6%
+2025-06-21 22:07:41 - reddit_service - DEBUG - ⏬ Загружено: 50.1%
+2025-06-21 22:07:41 - reddit_service - DEBUG - ⏬ Загружено: 75.7%
+2025-06-21 22:07:41 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:07:41 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\vrrg9w1tha8f1.jpeg (0.70 MB)
+2025-06-21 22:07:41 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-21 22:07:41 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-21 22:07:41 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lh06za - Goth nun 2B (aelion draws)...
+2025-06-21 22:07:41 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/b2bve4bp1b8f1.jpeg
+2025-06-21 22:07:41 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/b2bve4bp1b8f1.jpeg
+2025-06-21 22:07:41 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/b2bve4bp1b8f1.jpeg
+2025-06-21 22:07:42 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:07:42 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/b2bve4bp1b8f1.jpeg
+2025-06-21 22:07:42 - reddit_service - INFO - 💾 Сохраняем как: downloads\b2bve4bp1b8f1.jpeg
+2025-06-21 22:07:42 - reddit_service - DEBUG - ⏬ Загружено: 51.0%
+2025-06-21 22:07:42 - reddit_service - DEBUG - ⏬ Загружено: 75.6%
+2025-06-21 22:07:42 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:07:42 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\b2bve4bp1b8f1.jpeg (0.44 MB)
+2025-06-21 22:07:42 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-21 22:07:42 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-21 22:07:42 - reddit_service - INFO - 📊 Получено 3 медиа-постов из 3 всего
+2025-06-21 22:07:42 - orchestrator - INFO - 📰 Пост #1/3: t3_1lgznhx
+2025-06-21 22:07:42 - orchestrator - INFO - 📋 Тип: gallery, файлов: 6
+2025-06-21 22:07:42 - orchestrator - INFO - ⏭️ Пост t3_1lgznhx уже был обработан ранее
+2025-06-21 22:07:42 - orchestrator - INFO - 📰 Пост #2/3: t3_1lgxp31
+2025-06-21 22:07:42 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-21 22:07:42 - orchestrator - INFO - ⏭️ Пост t3_1lgxp31 уже был обработан ранее
+2025-06-21 22:07:42 - orchestrator - INFO - 📰 Пост #3/3: t3_1lh06za
+2025-06-21 22:07:42 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-21 22:07:42 - orchestrator - INFO - ⏭️ Пост t3_1lh06za уже был обработан ранее
+2025-06-21 22:07:42 - orchestrator - INFO - 📭 Ни один пост из r/hentai не удалось обработать
+2025-06-21 22:07:42 - orchestrator - INFO - ⚠️ Подходящих постов в r/hentai не найдено, переходим к следующему...
+2025-06-21 22:07:42 - orchestrator - INFO - 🔍 Проверяем subreddit #2/3: r/ecchi
+2025-06-21 22:07:42 - orchestrator - INFO - 🔍 Проверяем Reddit r/ecchi...
+2025-06-21 22:07:42 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/ecchi
+2025-06-21 22:07:42 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lgzzmk - Fern naked dogeza...
+2025-06-21 22:07:42 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/l5vtkv800b8f1.jpeg
+2025-06-21 22:07:42 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/l5vtkv800b8f1.jpeg
+2025-06-21 22:07:42 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/l5vtkv800b8f1.jpeg
+2025-06-21 22:07:43 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:07:43 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/l5vtkv800b8f1.jpeg
+2025-06-21 22:07:43 - reddit_service - INFO - 💾 Сохраняем как: downloads\l5vtkv800b8f1.jpeg
+2025-06-21 22:07:43 - reddit_service - DEBUG - ⏬ Загружено: 0.1%
+2025-06-21 22:07:43 - reddit_service - DEBUG - ⏬ Загружено: 0.1%
+2025-06-21 22:07:43 - reddit_service - DEBUG - ⏬ Загружено: 0.2%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 0.3%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 0.3%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 0.4%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 0.5%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 0.5%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 0.6%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 0.7%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 0.7%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 0.8%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 0.9%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 0.9%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 1.0%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 25.0%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 25.1%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 25.1%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 25.2%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 25.3%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 25.3%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 25.4%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 25.5%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 25.5%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 25.6%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 25.7%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 25.7%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 25.8%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 25.9%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 25.9%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 26.0%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 50.0%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 50.1%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 50.1%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 50.2%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 50.3%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 50.3%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 50.4%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 50.5%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 50.5%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 50.6%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 50.7%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 50.7%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 50.8%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 50.9%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 50.9%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 51.0%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 75.0%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 75.1%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 75.1%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 75.2%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 75.3%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 75.3%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 75.4%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 75.5%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 75.5%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 75.6%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 75.7%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 75.7%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 75.8%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 75.9%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 75.9%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 76.0%
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:07:44 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\l5vtkv800b8f1.jpeg (11.78 MB)
+2025-06-21 22:07:44 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-21 22:07:44 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-21 22:07:44 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lgsoiz - Aurora showing her flexibility...
+2025-06-21 22:07:44 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/szxptvnb398f1.jpeg
+2025-06-21 22:07:44 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/szxptvnb398f1.jpeg
+2025-06-21 22:07:44 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/szxptvnb398f1.jpeg
+2025-06-21 22:07:44 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:07:44 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/szxptvnb398f1.jpeg
+2025-06-21 22:07:45 - reddit_service - INFO - 💾 Сохраняем как: downloads\szxptvnb398f1.jpeg
+2025-06-21 22:07:45 - reddit_service - DEBUG - ⏬ Загружено: 25.9%
+2025-06-21 22:07:45 - reddit_service - DEBUG - ⏬ Загружено: 50.5%
+2025-06-21 22:07:45 - reddit_service - DEBUG - ⏬ Загружено: 75.1%
+2025-06-21 22:07:45 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:07:45 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\szxptvnb398f1.jpeg (0.57 MB)
+2025-06-21 22:07:45 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-21 22:07:45 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-21 22:07:45 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lgxmbo - Evelyn with coat (KKUNI /_KKuni)...
+2025-06-21 22:07:45 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/gpo7j4iyga8f1.jpeg
+2025-06-21 22:07:45 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/gpo7j4iyga8f1.jpeg
+2025-06-21 22:07:45 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/gpo7j4iyga8f1.jpeg
+2025-06-21 22:07:45 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:07:45 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/gpo7j4iyga8f1.jpeg
+2025-06-21 22:07:46 - reddit_service - INFO - 💾 Сохраняем как: downloads\gpo7j4iyga8f1.jpeg
+2025-06-21 22:07:46 - reddit_service - DEBUG - ⏬ Загружено: 51.0%
+2025-06-21 22:07:46 - reddit_service - DEBUG - ⏬ Загружено: 75.9%
+2025-06-21 22:07:46 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:07:46 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\gpo7j4iyga8f1.jpeg (0.72 MB)
+2025-06-21 22:07:46 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-21 22:07:46 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-21 22:07:46 - reddit_service - INFO - 📊 Получено 3 медиа-постов из 3 всего
+2025-06-21 22:07:46 - orchestrator - INFO - 📰 Пост #1/3: t3_1lgzzmk
+2025-06-21 22:07:46 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-21 22:07:46 - orchestrator - INFO - 🖼️ Обрабатываем изображение...
+2025-06-21 22:07:46 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\l5vtkv800b8f1.jpeg
+2025-06-21 22:07:46 - orchestrator - INFO - 📊 Размер изображения: 11.78 МБ
+2025-06-21 22:07:46 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-21 22:07:47 - orchestrator - INFO - 🏷️ Получено 23 тегов через deepdanbooru
+2025-06-21 22:07:47 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-21 22:09:06 - root - INFO - Сгенерированное описание (243 симв.): Мои руки вздрагивают, когда расстёгиваю топ — шорох ткани словно зовёт к освобождению. Груди вырываются на свободу, соски уже затвердели, жаждут прикосновений. Волосы, тяжёлые и пурпурные, как водопад ниспадают до середины спины, щекоча плечи.
+2025-06-21 22:09:06 - orchestrator - INFO - ✍️ Описание сгенерировано: 243 символов
+2025-06-21 22:09:06 - orchestrator - INFO - 🏷️ После фильтрации: 10 тегов из 23
+2025-06-21 22:09:06 - orchestrator - INFO - 📤 Отправляем одиночное изображение...
+2025-06-21 22:09:06 - telegram_service - INFO - 📤 Начинаем отправку фото, размер: 11.78 МБ
+2025-06-21 22:09:06 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 11.78 МБ
+2025-06-21 22:09:06 - telegram_service - INFO - 📏 Размеры 3308x4678 корректны
+2025-06-21 22:09:07 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7569844371:AAGfQvbxyinPggXrD89FwPUe6x4-MZp4V7U/sendPhoto "HTTP/1.1 400 Bad Request"
+2025-06-21 22:09:07 - telegram_service - ERROR - ❌ Ошибка при отправке фото: File of size 12353281 bytes is too big for a photo; the maximum size is 10485760 bytes
+2025-06-21 22:09:07 - orchestrator - ERROR - ❌ Ошибка при отправке изображения: File of size 12353281 bytes is too big for a photo; the maximum size is 10485760 bytes
+2025-06-21 22:09:07 - orchestrator - INFO - 🔄 Изображение не может быть отправлено, пропускаем этот пост
+2025-06-21 22:09:07 - orchestrator - WARNING - ⚠️ Пост #1 не удалось отправить, пробуем следующий...
+2025-06-21 22:09:07 - orchestrator - INFO - 📰 Пост #2/3: t3_1lgsoiz
+2025-06-21 22:09:07 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-21 22:09:07 - orchestrator - INFO - ⏭️ Пост t3_1lgsoiz уже был обработан ранее
+2025-06-21 22:09:07 - orchestrator - INFO - 📰 Пост #3/3: t3_1lgxmbo
+2025-06-21 22:09:07 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-21 22:09:07 - orchestrator - INFO - ⏭️ Пост t3_1lgxmbo уже был обработан ранее
+2025-06-21 22:09:07 - orchestrator - INFO - 📭 Ни один пост из r/ecchi не удалось обработать
+2025-06-21 22:09:07 - orchestrator - INFO - ⚠️ Подходящих постов в r/ecchi не найдено, переходим к следующему...
+2025-06-21 22:09:07 - orchestrator - INFO - 🔍 Проверяем subreddit #3/3: r/muchihentai
+2025-06-21 22:09:07 - orchestrator - INFO - 🔍 Проверяем Reddit r/muchihentai...
+2025-06-21 22:09:07 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/muchihentai
+2025-06-21 22:09:08 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lh1ygj - Rio is doing a good job...
+2025-06-21 22:09:08 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/6mu7nmt2fb8f1.jpeg
+2025-06-21 22:09:08 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/6mu7nmt2fb8f1.jpeg
+2025-06-21 22:09:08 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/6mu7nmt2fb8f1.jpeg
+2025-06-21 22:09:08 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:09:08 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/6mu7nmt2fb8f1.jpeg
+2025-06-21 22:09:08 - reddit_service - INFO - 💾 Сохраняем как: downloads\6mu7nmt2fb8f1.jpeg
+2025-06-21 22:09:08 - reddit_service - DEBUG - ⏬ Загружено: 25.2%
+2025-06-21 22:09:08 - reddit_service - DEBUG - ⏬ Загружено: 50.4%
+2025-06-21 22:09:08 - reddit_service - DEBUG - ⏬ Загружено: 75.6%
+2025-06-21 22:09:08 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:09:08 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\6mu7nmt2fb8f1.jpeg (0.47 MB)
+2025-06-21 22:09:08 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-21 22:09:08 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-21 22:09:08 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lgtm9t - Yi Xuan on top [ZZZ]...
+2025-06-21 22:09:08 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://www.reddit.com/gallery/1lgtleg
+2025-06-21 22:09:08 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://www.reddit.com/gallery/1lgtleg
+2025-06-21 22:09:08 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://www.reddit.com/gallery/1lgtleg
+2025-06-21 22:09:09 - reddit_service - DEBUG - 📋 Content-Type: text/html; charset=utf-8
+2025-06-21 22:09:09 - reddit_service - DEBUG - 🌐 Обнаружен HTML, парсим страницу...
+2025-06-21 22:09:09 - reddit_service - DEBUG - 🖼️ Найден тег <img>
+2025-06-21 22:09:09 - reddit_service - INFO - 🔗 Найден прямой URL изображения: https://id.rlcdn.com/472486.gif
+2025-06-21 22:09:09 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://id.rlcdn.com/472486.gif
+2025-06-21 22:09:09 - reddit_service - ERROR - ❌ Ошибка при скачивании медиа: 451 Client Error: unknown for url: https://id.rlcdn.com/472486.gif
+2025-06-21 22:09:09 - reddit_service - DEBUG - ❌ Не удалось скачать медиа: 451 Client Error: unknown for url: https://id.rlcdn.com/472486.gif
+2025-06-21 22:09:09 - reddit_service - DEBUG - 📭 Пост не содержит медиа-файлов
+2025-06-21 22:09:09 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lgfzuo - lenora (sleeptopi)...
+2025-06-21 22:09:09 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/eifsv1z5k58f1.jpeg
+2025-06-21 22:09:09 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/eifsv1z5k58f1.jpeg
+2025-06-21 22:09:09 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/eifsv1z5k58f1.jpeg
+2025-06-21 22:09:10 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:09:10 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/eifsv1z5k58f1.jpeg
+2025-06-21 22:09:10 - reddit_service - INFO - 💾 Сохраняем как: downloads\eifsv1z5k58f1.jpeg
+2025-06-21 22:09:10 - reddit_service - DEBUG - ⏬ Загружено: 0.6%
+2025-06-21 22:09:10 - reddit_service - DEBUG - ⏬ Загружено: 25.4%
+2025-06-21 22:09:10 - reddit_service - DEBUG - ⏬ Загружено: 26.0%
+2025-06-21 22:09:10 - reddit_service - DEBUG - ⏬ Загружено: 50.1%
+2025-06-21 22:09:10 - reddit_service - DEBUG - ⏬ Загружено: 50.8%
+2025-06-21 22:09:10 - reddit_service - DEBUG - ⏬ Загружено: 75.5%
+2025-06-21 22:09:10 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:09:10 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\eifsv1z5k58f1.jpeg (1.29 MB)
+2025-06-21 22:09:10 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-21 22:09:10 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-21 22:09:10 - reddit_service - INFO - 📊 Получено 2 медиа-постов из 3 всего
+2025-06-21 22:09:10 - orchestrator - INFO - 📰 Пост #1/2: t3_1lh1ygj
+2025-06-21 22:09:10 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-21 22:09:10 - orchestrator - INFO - 🖼️ Обрабатываем изображение...
+2025-06-21 22:09:10 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\6mu7nmt2fb8f1.jpeg
+2025-06-21 22:09:10 - orchestrator - INFO - 📊 Размер изображения: 0.47 МБ
+2025-06-21 22:09:10 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-21 22:09:10 - orchestrator - INFO - 🏷️ Получено 56 тегов через deepdanbooru
+2025-06-21 22:09:10 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-21 22:10:44 - root - INFO - Сгенерированное описание (243 симв.): Я стою на песке, босые ступни глубоко уходят в теплые капли, которые медленно проглатывают мои пальцы. Волосы, такие длинные и густые, будто водопад локонов, падают по спине до самой поясницы, разделяясь только на несколько сантиметров ниже...
+2025-06-21 22:10:44 - orchestrator - INFO - ✍️ Описание сгенерировано: 243 символов
+2025-06-21 22:10:44 - orchestrator - INFO - 🏷️ После фильтрации: 10 тегов из 56
+2025-06-21 22:10:44 - orchestrator - INFO - 📤 Отправляем одиночное изображение...
+2025-06-21 22:10:44 - telegram_service - INFO - 📤 Начинаем отправку фото, размер: 0.47 МБ
+2025-06-21 22:10:44 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.47 МБ
+2025-06-21 22:10:44 - telegram_service - INFO - 📏 Размеры 700x1200 корректны
+2025-06-21 22:10:45 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7569844371:AAGfQvbxyinPggXrD89FwPUe6x4-MZp4V7U/sendPhoto "HTTP/1.1 200 OK"
+2025-06-21 22:10:45 - telegram_service - INFO - ✅ Фото успешно отправлено (message_id: 382)
+2025-06-21 22:10:45 - orchestrator - INFO - 💾 Сохраняем в БД...
+2025-06-21 22:10:45 - orchestrator - INFO - ✅ Reddit пост полностью обработан
+2025-06-21 22:10:45 - orchestrator - INFO - ✅ Пост #1 из Reddit r/muchihentai обработан успешно
+2025-06-21 22:10:45 - orchestrator - INFO - ✅ Пост из r/muchihentai обработан успешно
+2025-06-21 22:10:45 - orchestrator - INFO - ⏱️ Время выполнения цикла: 191.2 сек
+2025-06-21 22:10:45 - orchestrator - INFO - ============================================================
+
+2025-06-21 22:10:45 - orchestrator - INFO - ⏰ Настройка планировщика (интервал: 120 мин)...
+2025-06-21 22:10:45 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-21 22:10:45 - apscheduler.scheduler - INFO - Added job "process_cycle" to job store "default"
+2025-06-21 22:10:45 - apscheduler.scheduler - INFO - Scheduler started
+2025-06-21 22:10:45 - orchestrator - INFO - ✅ Бот запущен и работает!
+2025-06-21 22:10:45 - orchestrator - INFO - 🔄 Ожидание следующего цикла...
+
+2025-06-21 22:18:04 - orchestrator - INFO - 📝 Логирование настроено. Логи сохраняются в logs/tgposter.log
+2025-06-21 22:18:04 - orchestrator - INFO - 🚀 Запуск бота TgPoster
+2025-06-21 22:18:04 - orchestrator - INFO - 📋 Конфигурация:
+2025-06-21 22:18:04 - orchestrator - INFO -    - Subreddits (3): r/hentai, r/ecchi, r/muchihentai
+2025-06-21 22:18:04 - orchestrator - INFO -    - Интервал: 120 минут
+2025-06-21 22:18:04 - orchestrator - INFO -    - Tagger: выключен
+2025-06-21 22:18:04 - orchestrator - INFO -    - LM Model: saiga_nemo_12b_gguf
+2025-06-21 22:18:04 - orchestrator - INFO - 🗄️ Инициализация базы данных...
+2025-06-21 22:18:04 - orchestrator - INFO - ▶️ Запуск первого цикла обработки...
+2025-06-21 22:18:04 - orchestrator - INFO - ============================================================
+2025-06-21 22:18:04 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-21 22:18:04 - orchestrator - INFO - ============================================================
+2025-06-21 22:18:04 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-21 22:18:04 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-21 22:18:04 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-21 22:18:05 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lgznhx - Childhood friend was a girl...
+2025-06-21 22:18:05 - reddit_service - DEBUG - 🖼️ Обнаружена галерея изображений
+2025-06-21 22:18:05 - reddit_service - DEBUG - 📸 Количество изображений в галерее: 6
+2025-06-21 22:18:05 - reddit_service - DEBUG - 🔗 URL изображения #0: https://i.redd.it/k4r0b77ixa8f1.jpg
+2025-06-21 22:18:05 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/k4r0b77ixa8f1.jpg
+2025-06-21 22:18:05 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/k4r0b77ixa8f1.jpg
+2025-06-21 22:18:08 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:18:08 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/k4r0b77ixa8f1.jpg
+2025-06-21 22:18:08 - reddit_service - INFO - 💾 Сохраняем как: downloads\k4r0b77ixa8f1.jpeg
+2025-06-21 22:18:09 - reddit_service - DEBUG - ⏬ Загружено: 76.0%
+2025-06-21 22:18:09 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:18:09 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\k4r0b77ixa8f1.jpeg (0.50 MB)
+2025-06-21 22:18:09 - reddit_service - DEBUG - 🔗 URL изображения #1: https://i.redd.it/w600f67ixa8f1.jpg
+2025-06-21 22:18:09 - reddit_service - INFO - 📥 Начинаем скачивание медиа #1 с URL: https://i.redd.it/w600f67ixa8f1.jpg
+2025-06-21 22:18:09 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/w600f67ixa8f1.jpg
+2025-06-21 22:18:12 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:18:12 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/w600f67ixa8f1.jpg
+2025-06-21 22:18:13 - reddit_service - INFO - 💾 Сохраняем как: downloads\w600f67ixa8f1.jpeg
+2025-06-21 22:18:13 - reddit_service - DEBUG - ⏬ Загружено: 0.9%
+2025-06-21 22:18:13 - reddit_service - DEBUG - ⏬ Загружено: 25.0%
+2025-06-21 22:18:13 - reddit_service - DEBUG - ⏬ Загружено: 26.0%
+2025-06-21 22:18:13 - reddit_service - DEBUG - ⏬ Загружено: 50.1%
+2025-06-21 22:18:14 - reddit_service - DEBUG - ⏬ Загружено: 75.1%
+2025-06-21 22:18:14 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:18:14 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\w600f67ixa8f1.jpeg (0.84 MB)
+2025-06-21 22:18:14 - reddit_service - DEBUG - 🔗 URL изображения #2: https://i.redd.it/fv5fdb7ixa8f1.jpg
+2025-06-21 22:18:14 - reddit_service - INFO - 📥 Начинаем скачивание медиа #2 с URL: https://i.redd.it/fv5fdb7ixa8f1.jpg
+2025-06-21 22:18:14 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/fv5fdb7ixa8f1.jpg
+2025-06-21 22:18:15 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:18:15 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/fv5fdb7ixa8f1.jpg
+2025-06-21 22:18:16 - reddit_service - INFO - 💾 Сохраняем как: downloads\fv5fdb7ixa8f1.jpeg
+2025-06-21 22:18:16 - reddit_service - DEBUG - ⏬ Загружено: 25.3%
+2025-06-21 22:18:16 - reddit_service - DEBUG - ⏬ Загружено: 50.6%
+2025-06-21 22:18:16 - reddit_service - DEBUG - ⏬ Загружено: 76.0%
+2025-06-21 22:18:16 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:18:16 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\fv5fdb7ixa8f1.jpeg (0.59 MB)
+2025-06-21 22:18:16 - reddit_service - DEBUG - 🔗 URL изображения #3: https://i.redd.it/qx91f37ixa8f1.jpg
+2025-06-21 22:18:16 - reddit_service - INFO - 📥 Начинаем скачивание медиа #3 с URL: https://i.redd.it/qx91f37ixa8f1.jpg
+2025-06-21 22:18:16 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/qx91f37ixa8f1.jpg
+2025-06-21 22:18:18 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:18:18 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/qx91f37ixa8f1.jpg
+2025-06-21 22:18:18 - reddit_service - INFO - 💾 Сохраняем как: downloads\qx91f37ixa8f1.jpeg
+2025-06-21 22:18:18 - reddit_service - DEBUG - ⏬ Загружено: 25.2%
+2025-06-21 22:18:18 - reddit_service - DEBUG - ⏬ Загружено: 50.5%
+2025-06-21 22:18:19 - reddit_service - DEBUG - ⏬ Загружено: 75.7%
+2025-06-21 22:18:19 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:18:19 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\qx91f37ixa8f1.jpeg (0.68 MB)
+2025-06-21 22:18:19 - reddit_service - DEBUG - 🔗 URL изображения #4: https://i.redd.it/tjm0t77ixa8f1.jpg
+2025-06-21 22:18:19 - reddit_service - INFO - 📥 Начинаем скачивание медиа #4 с URL: https://i.redd.it/tjm0t77ixa8f1.jpg
+2025-06-21 22:18:19 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/tjm0t77ixa8f1.jpg
+2025-06-21 22:18:20 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:18:20 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/tjm0t77ixa8f1.jpg
+2025-06-21 22:18:20 - reddit_service - INFO - 💾 Сохраняем как: downloads\tjm0t77ixa8f1.jpeg
+2025-06-21 22:18:20 - reddit_service - DEBUG - ⏬ Загружено: 25.5%
+2025-06-21 22:18:21 - reddit_service - DEBUG - ⏬ Загружено: 51.0%
+2025-06-21 22:18:21 - reddit_service - DEBUG - ⏬ Загружено: 75.5%
+2025-06-21 22:18:21 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:18:21 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\tjm0t77ixa8f1.jpeg (0.77 MB)
+2025-06-21 22:18:21 - reddit_service - DEBUG - 🔗 URL изображения #5: https://i.redd.it/xl02u77ixa8f1.jpg
+2025-06-21 22:18:21 - reddit_service - INFO - 📥 Начинаем скачивание медиа #5 с URL: https://i.redd.it/xl02u77ixa8f1.jpg
+2025-06-21 22:18:21 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/xl02u77ixa8f1.jpg
+2025-06-21 22:18:22 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:18:22 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/xl02u77ixa8f1.jpg
+2025-06-21 22:18:22 - reddit_service - INFO - 💾 Сохраняем как: downloads\xl02u77ixa8f1.jpeg
+2025-06-21 22:18:22 - reddit_service - DEBUG - ⏬ Загружено: 0.9%
+2025-06-21 22:18:23 - reddit_service - DEBUG - ⏬ Загружено: 25.9%
+2025-06-21 22:18:23 - reddit_service - DEBUG - ⏬ Загружено: 50.9%
+2025-06-21 22:18:23 - reddit_service - DEBUG - ⏬ Загружено: 75.8%
+2025-06-21 22:18:24 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:18:24 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\xl02u77ixa8f1.jpeg (0.84 MB)
+2025-06-21 22:18:24 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 6
+2025-06-21 22:18:24 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lgxp31 - Swimming lessons with Asuna...
+2025-06-21 22:18:24 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/vrrg9w1tha8f1.jpeg
+2025-06-21 22:18:24 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/vrrg9w1tha8f1.jpeg
+2025-06-21 22:18:24 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/vrrg9w1tha8f1.jpeg
+2025-06-21 22:18:25 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:18:25 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/vrrg9w1tha8f1.jpeg
+2025-06-21 22:18:25 - reddit_service - INFO - 💾 Сохраняем как: downloads\vrrg9w1tha8f1.jpeg
+2025-06-21 22:18:26 - reddit_service - DEBUG - ⏬ Загружено: 25.6%
+2025-06-21 22:18:26 - reddit_service - DEBUG - ⏬ Загружено: 50.1%
+2025-06-21 22:18:26 - reddit_service - DEBUG - ⏬ Загружено: 75.7%
+2025-06-21 22:18:26 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:18:26 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\vrrg9w1tha8f1.jpeg (0.70 MB)
+2025-06-21 22:18:26 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-21 22:18:26 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-21 22:18:26 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lh06za - Goth nun 2B (aelion draws)...
+2025-06-21 22:18:26 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/b2bve4bp1b8f1.jpeg
+2025-06-21 22:18:26 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/b2bve4bp1b8f1.jpeg
+2025-06-21 22:18:26 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/b2bve4bp1b8f1.jpeg
+2025-06-21 22:18:27 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:18:27 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/b2bve4bp1b8f1.jpeg
+2025-06-21 22:18:27 - reddit_service - INFO - 💾 Сохраняем как: downloads\b2bve4bp1b8f1.jpeg
+2025-06-21 22:18:28 - reddit_service - DEBUG - ⏬ Загружено: 51.0%
+2025-06-21 22:18:28 - reddit_service - DEBUG - ⏬ Загружено: 75.6%
+2025-06-21 22:18:28 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:18:28 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\b2bve4bp1b8f1.jpeg (0.44 MB)
+2025-06-21 22:18:28 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-21 22:18:28 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-21 22:18:28 - reddit_service - INFO - 📊 Получено 3 медиа-постов из 3 всего
+2025-06-21 22:18:28 - orchestrator - INFO - 📰 Пост #1/3: t3_1lgznhx
+2025-06-21 22:18:28 - orchestrator - INFO - 📋 Тип: gallery, файлов: 6
+2025-06-21 22:18:28 - orchestrator - INFO - ⏭️ Пост t3_1lgznhx уже был обработан ранее
+2025-06-21 22:18:28 - orchestrator - INFO - 📰 Пост #2/3: t3_1lgxp31
+2025-06-21 22:18:28 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-21 22:18:28 - orchestrator - INFO - ⏭️ Пост t3_1lgxp31 уже был обработан ранее
+2025-06-21 22:18:28 - orchestrator - INFO - 📰 Пост #3/3: t3_1lh06za
+2025-06-21 22:18:28 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-21 22:18:28 - orchestrator - INFO - ⏭️ Пост t3_1lh06za уже был обработан ранее
+2025-06-21 22:18:28 - orchestrator - INFO - 📭 Ни один пост из r/hentai не удалось обработать
+2025-06-21 22:18:28 - orchestrator - INFO - ⚠️ Подходящих постов в r/hentai не найдено, переходим к следующему...
+2025-06-21 22:18:28 - orchestrator - INFO - 🔍 Проверяем subreddit #2/3: r/ecchi
+2025-06-21 22:18:28 - orchestrator - INFO - 🔍 Проверяем Reddit r/ecchi...
+2025-06-21 22:18:28 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/ecchi
+2025-06-21 22:18:29 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lgzzmk - Fern naked dogeza...
+2025-06-21 22:18:29 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/l5vtkv800b8f1.jpeg
+2025-06-21 22:18:29 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/l5vtkv800b8f1.jpeg
+2025-06-21 22:18:29 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/l5vtkv800b8f1.jpeg
+2025-06-21 22:18:32 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:18:32 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/l5vtkv800b8f1.jpeg
+2025-06-21 22:18:32 - reddit_service - INFO - 💾 Сохраняем как: downloads\l5vtkv800b8f1.jpeg
+2025-06-21 22:18:32 - reddit_service - DEBUG - ⏬ Загружено: 0.1%
+2025-06-21 22:18:32 - reddit_service - DEBUG - ⏬ Загружено: 0.1%
+2025-06-21 22:18:32 - reddit_service - DEBUG - ⏬ Загружено: 0.2%
+2025-06-21 22:18:32 - reddit_service - DEBUG - ⏬ Загружено: 0.3%
+2025-06-21 22:18:32 - reddit_service - DEBUG - ⏬ Загружено: 0.3%
+2025-06-21 22:18:32 - reddit_service - DEBUG - ⏬ Загружено: 0.4%
+2025-06-21 22:18:32 - reddit_service - DEBUG - ⏬ Загружено: 0.5%
+2025-06-21 22:18:32 - reddit_service - DEBUG - ⏬ Загружено: 0.5%
+2025-06-21 22:18:32 - reddit_service - DEBUG - ⏬ Загружено: 0.6%
+2025-06-21 22:18:32 - reddit_service - DEBUG - ⏬ Загружено: 0.7%
+2025-06-21 22:18:32 - reddit_service - DEBUG - ⏬ Загружено: 0.7%
+2025-06-21 22:18:32 - reddit_service - DEBUG - ⏬ Загружено: 0.8%
+2025-06-21 22:18:32 - reddit_service - DEBUG - ⏬ Загружено: 0.9%
+2025-06-21 22:18:32 - reddit_service - DEBUG - ⏬ Загружено: 0.9%
+2025-06-21 22:18:32 - reddit_service - DEBUG - ⏬ Загружено: 1.0%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 25.0%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 25.1%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 25.1%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 25.2%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 25.3%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 25.3%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 25.4%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 25.5%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 25.5%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 25.6%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 25.7%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 25.7%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 25.8%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 25.9%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 25.9%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 26.0%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 50.0%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 50.1%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 50.1%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 50.2%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 50.3%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 50.3%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 50.4%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 50.5%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 50.5%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 50.6%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 50.7%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 50.7%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 50.8%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 50.9%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 50.9%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 51.0%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 75.0%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 75.1%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 75.1%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 75.2%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 75.3%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 75.3%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 75.4%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 75.5%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 75.5%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 75.6%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 75.7%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 75.7%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 75.8%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 75.9%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 75.9%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 76.0%
+2025-06-21 22:18:33 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:18:33 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\l5vtkv800b8f1.jpeg (11.78 MB)
+2025-06-21 22:18:33 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-21 22:18:33 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-21 22:18:33 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lgsoiz - Aurora showing her flexibility...
+2025-06-21 22:18:33 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/szxptvnb398f1.jpeg
+2025-06-21 22:18:33 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/szxptvnb398f1.jpeg
+2025-06-21 22:18:33 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/szxptvnb398f1.jpeg
+2025-06-21 22:18:34 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:18:34 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/szxptvnb398f1.jpeg
+2025-06-21 22:18:35 - reddit_service - INFO - 💾 Сохраняем как: downloads\szxptvnb398f1.jpeg
+2025-06-21 22:18:35 - reddit_service - DEBUG - ⏬ Загружено: 25.9%
+2025-06-21 22:18:35 - reddit_service - DEBUG - ⏬ Загружено: 50.5%
+2025-06-21 22:18:35 - reddit_service - DEBUG - ⏬ Загружено: 75.1%
+2025-06-21 22:18:35 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:18:35 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\szxptvnb398f1.jpeg (0.57 MB)
+2025-06-21 22:18:35 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-21 22:18:35 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-21 22:18:35 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lgxmbo - Evelyn with coat (KKUNI /_KKuni)...
+2025-06-21 22:18:35 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/gpo7j4iyga8f1.jpeg
+2025-06-21 22:18:35 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/gpo7j4iyga8f1.jpeg
+2025-06-21 22:18:35 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/gpo7j4iyga8f1.jpeg
+2025-06-21 22:18:36 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:18:36 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/gpo7j4iyga8f1.jpeg
+2025-06-21 22:18:37 - reddit_service - INFO - 💾 Сохраняем как: downloads\gpo7j4iyga8f1.jpeg
+2025-06-21 22:18:37 - reddit_service - DEBUG - ⏬ Загружено: 51.0%
+2025-06-21 22:18:37 - reddit_service - DEBUG - ⏬ Загружено: 75.9%
+2025-06-21 22:18:37 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:18:37 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\gpo7j4iyga8f1.jpeg (0.72 MB)
+2025-06-21 22:18:37 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-21 22:18:37 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-21 22:18:37 - reddit_service - INFO - 📊 Получено 3 медиа-постов из 3 всего
+2025-06-21 22:18:37 - orchestrator - INFO - 📰 Пост #1/3: t3_1lgzzmk
+2025-06-21 22:18:37 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-21 22:18:37 - orchestrator - INFO - 🖼️ Обрабатываем изображение...
+2025-06-21 22:18:37 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\l5vtkv800b8f1.jpeg
+2025-06-21 22:18:37 - orchestrator - INFO - 📊 Размер изображения: 11.78 МБ
+2025-06-21 22:18:37 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-21 22:18:38 - orchestrator - INFO - 🏷️ Получено 23 тегов через deepdanbooru
+2025-06-21 22:18:38 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-21 22:19:35 - root - INFO - Сгенерированное описание (153 симв.): Я чувствую, как моя попка стегается о воздух, каждый толчок отдаётся глубже в киску. Эта пульсация невыносимая! Мой клитор ноет от желания быть коснутым.
+2025-06-21 22:19:35 - orchestrator - INFO - ✍️ Описание сгенерировано: 153 символов
+2025-06-21 22:19:35 - orchestrator - INFO - 🏷️ После фильтрации: 10 тегов из 23
+2025-06-21 22:19:35 - orchestrator - INFO - 📤 Отправляем одиночное изображение...
+2025-06-21 22:19:35 - telegram_service - INFO - 📤 Начинаем отправку фото, размер: 11.78 МБ
+2025-06-21 22:19:35 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 11.78 МБ
+2025-06-21 22:19:35 - telegram_service - INFO - 📏 Размеры 3308x4678 корректны
+2025-06-21 22:19:49 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7569844371:AAGfQvbxyinPggXrD89FwPUe6x4-MZp4V7U/sendPhoto "HTTP/1.1 400 Bad Request"
+2025-06-21 22:19:49 - telegram_service - ERROR - ❌ Ошибка при отправке фото: File of size 12353281 bytes is too big for a photo; the maximum size is 10485760 bytes
+2025-06-21 22:19:49 - orchestrator - ERROR - ❌ Ошибка при отправке изображения: File of size 12353281 bytes is too big for a photo; the maximum size is 10485760 bytes
+2025-06-21 22:19:49 - orchestrator - INFO - 🔄 Изображение не может быть отправлено, пропускаем этот пост
+2025-06-21 22:19:49 - orchestrator - WARNING - ⚠️ Пост #1 не удалось отправить, пробуем следующий...
+2025-06-21 22:19:49 - orchestrator - INFO - 📰 Пост #2/3: t3_1lgsoiz
+2025-06-21 22:19:49 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-21 22:19:49 - orchestrator - INFO - ⏭️ Пост t3_1lgsoiz уже был обработан ранее
+2025-06-21 22:19:49 - orchestrator - INFO - 📰 Пост #3/3: t3_1lgxmbo
+2025-06-21 22:19:49 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-21 22:19:49 - orchestrator - INFO - ⏭️ Пост t3_1lgxmbo уже был обработан ранее
+2025-06-21 22:19:49 - orchestrator - INFO - 📭 Ни один пост из r/ecchi не удалось обработать
+2025-06-21 22:19:49 - orchestrator - INFO - ⚠️ Подходящих постов в r/ecchi не найдено, переходим к следующему...
+2025-06-21 22:19:49 - orchestrator - INFO - 🔍 Проверяем subreddit #3/3: r/muchihentai
+2025-06-21 22:19:49 - orchestrator - INFO - 🔍 Проверяем Reddit r/muchihentai...
+2025-06-21 22:19:49 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/muchihentai
+2025-06-21 22:19:49 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lh1ygj - Rio is doing a good job...
+2025-06-21 22:19:49 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/6mu7nmt2fb8f1.jpeg
+2025-06-21 22:19:49 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/6mu7nmt2fb8f1.jpeg
+2025-06-21 22:19:49 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/6mu7nmt2fb8f1.jpeg
+2025-06-21 22:19:50 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:19:50 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/6mu7nmt2fb8f1.jpeg
+2025-06-21 22:19:51 - reddit_service - INFO - 💾 Сохраняем как: downloads\6mu7nmt2fb8f1.jpeg
+2025-06-21 22:19:51 - reddit_service - DEBUG - ⏬ Загружено: 25.2%
+2025-06-21 22:19:51 - reddit_service - DEBUG - ⏬ Загружено: 50.4%
+2025-06-21 22:19:51 - reddit_service - DEBUG - ⏬ Загружено: 75.6%
+2025-06-21 22:19:51 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:19:51 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\6mu7nmt2fb8f1.jpeg (0.47 MB)
+2025-06-21 22:19:51 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-21 22:19:51 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-21 22:19:51 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lgtm9t - Yi Xuan on top [ZZZ]...
+2025-06-21 22:19:51 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://www.reddit.com/gallery/1lgtleg
+2025-06-21 22:19:51 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://www.reddit.com/gallery/1lgtleg
+2025-06-21 22:19:51 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://www.reddit.com/gallery/1lgtleg
+2025-06-21 22:19:52 - reddit_service - DEBUG - 📋 Content-Type: text/html; charset=utf-8
+2025-06-21 22:19:52 - reddit_service - DEBUG - 🌐 Обнаружен HTML, парсим страницу...
+2025-06-21 22:19:52 - reddit_service - DEBUG - 🖼️ Найден тег <img>
+2025-06-21 22:19:52 - reddit_service - INFO - 🔗 Найден прямой URL изображения: https://id.rlcdn.com/472486.gif
+2025-06-21 22:19:53 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://id.rlcdn.com/472486.gif
+2025-06-21 22:19:54 - reddit_service - ERROR - ❌ Ошибка при скачивании медиа: 403 Client Error: Forbidden for url: https://alb.reddit.com/skatepark?IDLT=
+2025-06-21 22:19:54 - reddit_service - DEBUG - ❌ Не удалось скачать медиа: 403 Client Error: Forbidden for url: https://alb.reddit.com/skatepark?IDLT=
+2025-06-21 22:19:54 - reddit_service - DEBUG - 📭 Пост не содержит медиа-файлов
+2025-06-21 22:19:54 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lh260y - yoruichi (sleeptopi)...
+2025-06-21 22:19:54 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/bn280bgzgb8f1.jpeg
+2025-06-21 22:19:54 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/bn280bgzgb8f1.jpeg
+2025-06-21 22:19:54 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/bn280bgzgb8f1.jpeg
+2025-06-21 22:19:57 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-21 22:19:57 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/bn280bgzgb8f1.jpeg
+2025-06-21 22:19:57 - reddit_service - INFO - 💾 Сохраняем как: downloads\bn280bgzgb8f1.jpeg
+2025-06-21 22:19:57 - reddit_service - DEBUG - ⏬ Загружено: 0.6%
+2025-06-21 22:19:58 - reddit_service - DEBUG - ⏬ Загружено: 25.1%
+2025-06-21 22:19:58 - reddit_service - DEBUG - ⏬ Загружено: 25.7%
+2025-06-21 22:19:58 - reddit_service - DEBUG - ⏬ Загружено: 50.2%
+2025-06-21 22:19:58 - reddit_service - DEBUG - ⏬ Загружено: 50.8%
+2025-06-21 22:19:58 - reddit_service - DEBUG - ⏬ Загружено: 75.4%
+2025-06-21 22:19:58 - reddit_service - DEBUG - ⏬ Загружено: 76.0%
+2025-06-21 22:19:58 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-21 22:19:58 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\bn280bgzgb8f1.jpeg (1.34 MB)
+2025-06-21 22:19:58 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-21 22:19:58 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-21 22:19:58 - reddit_service - INFO - 📊 Получено 2 медиа-постов из 3 всего
+2025-06-21 22:19:58 - orchestrator - INFO - 📰 Пост #1/2: t3_1lh1ygj
+2025-06-21 22:19:58 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-21 22:19:58 - orchestrator - INFO - ⏭️ Пост t3_1lh1ygj уже был обработан ранее
+2025-06-21 22:19:58 - orchestrator - INFO - 📰 Пост #2/2: t3_1lh260y
+2025-06-21 22:19:58 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-21 22:19:58 - orchestrator - INFO - 🖼️ Обрабатываем изображение...
+2025-06-21 22:19:58 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\bn280bgzgb8f1.jpeg
+2025-06-21 22:19:58 - orchestrator - INFO - 📊 Размер изображения: 1.34 МБ
+2025-06-21 22:19:58 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-21 22:19:58 - orchestrator - INFO - 🏷️ Получено 58 тегов через deepdanbooru
+2025-06-21 22:19:58 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-21 22:21:03 - root - INFO - Сгенерированное описание (173 симв.): Ох, солнечные лучи жгут моё темнокожее тело, и каждое прикосновение к моей влажной кожице вызывает дрожь. О-о... я чувствую, как пульс в киске отзывается на каждый шум волн!
+2025-06-21 22:21:03 - orchestrator - INFO - ✍️ Описание сгенерировано: 173 символов
+2025-06-21 22:21:03 - orchestrator - INFO - 🏷️ После фильтрации: 10 тегов из 58
+2025-06-21 22:21:03 - orchestrator - INFO - 📤 Отправляем одиночное изображение...
+2025-06-21 22:21:03 - telegram_service - INFO - 📤 Начинаем отправку фото, размер: 1.34 МБ
+2025-06-21 22:21:03 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 1.34 МБ
+2025-06-21 22:21:03 - telegram_service - INFO - 📏 Размеры 1539x2222 корректны
+2025-06-21 22:21:06 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7569844371:AAGfQvbxyinPggXrD89FwPUe6x4-MZp4V7U/sendPhoto "HTTP/1.1 200 OK"
+2025-06-21 22:21:06 - telegram_service - INFO - ✅ Фото успешно отправлено (message_id: 383)
+2025-06-21 22:21:06 - orchestrator - INFO - 💾 Сохраняем в БД...
+2025-06-21 22:21:06 - orchestrator - INFO - ✅ Reddit пост полностью обработан
+2025-06-21 22:21:06 - orchestrator - INFO - ✅ Пост #2 из Reddit r/muchihentai обработан успешно
+2025-06-21 22:21:06 - orchestrator - INFO - ✅ Пост из r/muchihentai обработан успешно
+2025-06-21 22:21:06 - orchestrator - INFO - ⏱️ Время выполнения цикла: 181.7 сек
+2025-06-21 22:21:06 - orchestrator - INFO - ============================================================
+
+2025-06-21 22:21:06 - orchestrator - INFO - ⏰ Настройка планировщика (интервал: 120 мин)...
+2025-06-21 22:21:06 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-21 22:21:06 - apscheduler.scheduler - INFO - Added job "process_cycle" to job store "default"
+2025-06-21 22:21:06 - apscheduler.scheduler - INFO - Scheduler started
+2025-06-21 22:21:06 - orchestrator - INFO - ✅ Бот запущен и работает!
+2025-06-21 22:21:06 - orchestrator - INFO - 🔄 Ожидание следующего цикла...
+
