@@ -7,4 +7,4 @@ __pycache__/
 migrations/
 downloads/
 latest_post.json
-telegram_bot.db
+*.db
