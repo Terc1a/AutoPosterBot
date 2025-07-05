@@ -13949,3 +13949,1652 @@ asyncio.exceptions.CancelledError
 2025-06-23 11:04:42 - orchestrator - INFO - ============================================================
 
 2025-06-23 11:04:42 - apscheduler.executors.default - INFO - Job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-23 13:03:12 MSK)" executed successfully
+2025-06-23 20:45:26 - orchestrator - INFO - 📝 Логирование настроено. Логи сохраняются в logs/tgposter.log
+2025-06-23 20:45:26 - orchestrator - INFO - 🚀 Запуск бота TgPoster
+2025-06-23 20:45:26 - orchestrator - INFO - 📋 Конфигурация:
+2025-06-23 20:45:26 - orchestrator - INFO -    - Subreddits (3): r/hentai, r/ecchi, r/muchihentai
+2025-06-23 20:45:26 - orchestrator - INFO -    - Интервал: 120 минут
+2025-06-23 20:45:26 - orchestrator - INFO -    - Tagger: выключен
+2025-06-23 20:45:26 - orchestrator - INFO -    - LM Model: saiga_nemo_12b_gguf
+2025-06-23 20:45:26 - orchestrator - INFO - 🗄️ Инициализация базы данных...
+2025-06-23 20:45:26 - orchestrator - INFO - ▶️ Запуск первого цикла обработки...
+2025-06-23 20:45:26 - orchestrator - INFO - ============================================================
+2025-06-23 20:45:26 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-23 20:45:26 - orchestrator - INFO - ============================================================
+2025-06-23 20:45:26 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-23 20:45:26 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-23 20:45:26 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-23 20:45:27 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1liixyj - Cute Cat Girl (Jagaimo)...
+2025-06-23 20:45:27 - reddit_service - DEBUG - 🖼️ Обнаружена галерея изображений
+2025-06-23 20:45:27 - reddit_service - DEBUG - 📸 Количество изображений в галерее: 2
+2025-06-23 20:45:27 - reddit_service - DEBUG - 🔗 URL изображения #0: https://i.redd.it/o15avgfazo8f1.jpg
+2025-06-23 20:45:27 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/o15avgfazo8f1.jpg
+2025-06-23 20:45:27 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/o15avgfazo8f1.jpg
+2025-06-23 20:45:28 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-23 20:45:28 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/o15avgfazo8f1.jpg
+2025-06-23 20:45:28 - reddit_service - INFO - 💾 Сохраняем как: downloads\o15avgfazo8f1.jpeg
+2025-06-23 20:45:28 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-23 20:45:28 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\o15avgfazo8f1.jpeg (0.05 MB)
+2025-06-23 20:45:28 - reddit_service - DEBUG - 🔗 URL изображения #1: https://i.redd.it/3oqaghfazo8f1.jpg
+2025-06-23 20:45:28 - reddit_service - INFO - 📥 Начинаем скачивание медиа #1 с URL: https://i.redd.it/3oqaghfazo8f1.jpg
+2025-06-23 20:45:28 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/3oqaghfazo8f1.jpg
+2025-06-23 20:45:29 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-23 20:45:29 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/3oqaghfazo8f1.jpg
+2025-06-23 20:45:29 - reddit_service - INFO - 💾 Сохраняем как: downloads\3oqaghfazo8f1.jpeg
+2025-06-23 20:45:29 - reddit_service - DEBUG - ⏬ Загружено: 50.1%
+2025-06-23 20:45:29 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-23 20:45:29 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\3oqaghfazo8f1.jpeg (0.05 MB)
+2025-06-23 20:45:29 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 2
+2025-06-23 20:45:29 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1licybc - Soaking with just two fingers...
+2025-06-23 20:45:29 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/aoqbrz0dkn8f1.jpeg
+2025-06-23 20:45:29 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/aoqbrz0dkn8f1.jpeg
+2025-06-23 20:45:29 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/aoqbrz0dkn8f1.jpeg
+2025-06-23 20:45:30 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-23 20:45:30 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/aoqbrz0dkn8f1.jpeg
+2025-06-23 20:45:31 - reddit_service - INFO - 💾 Сохраняем как: downloads\aoqbrz0dkn8f1.jpeg
+2025-06-23 20:45:31 - reddit_service - DEBUG - ⏬ Загружено: 25.4%
+2025-06-23 20:45:31 - reddit_service - DEBUG - ⏬ Загружено: 50.7%
+2025-06-23 20:45:31 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-23 20:45:31 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\aoqbrz0dkn8f1.jpeg (0.12 MB)
+2025-06-23 20:45:31 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-23 20:45:31 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-23 20:45:31 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1li6n1z - Punishment by Boobsphyxia...
+2025-06-23 20:45:31 - reddit_service - DEBUG - 🖼️ Обнаружена галерея изображений
+2025-06-23 20:45:31 - reddit_service - DEBUG - 📸 Количество изображений в галерее: 2
+2025-06-23 20:45:31 - reddit_service - DEBUG - 🔗 URL изображения #0: https://i.redd.it/d5mi59zykl8f1.jpg
+2025-06-23 20:45:31 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/d5mi59zykl8f1.jpg
+2025-06-23 20:45:31 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/d5mi59zykl8f1.jpg
+2025-06-23 20:45:32 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-23 20:45:32 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/d5mi59zykl8f1.jpg
+2025-06-23 20:45:32 - reddit_service - INFO - 💾 Сохраняем как: downloads\d5mi59zykl8f1.jpeg
+2025-06-23 20:45:33 - reddit_service - DEBUG - ⏬ Загружено: 50.3%
+2025-06-23 20:45:33 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-23 20:45:33 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\d5mi59zykl8f1.jpeg (0.23 MB)
+2025-06-23 20:45:33 - reddit_service - DEBUG - 🔗 URL изображения #1: https://i.redd.it/9hg8dlxykl8f1.jpg
+2025-06-23 20:45:33 - reddit_service - INFO - 📥 Начинаем скачивание медиа #1 с URL: https://i.redd.it/9hg8dlxykl8f1.jpg
+2025-06-23 20:45:33 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/9hg8dlxykl8f1.jpg
+2025-06-23 20:45:34 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-23 20:45:34 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/9hg8dlxykl8f1.jpg
+2025-06-23 20:45:34 - reddit_service - INFO - 💾 Сохраняем как: downloads\9hg8dlxykl8f1.jpeg
+2025-06-23 20:45:35 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-23 20:45:35 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\9hg8dlxykl8f1.jpeg (0.31 MB)
+2025-06-23 20:45:35 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 2
+2025-06-23 20:45:35 - reddit_service - INFO - 📊 Получено 3 медиа-постов из 3 всего
+2025-06-23 20:45:35 - orchestrator - INFO - 📰 Пост #1/3: t3_1liixyj
+2025-06-23 20:45:35 - orchestrator - INFO - 📋 Тип: gallery, файлов: 2
+2025-06-23 20:45:35 - orchestrator - INFO - 🖼️ Обрабатываем галерею...
+2025-06-23 20:45:35 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\o15avgfazo8f1.jpeg
+2025-06-23 20:45:35 - orchestrator - INFO - 📊 Размер изображения: 0.05 МБ
+2025-06-23 20:45:35 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-23 20:45:37 - root - ERROR - interrogate_deepbooru error: Cannot connect to host 127.0.0.1:7860 ssl:default [Удаленный компьютер отклонил это сетевое подключение]
+2025-06-23 20:45:37 - orchestrator - INFO - 🏷️ Получено 0 тегов через none
+2025-06-23 20:45:37 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-23 20:46:55 - root - INFO - Сгенерированное описание (249 симв.): Я чувствую, как жар нарастает в низу живота. Мой клитор уже пульсирует от предвкушения, влажность стекает по бедрам. Каждая клеточка тела горит желанием быть заполненной, я готова рычать от нетерпения и просить "трахни меня сейчас же!" 
+Мои стоны...
+2025-06-23 20:46:55 - orchestrator - INFO - ✍️ Описание сгенерировано: 249 символов
+2025-06-23 20:46:55 - orchestrator - INFO - 🏷️ После фильтрации: 0 тегов из 0
+2025-06-23 20:46:55 - orchestrator - INFO - 📤 Отправляем галерею из 2 изображений...
+2025-06-23 20:46:55 - telegram_service - INFO - 📤 Начинаем отправку медиа-группы из 2 элементов
+2025-06-23 20:46:55 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.05 МБ
+2025-06-23 20:46:55 - telegram_service - DEBUG -    📏 Изображение #1: Размеры 600x944 корректны
+2025-06-23 20:46:55 - telegram_service - DEBUG -    📸 Изображение #1: 0.05 МБ
+2025-06-23 20:46:55 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.05 МБ
+2025-06-23 20:46:55 - telegram_service - DEBUG -    📏 Изображение #2: Размеры 600x944 корректны
+2025-06-23 20:46:55 - telegram_service - DEBUG -    📸 Изображение #2: 0.05 МБ
+2025-06-23 20:46:57 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7569844371:AAGfQvbxyinPggXrD89FwPUe6x4-MZp4V7U/sendMediaGroup "HTTP/1.1 200 OK"
+2025-06-23 20:46:57 - telegram_service - INFO - ✅ Медиа-группа успешно отправлена. Сообщений: 2
+2025-06-23 20:46:57 - telegram_service - DEBUG -    Message IDs: [403, 404]
+2025-06-23 20:46:57 - orchestrator - INFO - 💾 Сохраняем изображение #1 в БД...
+2025-06-23 20:46:57 - orchestrator - INFO - 💾 Сохраняем изображение #2 в БД...
+2025-06-23 20:46:57 - orchestrator - INFO - ✅ Reddit пост полностью обработан
+2025-06-23 20:46:57 - orchestrator - INFO - ✅ Пост #1 из Reddit r/hentai обработан успешно
+2025-06-23 20:46:57 - orchestrator - INFO - ✅ Пост из r/hentai обработан успешно
+2025-06-23 20:46:57 - orchestrator - INFO - ⏱️ Время выполнения цикла: 90.9 сек
+2025-06-23 20:46:57 - orchestrator - INFO - ============================================================
+
+2025-06-23 20:46:57 - orchestrator - INFO - ⏰ Настройка планировщика (интервал: 120 мин)...
+2025-06-23 20:46:57 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-23 20:46:57 - apscheduler.scheduler - INFO - Added job "process_cycle" to job store "default"
+2025-06-23 20:46:57 - apscheduler.scheduler - INFO - Scheduler started
+2025-06-23 20:46:57 - orchestrator - INFO - ✅ Бот запущен и работает!
+2025-06-23 20:46:57 - orchestrator - INFO - 🔄 Ожидание следующего цикла...
+
+2025-06-23 23:14:23 - apscheduler.executors.default - WARNING - Run time of job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-24 00:46:57 MSK)" was missed by 0:27:26.192041
+2025-06-24 00:03:36 - orchestrator - INFO - 📝 Логирование настроено. Логи сохраняются в logs/tgposter.log
+2025-06-24 00:03:36 - orchestrator - INFO - 🚀 Запуск бота TgPoster
+2025-06-24 00:03:36 - orchestrator - INFO - 📋 Конфигурация:
+2025-06-24 00:03:36 - orchestrator - INFO -    - Subreddits (3): r/hentai, r/ecchi, r/muchihentai
+2025-06-24 00:03:36 - orchestrator - INFO -    - Интервал: 120 минут
+2025-06-24 00:03:36 - orchestrator - INFO -    - Tagger: выключен
+2025-06-24 00:03:36 - orchestrator - INFO -    - LM Model: saiga_nemo_12b_gguf
+2025-06-24 00:03:36 - orchestrator - INFO - 🗄️ Инициализация базы данных...
+2025-06-24 00:03:36 - orchestrator - INFO - ▶️ Запуск первого цикла обработки...
+2025-06-24 00:03:36 - orchestrator - INFO - ============================================================
+2025-06-24 00:03:36 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-24 00:03:36 - orchestrator - INFO - ============================================================
+2025-06-24 00:03:36 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-24 00:03:36 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-24 00:03:36 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-24 00:03:37 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1liixyj - Cute Cat Girl (Jagaimo)...
+2025-06-24 00:03:37 - reddit_service - DEBUG - 🖼️ Обнаружена галерея изображений
+2025-06-24 00:03:37 - reddit_service - DEBUG - 📸 Количество изображений в галерее: 2
+2025-06-24 00:03:37 - reddit_service - DEBUG - 🔗 URL изображения #0: https://i.redd.it/o15avgfazo8f1.jpg
+2025-06-24 00:03:37 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/o15avgfazo8f1.jpg
+2025-06-24 00:03:37 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/o15avgfazo8f1.jpg
+2025-06-24 00:03:37 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-24 00:03:37 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/o15avgfazo8f1.jpg
+2025-06-24 00:03:37 - reddit_service - INFO - 💾 Сохраняем как: downloads\o15avgfazo8f1.jpeg
+2025-06-24 00:03:37 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 00:03:37 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\o15avgfazo8f1.jpeg (0.05 MB)
+2025-06-24 00:03:37 - reddit_service - DEBUG - 🔗 URL изображения #1: https://i.redd.it/3oqaghfazo8f1.jpg
+2025-06-24 00:03:37 - reddit_service - INFO - 📥 Начинаем скачивание медиа #1 с URL: https://i.redd.it/3oqaghfazo8f1.jpg
+2025-06-24 00:03:37 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/3oqaghfazo8f1.jpg
+2025-06-24 00:03:37 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-24 00:03:37 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/3oqaghfazo8f1.jpg
+2025-06-24 00:03:38 - reddit_service - INFO - 💾 Сохраняем как: downloads\3oqaghfazo8f1.jpeg
+2025-06-24 00:03:38 - reddit_service - DEBUG - ⏬ Загружено: 50.1%
+2025-06-24 00:03:38 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 00:03:38 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\3oqaghfazo8f1.jpeg (0.05 MB)
+2025-06-24 00:03:38 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 2
+2025-06-24 00:03:38 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1linh11 - Foxgirl's breeding instinct kicking in...
+2025-06-24 00:03:38 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/2iall2xntp8f1.png
+2025-06-24 00:03:38 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/2iall2xntp8f1.png
+2025-06-24 00:03:38 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/2iall2xntp8f1.png
+2025-06-24 00:03:38 - reddit_service - DEBUG - 📋 Content-Type: image/png
+2025-06-24 00:03:38 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/2iall2xntp8f1.png
+2025-06-24 00:03:38 - reddit_service - INFO - 💾 Сохраняем как: downloads\2iall2xntp8f1.png
+2025-06-24 00:03:38 - reddit_service - DEBUG - ⏬ Загружено: 0.5%
+2025-06-24 00:03:38 - reddit_service - DEBUG - ⏬ Загружено: 1.0%
+2025-06-24 00:03:39 - reddit_service - DEBUG - ⏬ Загружено: 25.5%
+2025-06-24 00:03:39 - reddit_service - DEBUG - ⏬ Загружено: 26.0%
+2025-06-24 00:03:39 - reddit_service - DEBUG - ⏬ Загружено: 50.4%
+2025-06-24 00:03:39 - reddit_service - DEBUG - ⏬ Загружено: 50.9%
+2025-06-24 00:03:39 - reddit_service - DEBUG - ⏬ Загружено: 75.4%
+2025-06-24 00:03:39 - reddit_service - DEBUG - ⏬ Загружено: 75.9%
+2025-06-24 00:03:39 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 00:03:39 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\2iall2xntp8f1.png (1.56 MB)
+2025-06-24 00:03:39 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-24 00:03:39 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-24 00:03:39 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lipoqo - Under the covers...
+2025-06-24 00:03:39 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/13a82vwr8q8f1.jpeg
+2025-06-24 00:03:39 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/13a82vwr8q8f1.jpeg
+2025-06-24 00:03:39 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/13a82vwr8q8f1.jpeg
+2025-06-24 00:03:39 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-24 00:03:39 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/13a82vwr8q8f1.jpeg
+2025-06-24 00:03:39 - reddit_service - INFO - 💾 Сохраняем как: downloads\13a82vwr8q8f1.jpeg
+2025-06-24 00:03:40 - reddit_service - DEBUG - ⏬ Загружено: 25.6%
+2025-06-24 00:03:40 - reddit_service - DEBUG - ⏬ Загружено: 50.0%
+2025-06-24 00:03:40 - reddit_service - DEBUG - ⏬ Загружено: 75.7%
+2025-06-24 00:03:40 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 00:03:40 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\13a82vwr8q8f1.jpeg (0.64 MB)
+2025-06-24 00:03:40 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-24 00:03:40 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-24 00:03:40 - reddit_service - INFO - 📊 Получено 3 медиа-постов из 3 всего
+2025-06-24 00:03:40 - orchestrator - INFO - 📰 Пост #1/3: t3_1liixyj
+2025-06-24 00:03:40 - orchestrator - INFO - 📋 Тип: gallery, файлов: 2
+2025-06-24 00:03:40 - orchestrator - INFO - ⏭️ Пост t3_1liixyj уже был обработан ранее
+2025-06-24 00:03:40 - orchestrator - INFO - 📰 Пост #2/3: t3_1linh11
+2025-06-24 00:03:40 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-24 00:03:40 - orchestrator - INFO - 🖼️ Обрабатываем изображение...
+2025-06-24 00:03:40 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\2iall2xntp8f1.png
+2025-06-24 00:03:40 - orchestrator - INFO - 📊 Размер изображения: 1.56 МБ
+2025-06-24 00:03:40 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-24 00:03:46 - orchestrator - INFO - 🏷️ Получено 59 тегов через deepdanbooru
+2025-06-24 00:03:46 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-24 00:04:58 - root - INFO - Сгенерированное описание (239 симв.): Я стою тут, абсолютно голая перед тобой. Каждый миллиметр моего тела горит, как от искр в тёмной комнате. Киска уже пульсирует, будто жаждущая чего-то большее прикосновений... Ох! Мне так хочется почувствовать тебя внутри, глубоко и грубо!
+2025-06-24 00:04:58 - orchestrator - INFO - ✍️ Описание сгенерировано: 239 символов
+2025-06-24 00:04:58 - orchestrator - INFO - 🏷️ После фильтрации: 10 тегов из 59
+2025-06-24 00:04:58 - orchestrator - INFO - 📤 Отправляем одиночное изображение...
+2025-06-24 00:04:58 - telegram_service - INFO - 📤 Начинаем отправку фото, размер: 1.56 МБ
+2025-06-24 00:04:58 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 1.56 МБ
+2025-06-24 00:04:58 - telegram_service - INFO - 📏 Размеры 1911x2876 корректны
+2025-06-24 00:05:00 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7569844371:AAGfQvbxyinPggXrD89FwPUe6x4-MZp4V7U/sendPhoto "HTTP/1.1 200 OK"
+2025-06-24 00:05:00 - telegram_service - INFO - ✅ Фото успешно отправлено (message_id: 405)
+2025-06-24 00:05:00 - orchestrator - INFO - 💾 Сохраняем в БД...
+2025-06-24 00:05:00 - orchestrator - INFO - ✅ Reddit пост полностью обработан
+2025-06-24 00:05:00 - orchestrator - INFO - ✅ Пост #2 из Reddit r/hentai обработан успешно
+2025-06-24 00:05:00 - orchestrator - INFO - ✅ Пост из r/hentai обработан успешно
+2025-06-24 00:05:00 - orchestrator - INFO - ⏱️ Время выполнения цикла: 83.5 сек
+2025-06-24 00:05:00 - orchestrator - INFO - ============================================================
+
+2025-06-24 00:05:00 - orchestrator - INFO - ⏰ Настройка планировщика (интервал: 120 мин)...
+2025-06-24 00:05:00 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-24 00:05:00 - apscheduler.scheduler - INFO - Added job "process_cycle" to job store "default"
+2025-06-24 00:05:00 - apscheduler.scheduler - INFO - Scheduler started
+2025-06-24 00:05:00 - orchestrator - INFO - ✅ Бот запущен и работает!
+2025-06-24 00:05:00 - orchestrator - INFO - 🔄 Ожидание следующего цикла...
+
+2025-06-24 02:05:00 - apscheduler.executors.default - INFO - Running job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-24 04:05:00 MSK)" (scheduled at 2025-06-24 02:05:00.124464+03:00)
+2025-06-24 02:05:00 - orchestrator - INFO - ============================================================
+2025-06-24 02:05:00 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-24 02:05:00 - orchestrator - INFO - ============================================================
+2025-06-24 02:05:00 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-24 02:05:00 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-24 02:05:00 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-24 02:05:00 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lipoqo - Under the covers...
+2025-06-24 02:05:00 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/13a82vwr8q8f1.jpeg
+2025-06-24 02:05:00 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/13a82vwr8q8f1.jpeg
+2025-06-24 02:05:00 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/13a82vwr8q8f1.jpeg
+2025-06-24 02:05:00 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-24 02:05:00 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/13a82vwr8q8f1.jpeg
+2025-06-24 02:05:01 - reddit_service - INFO - 💾 Сохраняем как: downloads\13a82vwr8q8f1.jpeg
+2025-06-24 02:05:01 - reddit_service - DEBUG - ⏬ Загружено: 25.6%
+2025-06-24 02:05:01 - reddit_service - DEBUG - ⏬ Загружено: 50.0%
+2025-06-24 02:05:01 - reddit_service - DEBUG - ⏬ Загружено: 75.7%
+2025-06-24 02:05:01 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 02:05:01 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\13a82vwr8q8f1.jpeg (0.64 MB)
+2025-06-24 02:05:01 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-24 02:05:01 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-24 02:05:01 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1linh11 - Foxgirl's breeding instinct kicking in...
+2025-06-24 02:05:01 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/2iall2xntp8f1.png
+2025-06-24 02:05:01 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/2iall2xntp8f1.png
+2025-06-24 02:05:01 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/2iall2xntp8f1.png
+2025-06-24 02:05:01 - reddit_service - DEBUG - 📋 Content-Type: image/png
+2025-06-24 02:05:01 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/2iall2xntp8f1.png
+2025-06-24 02:05:01 - reddit_service - INFO - 💾 Сохраняем как: downloads\2iall2xntp8f1.png
+2025-06-24 02:05:01 - reddit_service - DEBUG - ⏬ Загружено: 0.5%
+2025-06-24 02:05:01 - reddit_service - DEBUG - ⏬ Загружено: 1.0%
+2025-06-24 02:05:02 - reddit_service - DEBUG - ⏬ Загружено: 25.5%
+2025-06-24 02:05:02 - reddit_service - DEBUG - ⏬ Загружено: 26.0%
+2025-06-24 02:05:02 - reddit_service - DEBUG - ⏬ Загружено: 50.4%
+2025-06-24 02:05:02 - reddit_service - DEBUG - ⏬ Загружено: 50.9%
+2025-06-24 02:05:02 - reddit_service - DEBUG - ⏬ Загружено: 75.4%
+2025-06-24 02:05:02 - reddit_service - DEBUG - ⏬ Загружено: 75.9%
+2025-06-24 02:05:02 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 02:05:02 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\2iall2xntp8f1.png (1.56 MB)
+2025-06-24 02:05:02 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-24 02:05:02 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-24 02:05:02 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1liixyj - Cute Cat Girl (Jagaimo)...
+2025-06-24 02:05:02 - reddit_service - DEBUG - 🖼️ Обнаружена галерея изображений
+2025-06-24 02:05:02 - reddit_service - DEBUG - 📸 Количество изображений в галерее: 2
+2025-06-24 02:05:02 - reddit_service - DEBUG - 🔗 URL изображения #0: https://i.redd.it/o15avgfazo8f1.jpg
+2025-06-24 02:05:02 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/o15avgfazo8f1.jpg
+2025-06-24 02:05:02 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/o15avgfazo8f1.jpg
+2025-06-24 02:05:02 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-24 02:05:02 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/o15avgfazo8f1.jpg
+2025-06-24 02:05:02 - reddit_service - INFO - 💾 Сохраняем как: downloads\o15avgfazo8f1.jpeg
+2025-06-24 02:05:02 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 02:05:02 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\o15avgfazo8f1.jpeg (0.05 MB)
+2025-06-24 02:05:02 - reddit_service - DEBUG - 🔗 URL изображения #1: https://i.redd.it/3oqaghfazo8f1.jpg
+2025-06-24 02:05:02 - reddit_service - INFO - 📥 Начинаем скачивание медиа #1 с URL: https://i.redd.it/3oqaghfazo8f1.jpg
+2025-06-24 02:05:02 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/3oqaghfazo8f1.jpg
+2025-06-24 02:05:02 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-24 02:05:02 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/3oqaghfazo8f1.jpg
+2025-06-24 02:05:02 - reddit_service - INFO - 💾 Сохраняем как: downloads\3oqaghfazo8f1.jpeg
+2025-06-24 02:05:02 - reddit_service - DEBUG - ⏬ Загружено: 50.1%
+2025-06-24 02:05:02 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 02:05:02 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\3oqaghfazo8f1.jpeg (0.05 MB)
+2025-06-24 02:05:02 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 2
+2025-06-24 02:05:02 - reddit_service - INFO - 📊 Получено 3 медиа-постов из 3 всего
+2025-06-24 02:05:02 - orchestrator - INFO - 📰 Пост #1/3: t3_1lipoqo
+2025-06-24 02:05:02 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-24 02:05:02 - orchestrator - INFO - 🖼️ Обрабатываем изображение...
+2025-06-24 02:05:02 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\13a82vwr8q8f1.jpeg
+2025-06-24 02:05:02 - orchestrator - INFO - 📊 Размер изображения: 0.64 МБ
+2025-06-24 02:05:02 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-24 02:05:03 - orchestrator - INFO - 🏷️ Получено 48 тегов через deepdanbooru
+2025-06-24 02:05:03 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-24 02:06:10 - root - INFO - Сгенерированное описание (244 симв.): Я чувствую, как тёплое дыхание на моей киске пробуждает самые сокровенные желания. Мой клитор пульсирует, жаждущий прикосновений. Руки блондинки и брюнетки нежно охватывают мои груди, их пальцы играют со мной так, будто знают каждый мой секрет.
+2025-06-24 02:06:10 - orchestrator - INFO - ✍️ Описание сгенерировано: 244 символов
+2025-06-24 02:06:10 - orchestrator - INFO - 🏷️ После фильтрации: 10 тегов из 48
+2025-06-24 02:06:10 - orchestrator - INFO - 📤 Отправляем одиночное изображение...
+2025-06-24 02:06:10 - telegram_service - INFO - 📤 Начинаем отправку фото, размер: 0.64 МБ
+2025-06-24 02:06:10 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.64 МБ
+2025-06-24 02:06:10 - telegram_service - INFO - 📏 Размеры 2803x4096 корректны
+2025-06-24 02:06:11 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7569844371:AAGfQvbxyinPggXrD89FwPUe6x4-MZp4V7U/sendPhoto "HTTP/1.1 200 OK"
+2025-06-24 02:06:11 - telegram_service - INFO - ✅ Фото успешно отправлено (message_id: 406)
+2025-06-24 02:06:11 - orchestrator - INFO - 💾 Сохраняем в БД...
+2025-06-24 02:06:11 - orchestrator - INFO - ✅ Reddit пост полностью обработан
+2025-06-24 02:06:11 - orchestrator - INFO - ✅ Пост #1 из Reddit r/hentai обработан успешно
+2025-06-24 02:06:11 - orchestrator - INFO - ✅ Пост из r/hentai обработан успешно
+2025-06-24 02:06:11 - orchestrator - INFO - ⏱️ Время выполнения цикла: 71.3 сек
+2025-06-24 02:06:11 - orchestrator - INFO - ============================================================
+
+2025-06-24 02:06:11 - apscheduler.executors.default - INFO - Job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-24 04:05:00 MSK)" executed successfully
+2025-06-24 04:05:00 - apscheduler.executors.default - INFO - Running job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-24 06:05:00 MSK)" (scheduled at 2025-06-24 04:05:00.124464+03:00)
+2025-06-24 04:05:00 - orchestrator - INFO - ============================================================
+2025-06-24 04:05:00 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-24 04:05:00 - orchestrator - INFO - ============================================================
+2025-06-24 04:05:00 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-24 04:05:00 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-24 04:05:00 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-24 04:05:00 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lipoqo - Under the covers...
+2025-06-24 04:05:00 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/13a82vwr8q8f1.jpeg
+2025-06-24 04:05:00 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/13a82vwr8q8f1.jpeg
+2025-06-24 04:05:00 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/13a82vwr8q8f1.jpeg
+2025-06-24 04:05:00 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-24 04:05:00 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/13a82vwr8q8f1.jpeg
+2025-06-24 04:05:01 - reddit_service - INFO - 💾 Сохраняем как: downloads\13a82vwr8q8f1.jpeg
+2025-06-24 04:05:01 - reddit_service - DEBUG - ⏬ Загружено: 25.6%
+2025-06-24 04:05:01 - reddit_service - DEBUG - ⏬ Загружено: 50.0%
+2025-06-24 04:05:01 - reddit_service - DEBUG - ⏬ Загружено: 75.7%
+2025-06-24 04:05:01 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 04:05:01 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\13a82vwr8q8f1.jpeg (0.64 MB)
+2025-06-24 04:05:01 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-24 04:05:01 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-24 04:05:01 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1linh11 - Foxgirl's breeding instinct kicking in...
+2025-06-24 04:05:01 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/2iall2xntp8f1.png
+2025-06-24 04:05:01 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/2iall2xntp8f1.png
+2025-06-24 04:05:01 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/2iall2xntp8f1.png
+2025-06-24 04:05:01 - reddit_service - DEBUG - 📋 Content-Type: image/png
+2025-06-24 04:05:01 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/2iall2xntp8f1.png
+2025-06-24 04:05:01 - reddit_service - INFO - 💾 Сохраняем как: downloads\2iall2xntp8f1.png
+2025-06-24 04:05:01 - reddit_service - DEBUG - ⏬ Загружено: 0.5%
+2025-06-24 04:05:01 - reddit_service - DEBUG - ⏬ Загружено: 1.0%
+2025-06-24 04:05:02 - reddit_service - DEBUG - ⏬ Загружено: 25.5%
+2025-06-24 04:05:02 - reddit_service - DEBUG - ⏬ Загружено: 26.0%
+2025-06-24 04:05:02 - reddit_service - DEBUG - ⏬ Загружено: 50.4%
+2025-06-24 04:05:02 - reddit_service - DEBUG - ⏬ Загружено: 50.9%
+2025-06-24 04:05:02 - reddit_service - DEBUG - ⏬ Загружено: 75.4%
+2025-06-24 04:05:02 - reddit_service - DEBUG - ⏬ Загружено: 75.9%
+2025-06-24 04:05:02 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 04:05:02 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\2iall2xntp8f1.png (1.56 MB)
+2025-06-24 04:05:02 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-24 04:05:02 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-24 04:05:02 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1liixyj - Cute Cat Girl (Jagaimo)...
+2025-06-24 04:05:02 - reddit_service - DEBUG - 🖼️ Обнаружена галерея изображений
+2025-06-24 04:05:02 - reddit_service - DEBUG - 📸 Количество изображений в галерее: 2
+2025-06-24 04:05:02 - reddit_service - DEBUG - 🔗 URL изображения #0: https://i.redd.it/o15avgfazo8f1.jpg
+2025-06-24 04:05:02 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/o15avgfazo8f1.jpg
+2025-06-24 04:05:02 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/o15avgfazo8f1.jpg
+2025-06-24 04:05:02 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-24 04:05:02 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/o15avgfazo8f1.jpg
+2025-06-24 04:05:02 - reddit_service - INFO - 💾 Сохраняем как: downloads\o15avgfazo8f1.jpeg
+2025-06-24 04:05:02 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 04:05:02 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\o15avgfazo8f1.jpeg (0.05 MB)
+2025-06-24 04:05:02 - reddit_service - DEBUG - 🔗 URL изображения #1: https://i.redd.it/3oqaghfazo8f1.jpg
+2025-06-24 04:05:02 - reddit_service - INFO - 📥 Начинаем скачивание медиа #1 с URL: https://i.redd.it/3oqaghfazo8f1.jpg
+2025-06-24 04:05:02 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/3oqaghfazo8f1.jpg
+2025-06-24 04:05:03 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-24 04:05:03 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/3oqaghfazo8f1.jpg
+2025-06-24 04:05:03 - reddit_service - INFO - 💾 Сохраняем как: downloads\3oqaghfazo8f1.jpeg
+2025-06-24 04:05:03 - reddit_service - DEBUG - ⏬ Загружено: 50.1%
+2025-06-24 04:05:03 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 04:05:03 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\3oqaghfazo8f1.jpeg (0.05 MB)
+2025-06-24 04:05:03 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 2
+2025-06-24 04:05:03 - reddit_service - INFO - 📊 Получено 3 медиа-постов из 3 всего
+2025-06-24 04:05:03 - orchestrator - INFO - 📰 Пост #1/3: t3_1lipoqo
+2025-06-24 04:05:03 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-24 04:05:03 - orchestrator - INFO - ⏭️ Пост t3_1lipoqo уже был обработан ранее
+2025-06-24 04:05:03 - orchestrator - INFO - 📰 Пост #2/3: t3_1linh11
+2025-06-24 04:05:03 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-24 04:05:03 - orchestrator - INFO - ⏭️ Пост t3_1linh11 уже был обработан ранее
+2025-06-24 04:05:03 - orchestrator - INFO - 📰 Пост #3/3: t3_1liixyj
+2025-06-24 04:05:03 - orchestrator - INFO - 📋 Тип: gallery, файлов: 2
+2025-06-24 04:05:03 - orchestrator - INFO - ⏭️ Пост t3_1liixyj уже был обработан ранее
+2025-06-24 04:05:03 - orchestrator - INFO - 📭 Ни один пост из r/hentai не удалось обработать
+2025-06-24 04:05:03 - orchestrator - INFO - ⚠️ Подходящих постов в r/hentai не найдено, переходим к следующему...
+2025-06-24 04:05:03 - orchestrator - INFO - 🔍 Проверяем subreddit #2/3: r/ecchi
+2025-06-24 04:05:03 - orchestrator - INFO - 🔍 Проверяем Reddit r/ecchi...
+2025-06-24 04:05:03 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/ecchi
+2025-06-24 04:05:03 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lijkaz - Cat shadow in the shower (GAOlukchup)...
+2025-06-24 04:05:03 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/a3h2z0gj3p8f1.jpeg
+2025-06-24 04:05:03 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/a3h2z0gj3p8f1.jpeg
+2025-06-24 04:05:03 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/a3h2z0gj3p8f1.jpeg
+2025-06-24 04:05:03 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-24 04:05:03 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/a3h2z0gj3p8f1.jpeg
+2025-06-24 04:05:04 - reddit_service - INFO - 💾 Сохраняем как: downloads\a3h2z0gj3p8f1.jpeg
+2025-06-24 04:05:04 - reddit_service - DEBUG - ⏬ Загружено: 50.1%
+2025-06-24 04:05:04 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 04:05:04 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\a3h2z0gj3p8f1.jpeg (0.20 MB)
+2025-06-24 04:05:04 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-24 04:05:04 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-24 04:05:04 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1limdj6 - Everything needed on a Monday morning...
+2025-06-24 04:05:04 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/lalx1c9imp8f1.jpeg
+2025-06-24 04:05:04 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/lalx1c9imp8f1.jpeg
+2025-06-24 04:05:04 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/lalx1c9imp8f1.jpeg
+2025-06-24 04:05:04 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-24 04:05:04 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/lalx1c9imp8f1.jpeg
+2025-06-24 04:05:04 - reddit_service - INFO - 💾 Сохраняем как: downloads\lalx1c9imp8f1.jpeg
+2025-06-24 04:05:05 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 04:05:05 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\lalx1c9imp8f1.jpeg (0.69 MB)
+2025-06-24 04:05:05 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-24 04:05:05 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-24 04:05:05 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lill12 - Shifu's sexy body [Zenless Zone Zero]...
+2025-06-24 04:05:05 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/mhhfwgn6hp8f1.jpeg
+2025-06-24 04:05:05 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/mhhfwgn6hp8f1.jpeg
+2025-06-24 04:05:05 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/mhhfwgn6hp8f1.jpeg
+2025-06-24 04:05:05 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-24 04:05:05 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/mhhfwgn6hp8f1.jpeg
+2025-06-24 04:05:05 - reddit_service - INFO - 💾 Сохраняем как: downloads\mhhfwgn6hp8f1.jpeg
+2025-06-24 04:05:05 - reddit_service - DEBUG - ⏬ Загружено: 0.9%
+2025-06-24 04:05:05 - reddit_service - DEBUG - ⏬ Загружено: 25.2%
+2025-06-24 04:05:05 - reddit_service - DEBUG - ⏬ Загружено: 50.4%
+2025-06-24 04:05:05 - reddit_service - DEBUG - ⏬ Загружено: 75.6%
+2025-06-24 04:05:05 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 04:05:05 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\mhhfwgn6hp8f1.jpeg (0.87 MB)
+2025-06-24 04:05:05 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-24 04:05:05 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-24 04:05:05 - reddit_service - INFO - 📊 Получено 3 медиа-постов из 3 всего
+2025-06-24 04:05:05 - orchestrator - INFO - 📰 Пост #1/3: t3_1lijkaz
+2025-06-24 04:05:05 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-24 04:05:05 - orchestrator - INFO - 🖼️ Обрабатываем изображение...
+2025-06-24 04:05:05 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\a3h2z0gj3p8f1.jpeg
+2025-06-24 04:05:05 - orchestrator - INFO - 📊 Размер изображения: 0.20 МБ
+2025-06-24 04:05:05 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-24 04:05:06 - orchestrator - INFO - 🏷️ Получено 96 тегов через deepdanbooru
+2025-06-24 04:05:06 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-24 04:06:18 - root - INFO - Сгенерированное описание (169 симв.): Охренительно... чувствую, как горячая вода обтекает мои груди, они так налитые и тяжёлые. Киска пульсирует от каждого касания кожи водой, будто между ног уже текут соки.
+2025-06-24 04:06:18 - orchestrator - INFO - ✍️ Описание сгенерировано: 169 символов
+2025-06-24 04:06:18 - orchestrator - INFO - 🏷️ После фильтрации: 10 тегов из 96
+2025-06-24 04:06:18 - orchestrator - INFO - 📤 Отправляем одиночное изображение...
+2025-06-24 04:06:18 - telegram_service - INFO - 📤 Начинаем отправку фото, размер: 0.20 МБ
+2025-06-24 04:06:18 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.20 МБ
+2025-06-24 04:06:18 - telegram_service - INFO - 📏 Размеры 900x1273 корректны
+2025-06-24 04:06:19 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7569844371:AAGfQvbxyinPggXrD89FwPUe6x4-MZp4V7U/sendPhoto "HTTP/1.1 200 OK"
+2025-06-24 04:06:19 - telegram_service - INFO - ✅ Фото успешно отправлено (message_id: 407)
+2025-06-24 04:06:19 - orchestrator - INFO - 💾 Сохраняем в БД...
+2025-06-24 04:06:19 - orchestrator - INFO - ✅ Reddit пост полностью обработан
+2025-06-24 04:06:19 - orchestrator - INFO - ✅ Пост #1 из Reddit r/ecchi обработан успешно
+2025-06-24 04:06:19 - orchestrator - INFO - ✅ Пост из r/ecchi обработан успешно
+2025-06-24 04:06:19 - orchestrator - INFO - ⏱️ Время выполнения цикла: 79.0 сек
+2025-06-24 04:06:19 - orchestrator - INFO - ============================================================
+
+2025-06-24 04:06:19 - apscheduler.executors.default - INFO - Job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-24 06:05:00 MSK)" executed successfully
+2025-06-24 06:05:00 - apscheduler.executors.default - INFO - Running job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-24 08:05:00 MSK)" (scheduled at 2025-06-24 06:05:00.124464+03:00)
+2025-06-24 06:05:00 - orchestrator - INFO - ============================================================
+2025-06-24 06:05:00 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-24 06:05:00 - orchestrator - INFO - ============================================================
+2025-06-24 06:05:00 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-24 06:05:00 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-24 06:05:00 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-24 06:05:00 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lipoqo - Under the covers...
+2025-06-24 06:05:00 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/13a82vwr8q8f1.jpeg
+2025-06-24 06:05:00 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/13a82vwr8q8f1.jpeg
+2025-06-24 06:05:00 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/13a82vwr8q8f1.jpeg
+2025-06-24 06:05:00 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-24 06:05:00 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/13a82vwr8q8f1.jpeg
+2025-06-24 06:05:01 - reddit_service - INFO - 💾 Сохраняем как: downloads\13a82vwr8q8f1.jpeg
+2025-06-24 06:05:01 - reddit_service - DEBUG - ⏬ Загружено: 25.6%
+2025-06-24 06:05:01 - reddit_service - DEBUG - ⏬ Загружено: 50.0%
+2025-06-24 06:05:01 - reddit_service - DEBUG - ⏬ Загружено: 75.7%
+2025-06-24 06:05:01 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 06:05:01 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\13a82vwr8q8f1.jpeg (0.64 MB)
+2025-06-24 06:05:01 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-24 06:05:01 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-24 06:05:01 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lisdsu - Group Activities...
+2025-06-24 06:05:01 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/sa67w6gdrq8f1.png
+2025-06-24 06:05:01 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/sa67w6gdrq8f1.png
+2025-06-24 06:05:01 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/sa67w6gdrq8f1.png
+2025-06-24 06:05:01 - reddit_service - DEBUG - 📋 Content-Type: image/png
+2025-06-24 06:05:01 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/sa67w6gdrq8f1.png
+2025-06-24 06:05:01 - reddit_service - INFO - 💾 Сохраняем как: downloads\sa67w6gdrq8f1.png
+2025-06-24 06:05:01 - reddit_service - DEBUG - ⏬ Загружено: 0.8%
+2025-06-24 06:05:02 - reddit_service - DEBUG - ⏬ Загружено: 25.3%
+2025-06-24 06:05:02 - reddit_service - DEBUG - ⏬ Загружено: 50.6%
+2025-06-24 06:05:02 - reddit_service - DEBUG - ⏬ Загружено: 75.1%
+2025-06-24 06:05:02 - reddit_service - DEBUG - ⏬ Загружено: 75.9%
+2025-06-24 06:05:02 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 06:05:02 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\sa67w6gdrq8f1.png (1.02 MB)
+2025-06-24 06:05:02 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-24 06:05:02 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-24 06:05:02 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1liixyj - Cute Cat Girl (Jagaimo)...
+2025-06-24 06:05:02 - reddit_service - DEBUG - 🖼️ Обнаружена галерея изображений
+2025-06-24 06:05:02 - reddit_service - DEBUG - 📸 Количество изображений в галерее: 2
+2025-06-24 06:05:02 - reddit_service - DEBUG - 🔗 URL изображения #0: https://i.redd.it/o15avgfazo8f1.jpg
+2025-06-24 06:05:02 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/o15avgfazo8f1.jpg
+2025-06-24 06:05:02 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/o15avgfazo8f1.jpg
+2025-06-24 06:05:02 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-24 06:05:02 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/o15avgfazo8f1.jpg
+2025-06-24 06:05:02 - reddit_service - INFO - 💾 Сохраняем как: downloads\o15avgfazo8f1.jpeg
+2025-06-24 06:05:02 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 06:05:02 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\o15avgfazo8f1.jpeg (0.05 MB)
+2025-06-24 06:05:02 - reddit_service - DEBUG - 🔗 URL изображения #1: https://i.redd.it/3oqaghfazo8f1.jpg
+2025-06-24 06:05:02 - reddit_service - INFO - 📥 Начинаем скачивание медиа #1 с URL: https://i.redd.it/3oqaghfazo8f1.jpg
+2025-06-24 06:05:02 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/3oqaghfazo8f1.jpg
+2025-06-24 06:05:02 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-24 06:05:02 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/3oqaghfazo8f1.jpg
+2025-06-24 06:05:03 - reddit_service - INFO - 💾 Сохраняем как: downloads\3oqaghfazo8f1.jpeg
+2025-06-24 06:05:03 - reddit_service - DEBUG - ⏬ Загружено: 50.1%
+2025-06-24 06:05:03 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 06:05:03 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\3oqaghfazo8f1.jpeg (0.05 MB)
+2025-06-24 06:05:03 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 2
+2025-06-24 06:05:03 - reddit_service - INFO - 📊 Получено 3 медиа-постов из 3 всего
+2025-06-24 06:05:03 - orchestrator - INFO - 📰 Пост #1/3: t3_1lipoqo
+2025-06-24 06:05:03 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-24 06:05:03 - orchestrator - INFO - ⏭️ Пост t3_1lipoqo уже был обработан ранее
+2025-06-24 06:05:03 - orchestrator - INFO - 📰 Пост #2/3: t3_1lisdsu
+2025-06-24 06:05:03 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-24 06:05:03 - orchestrator - INFO - 🖼️ Обрабатываем изображение...
+2025-06-24 06:05:03 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\sa67w6gdrq8f1.png
+2025-06-24 06:05:03 - orchestrator - INFO - 📊 Размер изображения: 1.02 МБ
+2025-06-24 06:05:03 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-24 06:05:03 - orchestrator - INFO - 🏷️ Получено 63 тегов через deepdanbooru
+2025-06-24 06:05:03 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-24 06:06:17 - root - INFO - Сгенерированное описание (200 симв.): Мое тело охвачено жаром, киска уже мокрая, как будто внутри меня закипел целый океан. Волосы бьют по плечам, когда я чувствую пальцы в своей гриве - это черные локоны путаются от чужого прикосновения.
+2025-06-24 06:06:17 - orchestrator - INFO - ✍️ Описание сгенерировано: 200 символов
+2025-06-24 06:06:17 - orchestrator - INFO - 🏷️ После фильтрации: 10 тегов из 63
+2025-06-24 06:06:17 - orchestrator - INFO - 📤 Отправляем одиночное изображение...
+2025-06-24 06:06:17 - telegram_service - INFO - 📤 Начинаем отправку фото, размер: 1.02 МБ
+2025-06-24 06:06:17 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 1.02 МБ
+2025-06-24 06:06:17 - telegram_service - INFO - 📏 Размеры 850x850 корректны
+2025-06-24 06:06:17 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7569844371:AAGfQvbxyinPggXrD89FwPUe6x4-MZp4V7U/sendPhoto "HTTP/1.1 200 OK"
+2025-06-24 06:06:17 - telegram_service - INFO - ✅ Фото успешно отправлено (message_id: 408)
+2025-06-24 06:06:17 - orchestrator - INFO - 💾 Сохраняем в БД...
+2025-06-24 06:06:17 - orchestrator - INFO - ✅ Reddit пост полностью обработан
+2025-06-24 06:06:17 - orchestrator - INFO - ✅ Пост #2 из Reddit r/hentai обработан успешно
+2025-06-24 06:06:17 - orchestrator - INFO - ✅ Пост из r/hentai обработан успешно
+2025-06-24 06:06:17 - orchestrator - INFO - ⏱️ Время выполнения цикла: 77.9 сек
+2025-06-24 06:06:17 - orchestrator - INFO - ============================================================
+
+2025-06-24 06:06:17 - apscheduler.executors.default - INFO - Job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-24 08:05:00 MSK)" executed successfully
+2025-06-24 08:09:25 - apscheduler.executors.default - WARNING - Run time of job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-24 10:05:00 MSK)" was missed by 0:04:25.286653
+2025-06-24 09:07:45 - orchestrator - INFO - 📝 Логирование настроено. Логи сохраняются в logs/tgposter.log
+2025-06-24 09:07:46 - orchestrator - INFO - 🚀 Запуск бота TgPoster
+2025-06-24 09:07:46 - orchestrator - INFO - 📋 Конфигурация:
+2025-06-24 09:07:46 - orchestrator - INFO -    - Subreddits (3): r/hentai, r/ecchi, r/muchihentai
+2025-06-24 09:07:46 - orchestrator - INFO -    - Интервал: 120 минут
+2025-06-24 09:07:46 - orchestrator - INFO -    - Tagger: выключен
+2025-06-24 09:07:46 - orchestrator - INFO -    - LM Model: saiga_nemo_12b_gguf
+2025-06-24 09:07:46 - orchestrator - INFO - 🗄️ Инициализация базы данных...
+2025-06-24 09:07:46 - orchestrator - INFO - ▶️ Запуск первого цикла обработки...
+2025-06-24 09:07:46 - orchestrator - INFO - ============================================================
+2025-06-24 09:07:46 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-24 09:07:46 - orchestrator - INFO - ============================================================
+2025-06-24 09:07:46 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-24 09:07:46 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-24 09:07:46 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-24 09:07:46 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lipoqo - Under the covers...
+2025-06-24 09:07:46 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/13a82vwr8q8f1.jpeg
+2025-06-24 09:07:46 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/13a82vwr8q8f1.jpeg
+2025-06-24 09:07:46 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/13a82vwr8q8f1.jpeg
+2025-06-24 09:07:47 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-24 09:07:47 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/13a82vwr8q8f1.jpeg
+2025-06-24 09:07:47 - reddit_service - INFO - 💾 Сохраняем как: downloads\13a82vwr8q8f1.jpeg
+2025-06-24 09:07:47 - reddit_service - DEBUG - ⏬ Загружено: 25.6%
+2025-06-24 09:07:47 - reddit_service - DEBUG - ⏬ Загружено: 50.0%
+2025-06-24 09:07:47 - reddit_service - DEBUG - ⏬ Загружено: 75.7%
+2025-06-24 09:07:47 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 09:07:47 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\13a82vwr8q8f1.jpeg (0.64 MB)
+2025-06-24 09:07:47 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-24 09:07:47 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-24 09:07:47 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1liup0k - Making her volleyballs bounce...
+2025-06-24 09:07:47 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/ihvlyaf18r8f1.jpeg
+2025-06-24 09:07:47 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/ihvlyaf18r8f1.jpeg
+2025-06-24 09:07:47 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/ihvlyaf18r8f1.jpeg
+2025-06-24 09:07:48 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-24 09:07:48 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/ihvlyaf18r8f1.jpeg
+2025-06-24 09:07:48 - reddit_service - INFO - 💾 Сохраняем как: downloads\ihvlyaf18r8f1.jpeg
+2025-06-24 09:07:48 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 09:07:48 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\ihvlyaf18r8f1.jpeg (0.09 MB)
+2025-06-24 09:07:48 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-24 09:07:48 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-24 09:07:48 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1linh11 - Foxgirl's breeding instinct kicking in...
+2025-06-24 09:07:48 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/2iall2xntp8f1.png
+2025-06-24 09:07:48 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/2iall2xntp8f1.png
+2025-06-24 09:07:48 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/2iall2xntp8f1.png
+2025-06-24 09:07:49 - reddit_service - DEBUG - 📋 Content-Type: image/png
+2025-06-24 09:07:49 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/2iall2xntp8f1.png
+2025-06-24 09:07:49 - reddit_service - INFO - 💾 Сохраняем как: downloads\2iall2xntp8f1.png
+2025-06-24 09:07:49 - reddit_service - DEBUG - ⏬ Загружено: 0.5%
+2025-06-24 09:07:49 - reddit_service - DEBUG - ⏬ Загружено: 1.0%
+2025-06-24 09:07:49 - reddit_service - DEBUG - ⏬ Загружено: 25.5%
+2025-06-24 09:07:49 - reddit_service - DEBUG - ⏬ Загружено: 26.0%
+2025-06-24 09:07:49 - reddit_service - DEBUG - ⏬ Загружено: 50.4%
+2025-06-24 09:07:49 - reddit_service - DEBUG - ⏬ Загружено: 50.9%
+2025-06-24 09:07:49 - reddit_service - DEBUG - ⏬ Загружено: 75.4%
+2025-06-24 09:07:49 - reddit_service - DEBUG - ⏬ Загружено: 75.9%
+2025-06-24 09:07:49 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-24 09:07:49 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\2iall2xntp8f1.png (1.56 MB)
+2025-06-24 09:07:49 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-24 09:07:49 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-24 09:07:49 - reddit_service - INFO - 📊 Получено 3 медиа-постов из 3 всего
+2025-06-24 09:07:49 - orchestrator - INFO - 📰 Пост #1/3: t3_1lipoqo
+2025-06-24 09:07:49 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-24 09:07:49 - orchestrator - INFO - ⏭️ Пост t3_1lipoqo уже был обработан ранее
+2025-06-24 09:07:49 - orchestrator - INFO - 📰 Пост #2/3: t3_1liup0k
+2025-06-24 09:07:49 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-24 09:07:49 - orchestrator - INFO - 🖼️ Обрабатываем изображение...
+2025-06-24 09:07:49 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\ihvlyaf18r8f1.jpeg
+2025-06-24 09:07:49 - orchestrator - INFO - 📊 Размер изображения: 0.09 МБ
+2025-06-24 09:07:49 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-24 09:07:56 - orchestrator - INFO - 🏷️ Получено 36 тегов через deepdanbooru
+2025-06-24 09:07:56 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-24 09:09:09 - root - INFO - Сгенерированное описание (195 симв.): Я вся горит, как будто внутри меня разожглись невидимые огни. Киска уже намокла, готовая принять тебя! Эти ощущения — о-о-о, мне так хочется чувствовать твой большой, твёрдый член глубоко внутри.
+2025-06-24 09:09:09 - orchestrator - INFO - ✍️ Описание сгенерировано: 195 символов
+2025-06-24 09:09:09 - orchestrator - INFO - 🏷️ После фильтрации: 10 тегов из 36
+2025-06-24 09:09:09 - orchestrator - INFO - 📤 Отправляем одиночное изображение...
+2025-06-24 09:09:09 - telegram_service - INFO - 📤 Начинаем отправку фото, размер: 0.09 МБ
+2025-06-24 09:09:09 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.09 МБ
+2025-06-24 09:09:09 - telegram_service - INFO - 📏 Размеры 919x1298 корректны
+2025-06-24 09:09:10 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7569844371:AAGfQvbxyinPggXrD89FwPUe6x4-MZp4V7U/sendPhoto "HTTP/1.1 200 OK"
+2025-06-24 09:09:10 - telegram_service - INFO - ✅ Фото успешно отправлено (message_id: 409)
+2025-06-24 09:09:10 - orchestrator - INFO - 💾 Сохраняем в БД...
+2025-06-24 09:09:10 - orchestrator - INFO - ✅ Reddit пост полностью обработан
+2025-06-24 09:09:10 - orchestrator - INFO - ✅ Пост #2 из Reddit r/hentai обработан успешно
+2025-06-24 09:09:10 - orchestrator - INFO - ✅ Пост из r/hentai обработан успешно
+2025-06-24 09:09:10 - orchestrator - INFO - ⏱️ Время выполнения цикла: 84.0 сек
+2025-06-24 09:09:10 - orchestrator - INFO - ============================================================
+
+2025-06-24 09:09:10 - orchestrator - INFO - ⏰ Настройка планировщика (интервал: 120 мин)...
+2025-06-24 09:09:10 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-24 09:09:10 - apscheduler.scheduler - INFO - Added job "process_cycle" to job store "default"
+2025-06-24 09:09:10 - apscheduler.scheduler - INFO - Scheduler started
+2025-06-24 09:09:10 - orchestrator - INFO - ✅ Бот запущен и работает!
+2025-06-24 09:09:10 - orchestrator - INFO - 🔄 Ожидание следующего цикла...
+
+2025-06-26 03:57:04 - orchestrator - INFO - 📝 Логирование настроено. Логи сохраняются в logs/tgposter.log
+2025-06-26 03:57:05 - orchestrator - INFO - 🚀 Запуск бота TgPoster
+2025-06-26 03:57:05 - orchestrator - INFO - 📋 Конфигурация:
+2025-06-26 03:57:05 - orchestrator - INFO -    - Subreddits (3): r/hentai, r/ecchi, r/muchihentai
+2025-06-26 03:57:05 - orchestrator - INFO -    - Интервал: 120 минут
+2025-06-26 03:57:05 - orchestrator - INFO -    - Tagger: выключен
+2025-06-26 03:57:05 - orchestrator - INFO -    - LM Model: saiga_nemo_12b_gguf
+2025-06-26 03:57:05 - orchestrator - INFO - 🗄️ Инициализация базы данных...
+2025-06-26 03:57:05 - orchestrator - INFO - ▶️ Запуск первого цикла обработки...
+2025-06-26 03:57:05 - orchestrator - INFO - ============================================================
+2025-06-26 03:57:05 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-26 03:57:05 - orchestrator - INFO - ============================================================
+2025-06-26 03:57:05 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-26 03:57:05 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-26 03:57:05 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-26 03:57:05 - reddit_service - ERROR - ❌ Ошибка при запросе к Reddit API: 403 Client Error: Blocked for url: https://www.reddit.com/r/hentai.json?limit=3
+2025-06-26 03:57:05 - orchestrator - INFO - 📭 Новых медиа-постов в r/hentai не найдено
+2025-06-26 03:57:05 - orchestrator - INFO - ⚠️ Подходящих постов в r/hentai не найдено, переходим к следующему...
+2025-06-26 03:57:05 - orchestrator - INFO - 🔍 Проверяем subreddit #2/3: r/ecchi
+2025-06-26 03:57:05 - orchestrator - INFO - 🔍 Проверяем Reddit r/ecchi...
+2025-06-26 03:57:05 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/ecchi
+2025-06-26 03:57:06 - reddit_service - ERROR - ❌ Ошибка при запросе к Reddit API: 403 Client Error: Blocked for url: https://www.reddit.com/r/ecchi.json?limit=3
+2025-06-26 03:57:06 - orchestrator - INFO - 📭 Новых медиа-постов в r/ecchi не найдено
+2025-06-26 03:57:06 - orchestrator - INFO - ⚠️ Подходящих постов в r/ecchi не найдено, переходим к следующему...
+2025-06-26 03:57:06 - orchestrator - INFO - 🔍 Проверяем subreddit #3/3: r/muchihentai
+2025-06-26 03:57:06 - orchestrator - INFO - 🔍 Проверяем Reddit r/muchihentai...
+2025-06-26 03:57:06 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/muchihentai
+2025-06-26 03:57:06 - reddit_service - ERROR - ❌ Ошибка при запросе к Reddit API: 403 Client Error: Blocked for url: https://www.reddit.com/r/muchihentai.json?limit=3
+2025-06-26 03:57:06 - orchestrator - INFO - 📭 Новых медиа-постов в r/muchihentai не найдено
+2025-06-26 03:57:06 - orchestrator - INFO - ⚠️ Подходящих постов в r/muchihentai не найдено, переходим к следующему...
+2025-06-26 03:57:06 - orchestrator - INFO - 📭 Ни один из 3 subreddit не дал подходящих постов
+2025-06-26 03:57:06 - orchestrator - INFO - 🔄 Переходим к fallback источнику - waifu.fm...
+2025-06-26 03:57:06 - orchestrator - INFO - 📊 Получено 1 изображений от waifu.fm
+2025-06-26 03:57:06 - orchestrator - INFO - 📥 Скачиваем изображение #1: https://cdn.waifu.im/7357.jpg...
+2025-06-26 03:57:07 - orchestrator - INFO - 📊 Размер изображения: 0.94 МБ
+2025-06-26 03:57:07 - orchestrator - INFO - 🔮 Анализируем через AI...
+2025-06-26 03:57:17 - orchestrator - INFO - 📝 Логирование настроено. Логи сохраняются в logs/tgposter.log
+2025-06-26 03:57:18 - orchestrator - INFO - 🚀 Запуск бота TgPoster
+2025-06-26 03:57:18 - orchestrator - INFO - 📋 Конфигурация:
+2025-06-26 03:57:18 - orchestrator - INFO -    - Subreddits (3): r/hentai, r/ecchi, r/muchihentai
+2025-06-26 03:57:18 - orchestrator - INFO -    - Интервал: 120 минут
+2025-06-26 03:57:18 - orchestrator - INFO -    - Tagger: выключен
+2025-06-26 03:57:18 - orchestrator - INFO -    - LM Model: saiga_nemo_12b_gguf
+2025-06-26 03:57:18 - orchestrator - INFO - 🗄️ Инициализация базы данных...
+2025-06-26 03:57:18 - orchestrator - INFO - ▶️ Запуск первого цикла обработки...
+2025-06-26 03:57:18 - orchestrator - INFO - ============================================================
+2025-06-26 03:57:18 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-26 03:57:18 - orchestrator - INFO - ============================================================
+2025-06-26 03:57:18 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-26 03:57:18 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-26 03:57:18 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-26 03:57:33 - reddit_service - ERROR - ❌ Ошибка при запросе к Reddit API: HTTPSConnectionPool(host='www.reddit.com', port=443): Read timed out. (read timeout=15)
+2025-06-26 03:57:33 - orchestrator - INFO - 📭 Новых медиа-постов в r/hentai не найдено
+2025-06-26 03:57:33 - orchestrator - INFO - ⚠️ Подходящих постов в r/hentai не найдено, переходим к следующему...
+2025-06-26 03:57:33 - orchestrator - INFO - 🔍 Проверяем subreddit #2/3: r/ecchi
+2025-06-26 03:57:33 - orchestrator - INFO - 🔍 Проверяем Reddit r/ecchi...
+2025-06-26 03:57:33 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/ecchi
+2025-06-26 03:57:48 - reddit_service - ERROR - ❌ Ошибка при запросе к Reddit API: HTTPSConnectionPool(host='www.reddit.com', port=443): Read timed out. (read timeout=15)
+2025-06-26 03:57:48 - orchestrator - INFO - 📭 Новых медиа-постов в r/ecchi не найдено
+2025-06-26 03:57:48 - orchestrator - INFO - ⚠️ Подходящих постов в r/ecchi не найдено, переходим к следующему...
+2025-06-26 03:57:48 - orchestrator - INFO - 🔍 Проверяем subreddit #3/3: r/muchihentai
+2025-06-26 03:57:48 - orchestrator - INFO - 🔍 Проверяем Reddit r/muchihentai...
+2025-06-26 03:57:48 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/muchihentai
+2025-06-26 03:58:03 - reddit_service - ERROR - ❌ Ошибка при запросе к Reddit API: HTTPSConnectionPool(host='www.reddit.com', port=443): Read timed out. (read timeout=15)
+2025-06-26 03:58:03 - orchestrator - INFO - 📭 Новых медиа-постов в r/muchihentai не найдено
+2025-06-26 03:58:03 - orchestrator - INFO - ⚠️ Подходящих постов в r/muchihentai не найдено, переходим к следующему...
+2025-06-26 03:58:03 - orchestrator - INFO - 📭 Ни один из 3 subreddit не дал подходящих постов
+2025-06-26 03:58:03 - orchestrator - INFO - 🔄 Переходим к fallback источнику - waifu.fm...
+2025-06-26 03:58:03 - orchestrator - INFO - 📊 Получено 1 изображений от waifu.fm
+2025-06-26 03:58:03 - orchestrator - INFO - 📥 Скачиваем изображение #1: https://cdn.waifu.im/4739.jpeg...
+2025-06-26 03:58:18 - orchestrator - ERROR - ❌ Ошибка при обработке изображения #1: HTTPSConnectionPool(host='cdn.waifu.im', port=443): Read timed out. (read timeout=15)
+2025-06-26 03:58:18 - orchestrator - ERROR - ❌ Все изображения от waifu.fm не удалось обработать
+2025-06-26 03:58:18 - orchestrator - WARNING - ⚠️ Ни одно изображение из waifu.fm не удалось обработать и отправить
+2025-06-26 03:58:18 - orchestrator - INFO - ⏱️ Время выполнения цикла: 60.6 сек
+2025-06-26 03:58:18 - orchestrator - INFO - ============================================================
+
+2025-06-26 03:58:18 - orchestrator - INFO - ⏰ Настройка планировщика (интервал: 120 мин)...
+2025-06-26 03:58:18 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-26 03:58:18 - apscheduler.scheduler - INFO - Added job "process_cycle" to job store "default"
+2025-06-26 03:58:18 - apscheduler.scheduler - INFO - Scheduler started
+2025-06-26 03:58:18 - orchestrator - INFO - ✅ Бот запущен и работает!
+2025-06-26 03:58:18 - orchestrator - INFO - 🔄 Ожидание следующего цикла...
+
+2025-06-26 04:03:05 - orchestrator - INFO - 📝 Логирование настроено. Логи сохраняются в logs/tgposter.log
+2025-06-26 04:03:05 - orchestrator - INFO - 🚀 Запуск бота TgPoster
+2025-06-26 04:03:05 - orchestrator - INFO - 📋 Конфигурация:
+2025-06-26 04:03:05 - orchestrator - INFO -    - Subreddits (3): r/hentai, r/ecchi, r/muchihentai
+2025-06-26 04:03:05 - orchestrator - INFO -    - Интервал: 120 минут
+2025-06-26 04:03:05 - orchestrator - INFO -    - Tagger: выключен
+2025-06-26 04:03:05 - orchestrator - INFO -    - LM Model: saiga_nemo_12b_gguf
+2025-06-26 04:03:05 - orchestrator - INFO - 🗄️ Инициализация базы данных...
+2025-06-26 04:03:05 - orchestrator - INFO - ▶️ Запуск первого цикла обработки...
+2025-06-26 04:03:05 - orchestrator - INFO - ============================================================
+2025-06-26 04:03:05 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-26 04:03:05 - orchestrator - INFO - ============================================================
+2025-06-26 04:03:05 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-26 04:03:05 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-26 04:03:05 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-26 04:03:05 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lkfh73 - Tatsumaki Riding...
+2025-06-26 04:03:05 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://www.redgifs.com/watch/distantlimegreenmole
+2025-06-26 04:03:05 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://www.redgifs.com/watch/distantlimegreenmole
+2025-06-26 04:03:05 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://www.redgifs.com/watch/distantlimegreenmole
+2025-06-26 04:03:06 - reddit_service - DEBUG - 📋 Content-Type: text/html
+2025-06-26 04:03:06 - reddit_service - DEBUG - 🌐 Обнаружен HTML, парсим страницу...
+2025-06-26 04:03:06 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://www.redgifs.com/watch/distantlimegreenmole
+2025-06-26 04:03:06 - reddit_service - INFO - 💾 Сохраняем как: downloads\media_0.jpg
+2025-06-26 04:03:06 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\media_0.jpg (0.01 MB)
+2025-06-26 04:03:06 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-26 04:03:06 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-26 04:03:06 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lk6q91 - Toga’s Beach Photo (zdoor)...
+2025-06-26 04:03:06 - reddit_service - DEBUG - 🖼️ Обнаружена галерея изображений
+2025-06-26 04:03:06 - reddit_service - DEBUG - 📸 Количество изображений в галерее: 2
+2025-06-26 04:03:06 - reddit_service - DEBUG - 🔗 URL изображения #0: https://i.redd.it/hub2irolz29f1.jpg
+2025-06-26 04:03:06 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/hub2irolz29f1.jpg
+2025-06-26 04:03:06 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/hub2irolz29f1.jpg
+2025-06-26 04:03:06 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-26 04:03:06 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/hub2irolz29f1.jpg
+2025-06-26 04:03:06 - reddit_service - INFO - 💾 Сохраняем как: downloads\hub2irolz29f1.jpeg
+2025-06-26 04:03:07 - reddit_service - DEBUG - ⏬ Загружено: 75.7%
+2025-06-26 04:03:07 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-26 04:03:07 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\hub2irolz29f1.jpeg (0.33 MB)
+2025-06-26 04:03:07 - reddit_service - DEBUG - 🔗 URL изображения #1: https://i.redd.it/p8r52polz29f1.jpg
+2025-06-26 04:03:07 - reddit_service - INFO - 📥 Начинаем скачивание медиа #1 с URL: https://i.redd.it/p8r52polz29f1.jpg
+2025-06-26 04:03:07 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/p8r52polz29f1.jpg
+2025-06-26 04:03:07 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-26 04:03:07 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/p8r52polz29f1.jpg
+2025-06-26 04:03:07 - reddit_service - INFO - 💾 Сохраняем как: downloads\p8r52polz29f1.jpeg
+2025-06-26 04:03:07 - reddit_service - DEBUG - ⏬ Загружено: 25.3%
+2025-06-26 04:03:07 - reddit_service - DEBUG - ⏬ Загружено: 50.6%
+2025-06-26 04:03:07 - reddit_service - DEBUG - ⏬ Загружено: 76.0%
+2025-06-26 04:03:07 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-26 04:03:07 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\p8r52polz29f1.jpeg (0.37 MB)
+2025-06-26 04:03:07 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 2
+2025-06-26 04:03:07 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lk8ewo - Shadowheart forgot her panties! (Maidcousin)...
+2025-06-26 04:03:07 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/ts0ykvmeb39f1.jpeg
+2025-06-26 04:03:07 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/ts0ykvmeb39f1.jpeg
+2025-06-26 04:03:07 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/ts0ykvmeb39f1.jpeg
+2025-06-26 04:03:08 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-26 04:03:08 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/ts0ykvmeb39f1.jpeg
+2025-06-26 04:03:08 - reddit_service - INFO - 💾 Сохраняем как: downloads\ts0ykvmeb39f1.jpeg
+2025-06-26 04:03:08 - reddit_service - DEBUG - ⏬ Загружено: 25.2%
+2025-06-26 04:03:08 - reddit_service - DEBUG - ⏬ Загружено: 50.4%
+2025-06-26 04:03:08 - reddit_service - DEBUG - ⏬ Загружено: 75.7%
+2025-06-26 04:03:08 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-26 04:03:08 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\ts0ykvmeb39f1.jpeg (0.59 MB)
+2025-06-26 04:03:08 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-26 04:03:08 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-26 04:03:08 - reddit_service - INFO - 📊 Получено 3 медиа-постов из 3 всего
+2025-06-26 04:03:08 - orchestrator - INFO - 📰 Пост #1/3: t3_1lkfh73
+2025-06-26 04:03:08 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-26 04:03:08 - orchestrator - INFO - 🖼️ Обрабатываем изображение...
+2025-06-26 04:03:08 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\media_0.jpg
+2025-06-26 04:03:08 - orchestrator - INFO - 📊 Размер изображения: 0.01 МБ
+2025-06-26 04:03:08 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-26 04:03:10 - root - ERROR - interrogate_deepbooru error: Cannot connect to host 127.0.0.1:7860 ssl:default [Удаленный компьютер отклонил это сетевое подключение]
+2025-06-26 04:03:10 - orchestrator - INFO - 🏷️ Получено 0 тегов через none
+2025-06-26 04:03:10 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-26 17:01:09 - orchestrator - INFO - 📝 Логирование настроено. Логи сохраняются в logs/tgposter.log
+2025-06-26 17:01:10 - orchestrator - INFO - 🚀 Запуск бота TgPoster
+2025-06-26 17:01:10 - orchestrator - INFO - 📋 Конфигурация:
+2025-06-26 17:01:10 - orchestrator - INFO -    - Subreddits (3): r/hentai, r/ecchi, r/muchihentai
+2025-06-26 17:01:10 - orchestrator - INFO -    - Интервал: 120 минут
+2025-06-26 17:01:10 - orchestrator - INFO -    - Tagger: выключен
+2025-06-26 17:01:10 - orchestrator - INFO -    - LM Model: saiga_nemo_12b_gguf
+2025-06-26 17:01:10 - orchestrator - INFO - 🗄️ Инициализация базы данных...
+2025-06-26 17:01:10 - orchestrator - INFO - ▶️ Запуск первого цикла обработки...
+2025-06-26 17:01:10 - orchestrator - INFO - ============================================================
+2025-06-26 17:01:10 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-26 17:01:10 - orchestrator - INFO - ============================================================
+2025-06-26 17:01:10 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-26 17:01:10 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-26 17:01:10 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-26 17:01:10 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lkrat5 - Jane Doe had a rough day...
+2025-06-26 17:01:10 - reddit_service - DEBUG - 🖼️ Обнаружена галерея изображений
+2025-06-26 17:01:10 - reddit_service - DEBUG - 📸 Количество изображений в галерее: 4
+2025-06-26 17:01:10 - reddit_service - DEBUG - 🔗 URL изображения #0: https://i.redd.it/jlu3ioavb79f1.jpg
+2025-06-26 17:01:10 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/jlu3ioavb79f1.jpg
+2025-06-26 17:01:10 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/jlu3ioavb79f1.jpg
+2025-06-26 17:01:11 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-26 17:01:11 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/jlu3ioavb79f1.jpg
+2025-06-26 17:01:11 - reddit_service - INFO - 💾 Сохраняем как: downloads\jlu3ioavb79f1.jpeg
+2025-06-26 17:01:11 - reddit_service - DEBUG - ⏬ Загружено: 25.2%
+2025-06-26 17:01:11 - reddit_service - DEBUG - ⏬ Загружено: 50.4%
+2025-06-26 17:01:11 - reddit_service - DEBUG - ⏬ Загружено: 75.6%
+2025-06-26 17:01:11 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-26 17:01:11 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\jlu3ioavb79f1.jpeg (0.19 MB)
+2025-06-26 17:01:11 - reddit_service - DEBUG - 🔗 URL изображения #1: https://i.redd.it/3ppmsmcvb79f1.jpg
+2025-06-26 17:01:11 - reddit_service - INFO - 📥 Начинаем скачивание медиа #1 с URL: https://i.redd.it/3ppmsmcvb79f1.jpg
+2025-06-26 17:01:11 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/3ppmsmcvb79f1.jpg
+2025-06-26 17:01:11 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-26 17:01:11 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/3ppmsmcvb79f1.jpg
+2025-06-26 17:01:12 - reddit_service - INFO - 💾 Сохраняем как: downloads\3ppmsmcvb79f1.jpeg
+2025-06-26 17:01:12 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-26 17:01:12 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\3ppmsmcvb79f1.jpeg (0.20 MB)
+2025-06-26 17:01:12 - reddit_service - DEBUG - 🔗 URL изображения #2: https://i.redd.it/jbcwm0evb79f1.jpg
+2025-06-26 17:01:12 - reddit_service - INFO - 📥 Начинаем скачивание медиа #2 с URL: https://i.redd.it/jbcwm0evb79f1.jpg
+2025-06-26 17:01:12 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/jbcwm0evb79f1.jpg
+2025-06-26 17:01:12 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-26 17:01:12 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/jbcwm0evb79f1.jpg
+2025-06-26 17:01:12 - reddit_service - INFO - 💾 Сохраняем как: downloads\jbcwm0evb79f1.jpeg
+2025-06-26 17:01:12 - reddit_service - DEBUG - ⏬ Загружено: 26.0%
+2025-06-26 17:01:12 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-26 17:01:12 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\jbcwm0evb79f1.jpeg (0.09 MB)
+2025-06-26 17:01:12 - reddit_service - DEBUG - 🔗 URL изображения #3: https://i.redd.it/niv5bwevb79f1.jpg
+2025-06-26 17:01:12 - reddit_service - INFO - 📥 Начинаем скачивание медиа #3 с URL: https://i.redd.it/niv5bwevb79f1.jpg
+2025-06-26 17:01:12 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/niv5bwevb79f1.jpg
+2025-06-26 17:01:12 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-26 17:01:12 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/niv5bwevb79f1.jpg
+2025-06-26 17:01:13 - reddit_service - INFO - 💾 Сохраняем как: downloads\niv5bwevb79f1.jpeg
+2025-06-26 17:01:13 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-26 17:01:13 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\niv5bwevb79f1.jpeg (0.09 MB)
+2025-06-26 17:01:13 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 4
+2025-06-26 17:01:13 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lkn8aq - Lusamine and Wicke getting a nice and hard workout...
+2025-06-26 17:01:13 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/wx1hxaica69f1.jpeg
+2025-06-26 17:01:13 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/wx1hxaica69f1.jpeg
+2025-06-26 17:01:13 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/wx1hxaica69f1.jpeg
+2025-06-26 17:01:13 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-26 17:01:13 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/wx1hxaica69f1.jpeg
+2025-06-26 17:01:13 - reddit_service - INFO - 💾 Сохраняем как: downloads\wx1hxaica69f1.jpeg
+2025-06-26 17:01:13 - reddit_service - DEBUG - ⏬ Загружено: 25.8%
+2025-06-26 17:01:13 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-26 17:01:13 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\wx1hxaica69f1.jpeg (0.12 MB)
+2025-06-26 17:01:13 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-26 17:01:13 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-26 17:01:13 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lkqr0g - What happens when a pirate girl is defeated...
+2025-06-26 17:01:13 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/ocbhyzdd679f1.jpeg
+2025-06-26 17:01:13 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/ocbhyzdd679f1.jpeg
+2025-06-26 17:01:13 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/ocbhyzdd679f1.jpeg
+2025-06-26 17:01:14 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-26 17:01:14 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/ocbhyzdd679f1.jpeg
+2025-06-26 17:01:14 - reddit_service - INFO - 💾 Сохраняем как: downloads\ocbhyzdd679f1.jpeg
+2025-06-26 17:01:14 - reddit_service - DEBUG - ⏬ Загружено: 0.4%
+2025-06-26 17:01:14 - reddit_service - DEBUG - ⏬ Загружено: 0.7%
+2025-06-26 17:01:14 - reddit_service - DEBUG - ⏬ Загружено: 25.2%
+2025-06-26 17:01:14 - reddit_service - DEBUG - ⏬ Загружено: 25.5%
+2025-06-26 17:01:14 - reddit_service - DEBUG - ⏬ Загружено: 25.9%
+2025-06-26 17:01:14 - reddit_service - DEBUG - ⏬ Загружено: 50.3%
+2025-06-26 17:01:14 - reddit_service - DEBUG - ⏬ Загружено: 50.7%
+2025-06-26 17:01:14 - reddit_service - DEBUG - ⏬ Загружено: 75.1%
+2025-06-26 17:01:14 - reddit_service - DEBUG - ⏬ Загружено: 75.5%
+2025-06-26 17:01:14 - reddit_service - DEBUG - ⏬ Загружено: 75.8%
+2025-06-26 17:01:14 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-26 17:01:14 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\ocbhyzdd679f1.jpeg (2.17 MB)
+2025-06-26 17:01:14 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-26 17:01:14 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-26 17:01:14 - reddit_service - INFO - 📊 Получено 3 медиа-постов из 3 всего
+2025-06-26 17:01:14 - orchestrator - INFO - 📰 Пост #1/3: t3_1lkrat5
+2025-06-26 17:01:14 - orchestrator - INFO - 📋 Тип: gallery, файлов: 4
+2025-06-26 17:01:14 - orchestrator - INFO - 🖼️ Обрабатываем галерею...
+2025-06-26 17:01:14 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\jlu3ioavb79f1.jpeg
+2025-06-26 17:01:14 - orchestrator - INFO - 📊 Размер изображения: 0.19 МБ
+2025-06-26 17:01:14 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-26 17:01:16 - orchestrator - INFO - 🏷️ Получено 8 тегов через deepdanbooru
+2025-06-26 17:01:16 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-26 17:02:32 - root - INFO - Сгенерированное описание (236 симв.): Мое тело пылает. Эта короткая ткань на ягодицах словно раздувается, жаждущая прикосновений. Пальцы так и норовят коснуться своего пульсирующего влагалища, уже такого мокрого... Хочется, чтобы меня сейчас, здесь и немедленно... Трахнули.
+2025-06-26 17:02:32 - orchestrator - INFO - ✍️ Описание сгенерировано: 236 символов
+2025-06-26 17:02:32 - orchestrator - INFO - 🏷️ После фильтрации: 3 тегов из 8
+2025-06-26 17:02:32 - orchestrator - INFO - 📤 Отправляем галерею из 4 изображений...
+2025-06-26 17:02:32 - telegram_service - INFO - 📤 Начинаем отправку медиа-группы из 4 элементов
+2025-06-26 17:02:32 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.19 МБ
+2025-06-26 17:02:32 - telegram_service - DEBUG -    📏 Изображение #1: Размеры 1080x1637 корректны
+2025-06-26 17:02:32 - telegram_service - DEBUG -    📸 Изображение #1: 0.19 МБ
+2025-06-26 17:02:32 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.20 МБ
+2025-06-26 17:02:32 - telegram_service - DEBUG -    📏 Изображение #2: Размеры 1050x1485 корректны
+2025-06-26 17:02:32 - telegram_service - DEBUG -    📸 Изображение #2: 0.20 МБ
+2025-06-26 17:02:32 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.09 МБ
+2025-06-26 17:02:32 - telegram_service - DEBUG -    📏 Изображение #3: Размеры 640x905 корректны
+2025-06-26 17:02:32 - telegram_service - DEBUG -    📸 Изображение #3: 0.09 МБ
+2025-06-26 17:02:32 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.09 МБ
+2025-06-26 17:02:32 - telegram_service - DEBUG -    📏 Изображение #4: Размеры 640x905 корректны
+2025-06-26 17:02:32 - telegram_service - DEBUG -    📸 Изображение #4: 0.09 МБ
+2025-06-26 17:02:33 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7569844371:AAGfQvbxyinPggXrD89FwPUe6x4-MZp4V7U/sendMediaGroup "HTTP/1.1 200 OK"
+2025-06-26 17:02:33 - telegram_service - INFO - ✅ Медиа-группа успешно отправлена. Сообщений: 4
+2025-06-26 17:02:33 - telegram_service - DEBUG -    Message IDs: [410, 411, 412, 413]
+2025-06-26 17:02:33 - orchestrator - INFO - 💾 Сохраняем изображение #1 в БД...
+2025-06-26 17:02:33 - orchestrator - INFO - 💾 Сохраняем изображение #2 в БД...
+2025-06-26 17:02:33 - orchestrator - INFO - 💾 Сохраняем изображение #3 в БД...
+2025-06-26 17:02:33 - orchestrator - INFO - 💾 Сохраняем изображение #4 в БД...
+2025-06-26 17:02:33 - orchestrator - INFO - ✅ Reddit пост полностью обработан
+2025-06-26 17:02:33 - orchestrator - INFO - ✅ Пост #1 из Reddit r/hentai обработан успешно
+2025-06-26 17:02:33 - orchestrator - INFO - ✅ Пост из r/hentai обработан успешно
+2025-06-26 17:02:33 - orchestrator - INFO - ⏱️ Время выполнения цикла: 83.2 сек
+2025-06-26 17:02:33 - orchestrator - INFO - ============================================================
+
+2025-06-26 17:02:33 - orchestrator - INFO - ⏰ Настройка планировщика (интервал: 120 мин)...
+2025-06-26 17:02:33 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-26 17:02:33 - apscheduler.scheduler - INFO - Added job "process_cycle" to job store "default"
+2025-06-26 17:02:33 - apscheduler.scheduler - INFO - Scheduler started
+2025-06-26 17:02:33 - orchestrator - INFO - ✅ Бот запущен и работает!
+2025-06-26 17:02:33 - orchestrator - INFO - 🔄 Ожидание следующего цикла...
+
+2025-06-26 19:59:00 - apscheduler.executors.default - ERROR - Error running job 5e5a9bf3f6dd4c3a9acc27d80795f54b
+Traceback (most recent call last):
+  File "C:\Users\xxc45\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\xxc45\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 650, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\xxc45\Desktop\prjcts\TgPosteer\orchestrator.py", line 515, in main
+    await asyncio.Event().wait()
+  File "C:\Users\xxc45\AppData\Local\Programs\Python\Python311\Lib\asyncio\locks.py", line 213, in wait
+    await fut
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xxc45\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\xxc45\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xxc45\Desktop\prjcts\TgPosteer\.venv\Lib\site-packages\apscheduler\executors\asyncio.py", line 35, in callback
+    events = f.result()
+             ^^^^^^^^^^
+  File "C:\Users\xxc45\Desktop\prjcts\TgPosteer\.venv\Lib\site-packages\apscheduler\executors\base.py", line 161, in run_coroutine_job
+    async def run_coroutine_job(job, jobstore_alias, run_times, logger_name):
+asyncio.exceptions.CancelledError
+2025-06-29 00:56:22 - orchestrator - INFO - 📝 Логирование настроено. Логи сохраняются в logs/tgposter.log
+2025-06-29 00:56:23 - orchestrator - INFO - 🚀 Запуск бота TgPoster
+2025-06-29 00:56:23 - orchestrator - INFO - 📋 Конфигурация:
+2025-06-29 00:56:23 - orchestrator - INFO -    - Subreddits (3): r/hentai, r/ecchi, r/muchihentai
+2025-06-29 00:56:23 - orchestrator - INFO -    - Интервал: 120 минут
+2025-06-29 00:56:23 - orchestrator - INFO -    - Tagger: выключен
+2025-06-29 00:56:23 - orchestrator - INFO -    - LM Model: saiga_nemo_12b_gguf
+2025-06-29 00:56:23 - orchestrator - INFO - 🗄️ Инициализация базы данных...
+2025-06-29 00:56:23 - orchestrator - INFO - ▶️ Запуск первого цикла обработки...
+2025-06-29 00:56:23 - orchestrator - INFO - ============================================================
+2025-06-29 00:56:23 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-29 00:56:23 - orchestrator - INFO - ============================================================
+2025-06-29 00:56:23 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-29 00:56:23 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-29 00:56:23 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-29 00:56:23 - reddit_service - ERROR - ❌ Ошибка при запросе к Reddit API: 403 Client Error: Blocked for url: https://www.reddit.com/r/hentai.json?limit=3
+2025-06-29 00:56:23 - orchestrator - INFO - 📭 Новых медиа-постов в r/hentai не найдено
+2025-06-29 00:56:23 - orchestrator - INFO - ⚠️ Подходящих постов в r/hentai не найдено, переходим к следующему...
+2025-06-29 00:56:23 - orchestrator - INFO - 🔍 Проверяем subreddit #2/3: r/ecchi
+2025-06-29 00:56:23 - orchestrator - INFO - 🔍 Проверяем Reddit r/ecchi...
+2025-06-29 00:56:23 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/ecchi
+2025-06-29 00:56:23 - reddit_service - ERROR - ❌ Ошибка при запросе к Reddit API: 403 Client Error: Blocked for url: https://www.reddit.com/r/ecchi.json?limit=3
+2025-06-29 00:56:23 - orchestrator - INFO - 📭 Новых медиа-постов в r/ecchi не найдено
+2025-06-29 00:56:23 - orchestrator - INFO - ⚠️ Подходящих постов в r/ecchi не найдено, переходим к следующему...
+2025-06-29 00:56:23 - orchestrator - INFO - 🔍 Проверяем subreddit #3/3: r/muchihentai
+2025-06-29 00:56:23 - orchestrator - INFO - 🔍 Проверяем Reddit r/muchihentai...
+2025-06-29 00:56:23 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/muchihentai
+2025-06-29 00:56:24 - reddit_service - ERROR - ❌ Ошибка при запросе к Reddit API: 403 Client Error: Blocked for url: https://www.reddit.com/r/muchihentai.json?limit=3
+2025-06-29 00:56:24 - orchestrator - INFO - 📭 Новых медиа-постов в r/muchihentai не найдено
+2025-06-29 00:56:24 - orchestrator - INFO - ⚠️ Подходящих постов в r/muchihentai не найдено, переходим к следующему...
+2025-06-29 00:56:24 - orchestrator - INFO - 📭 Ни один из 3 subreddit не дал подходящих постов
+2025-06-29 00:56:24 - orchestrator - INFO - 🔄 Переходим к fallback источнику - waifu.fm...
+2025-06-29 00:56:24 - orchestrator - INFO - 📊 Получено 1 изображений от waifu.fm
+2025-06-29 00:56:24 - orchestrator - INFO - 📥 Скачиваем изображение #1: https://cdn.waifu.im/7078.jpg...
+2025-06-29 00:56:25 - orchestrator - INFO - 📊 Размер изображения: 0.49 МБ
+2025-06-29 00:56:25 - orchestrator - INFO - 🔮 Анализируем через AI...
+2025-06-29 00:56:31 - orchestrator - INFO - 📝 Логирование настроено. Логи сохраняются в logs/tgposter.log
+2025-06-29 00:56:31 - orchestrator - INFO - 🚀 Запуск бота TgPoster
+2025-06-29 00:56:31 - orchestrator - INFO - 📋 Конфигурация:
+2025-06-29 00:56:31 - orchestrator - INFO -    - Subreddits (3): r/hentai, r/ecchi, r/muchihentai
+2025-06-29 00:56:31 - orchestrator - INFO -    - Интервал: 120 минут
+2025-06-29 00:56:31 - orchestrator - INFO -    - Tagger: выключен
+2025-06-29 00:56:31 - orchestrator - INFO -    - LM Model: saiga_nemo_12b_gguf
+2025-06-29 00:56:31 - orchestrator - INFO - 🗄️ Инициализация базы данных...
+2025-06-29 00:56:31 - orchestrator - INFO - ▶️ Запуск первого цикла обработки...
+2025-06-29 00:56:31 - orchestrator - INFO - ============================================================
+2025-06-29 00:56:31 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-29 00:56:31 - orchestrator - INFO - ============================================================
+2025-06-29 00:56:31 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-29 00:56:31 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-29 00:56:31 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-29 00:56:31 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lmojfs - Nah, that meeting can wait...
+2025-06-29 00:56:31 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/mhopg02oko9f1.jpeg
+2025-06-29 00:56:31 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/mhopg02oko9f1.jpeg
+2025-06-29 00:56:31 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/mhopg02oko9f1.jpeg
+2025-06-29 00:56:32 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 00:56:32 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/mhopg02oko9f1.jpeg
+2025-06-29 00:56:32 - reddit_service - INFO - 💾 Сохраняем как: downloads\mhopg02oko9f1.jpeg
+2025-06-29 00:56:32 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-29 00:56:32 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\mhopg02oko9f1.jpeg (0.44 MB)
+2025-06-29 00:56:32 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-29 00:56:32 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-29 00:56:32 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lmqruf - Have sex with Leona....
+2025-06-29 00:56:32 - reddit_service - DEBUG - 🖼️ Обнаружена галерея изображений
+2025-06-29 00:56:32 - reddit_service - DEBUG - 📸 Количество изображений в галерее: 4
+2025-06-29 00:56:32 - reddit_service - DEBUG - 🔗 URL изображения #0: https://i.redd.it/q95w47ji1p9f1.jpg
+2025-06-29 00:56:32 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/q95w47ji1p9f1.jpg
+2025-06-29 00:56:32 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/q95w47ji1p9f1.jpg
+2025-06-29 00:56:47 - reddit_service - ERROR - ❌ Ошибка при скачивании медиа: HTTPSConnectionPool(host='i.redd.it', port=443): Read timed out. (read timeout=15)
+2025-06-29 00:56:47 - reddit_service - ERROR - ❌ Не удалось скачать изображение #0: HTTPSConnectionPool(host='i.redd.it', port=443): Read timed out. (read timeout=15)
+2025-06-29 00:56:47 - reddit_service - DEBUG - 🔗 URL изображения #1: https://i.redd.it/caoqudji1p9f1.jpg
+2025-06-29 00:56:47 - reddit_service - INFO - 📥 Начинаем скачивание медиа #1 с URL: https://i.redd.it/caoqudji1p9f1.jpg
+2025-06-29 00:56:47 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/caoqudji1p9f1.jpg
+2025-06-29 00:57:02 - reddit_service - ERROR - ❌ Ошибка при скачивании медиа: HTTPSConnectionPool(host='i.redd.it', port=443): Read timed out. (read timeout=15)
+2025-06-29 00:57:02 - reddit_service - ERROR - ❌ Не удалось скачать изображение #1: HTTPSConnectionPool(host='i.redd.it', port=443): Read timed out. (read timeout=15)
+2025-06-29 00:57:02 - reddit_service - DEBUG - 🔗 URL изображения #2: https://i.redd.it/tv5p7cji1p9f1.jpg
+2025-06-29 00:57:02 - reddit_service - INFO - 📥 Начинаем скачивание медиа #2 с URL: https://i.redd.it/tv5p7cji1p9f1.jpg
+2025-06-29 00:57:02 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/tv5p7cji1p9f1.jpg
+2025-06-29 00:57:03 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 00:57:03 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/tv5p7cji1p9f1.jpg
+2025-06-29 00:57:03 - reddit_service - INFO - 💾 Сохраняем как: downloads\tv5p7cji1p9f1.jpeg
+2025-06-29 00:57:03 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-29 00:57:03 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\tv5p7cji1p9f1.jpeg (0.07 MB)
+2025-06-29 00:57:03 - reddit_service - DEBUG - 🔗 URL изображения #3: https://i.redd.it/tjy2mbji1p9f1.jpg
+2025-06-29 00:57:03 - reddit_service - INFO - 📥 Начинаем скачивание медиа #3 с URL: https://i.redd.it/tjy2mbji1p9f1.jpg
+2025-06-29 00:57:03 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/tjy2mbji1p9f1.jpg
+2025-06-29 00:57:03 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 00:57:03 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/tjy2mbji1p9f1.jpg
+2025-06-29 00:57:04 - reddit_service - INFO - 💾 Сохраняем как: downloads\tjy2mbji1p9f1.jpeg
+2025-06-29 00:57:10 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-29 00:57:10 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\tjy2mbji1p9f1.jpeg (0.12 MB)
+2025-06-29 00:57:10 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 2
+2025-06-29 00:57:10 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lmvdp1 - Summer's getting hotter...
+2025-06-29 00:57:10 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://www.redgifs.com/watch/wideglumumbrellabird
+2025-06-29 00:57:10 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://www.redgifs.com/watch/wideglumumbrellabird
+2025-06-29 00:57:10 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://www.redgifs.com/watch/wideglumumbrellabird
+2025-06-29 00:57:11 - reddit_service - DEBUG - 📋 Content-Type: text/html
+2025-06-29 00:57:11 - reddit_service - DEBUG - 🌐 Обнаружен HTML, парсим страницу...
+2025-06-29 00:57:11 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://www.redgifs.com/watch/wideglumumbrellabird
+2025-06-29 00:57:11 - reddit_service - INFO - 💾 Сохраняем как: downloads\media_0.jpg
+2025-06-29 00:57:11 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\media_0.jpg (0.01 MB)
+2025-06-29 00:57:11 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-29 00:57:11 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-29 00:57:11 - reddit_service - INFO - 📊 Получено 3 медиа-постов из 3 всего
+2025-06-29 00:57:11 - orchestrator - INFO - 📰 Пост #1/3: t3_1lmojfs
+2025-06-29 00:57:11 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-29 00:57:11 - orchestrator - INFO - 🖼️ Обрабатываем изображение...
+2025-06-29 00:57:11 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\mhopg02oko9f1.jpeg
+2025-06-29 00:57:11 - orchestrator - INFO - 📊 Размер изображения: 0.44 МБ
+2025-06-29 00:57:11 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-29 00:57:11 - orchestrator - INFO - 🏷️ Получено 32 тегов через deepdanbooru
+2025-06-29 00:57:11 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-29 00:58:39 - root - INFO - Сгенерированное описание (154 симв.): Мое сердце колотится в такт каждому его движению... Киска пульсирует, жаждет больше. Ох, я чувствую твой член сквозь тонкую ткань — это сводит меня с ума!
+2025-06-29 00:58:39 - orchestrator - INFO - ✍️ Описание сгенерировано: 154 символов
+2025-06-29 00:58:39 - orchestrator - INFO - 🏷️ После фильтрации: 10 тегов из 32
+2025-06-29 00:58:39 - orchestrator - INFO - 📤 Отправляем одиночное изображение...
+2025-06-29 00:58:39 - telegram_service - INFO - 📤 Начинаем отправку фото, размер: 0.44 МБ
+2025-06-29 00:58:39 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.44 МБ
+2025-06-29 00:58:39 - telegram_service - INFO - 📏 Размеры 1249x2129 корректны
+2025-06-29 00:58:40 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7569844371:AAGfQvbxyinPggXrD89FwPUe6x4-MZp4V7U/sendPhoto "HTTP/1.1 200 OK"
+2025-06-29 00:58:40 - telegram_service - INFO - ✅ Фото успешно отправлено (message_id: 414)
+2025-06-29 00:58:40 - orchestrator - INFO - 💾 Сохраняем в БД...
+2025-06-29 00:58:40 - orchestrator - INFO - ✅ Reddit пост полностью обработан
+2025-06-29 00:58:40 - orchestrator - INFO - ✅ Пост #1 из Reddit r/hentai обработан успешно
+2025-06-29 00:58:40 - orchestrator - INFO - ✅ Пост из r/hentai обработан успешно
+2025-06-29 00:58:40 - orchestrator - INFO - ⏱️ Время выполнения цикла: 129.0 сек
+2025-06-29 00:58:40 - orchestrator - INFO - ============================================================
+
+2025-06-29 00:58:40 - orchestrator - INFO - ⏰ Настройка планировщика (интервал: 120 мин)...
+2025-06-29 00:58:40 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-29 00:58:40 - apscheduler.scheduler - INFO - Added job "process_cycle" to job store "default"
+2025-06-29 00:58:40 - apscheduler.scheduler - INFO - Scheduler started
+2025-06-29 00:58:40 - orchestrator - INFO - ✅ Бот запущен и работает!
+2025-06-29 00:58:40 - orchestrator - INFO - 🔄 Ожидание следующего цикла...
+
+2025-06-29 04:37:20 - orchestrator - INFO - 📝 Логирование настроено. Логи сохраняются в logs/tgposter.log
+2025-06-29 04:37:21 - orchestrator - INFO - 🚀 Запуск бота TgPoster
+2025-06-29 04:37:21 - orchestrator - INFO - 📋 Конфигурация:
+2025-06-29 04:37:21 - orchestrator - INFO -    - Subreddits (3): r/hentai, r/ecchi, r/muchihentai
+2025-06-29 04:37:21 - orchestrator - INFO -    - Интервал: 120 минут
+2025-06-29 04:37:21 - orchestrator - INFO -    - Tagger: выключен
+2025-06-29 04:37:21 - orchestrator - INFO -    - LM Model: saiga_nemo_12b_gguf
+2025-06-29 04:37:21 - orchestrator - INFO - 🗄️ Инициализация базы данных...
+2025-06-29 04:37:21 - orchestrator - INFO - ▶️ Запуск первого цикла обработки...
+2025-06-29 04:37:21 - orchestrator - INFO - ============================================================
+2025-06-29 04:37:21 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-29 04:37:21 - orchestrator - INFO - ============================================================
+2025-06-29 04:37:21 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-29 04:37:21 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-29 04:37:21 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-29 04:37:22 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lmojfs - Nah, that meeting can wait...
+2025-06-29 04:37:22 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/mhopg02oko9f1.jpeg
+2025-06-29 04:37:22 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/mhopg02oko9f1.jpeg
+2025-06-29 04:37:22 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/mhopg02oko9f1.jpeg
+2025-06-29 04:37:22 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 04:37:22 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/mhopg02oko9f1.jpeg
+2025-06-29 04:37:41 - reddit_service - ERROR - ❌ Ошибка при скачивании медиа: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+2025-06-29 04:37:41 - reddit_service - DEBUG - ❌ Не удалось скачать медиа: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+2025-06-29 04:37:41 - reddit_service - DEBUG - 📭 Пост не содержит медиа-файлов
+2025-06-29 04:37:41 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lmvdp1 - Summer's getting hotter...
+2025-06-29 04:37:41 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://www.redgifs.com/watch/wideglumumbrellabird
+2025-06-29 04:37:41 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://www.redgifs.com/watch/wideglumumbrellabird
+2025-06-29 04:37:41 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://www.redgifs.com/watch/wideglumumbrellabird
+2025-06-29 04:37:42 - reddit_service - DEBUG - 📋 Content-Type: text/html
+2025-06-29 04:37:42 - reddit_service - DEBUG - 🌐 Обнаружен HTML, парсим страницу...
+2025-06-29 04:37:42 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://www.redgifs.com/watch/wideglumumbrellabird
+2025-06-29 04:37:42 - reddit_service - INFO - 💾 Сохраняем как: downloads\media_0.jpg
+2025-06-29 04:37:42 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\media_0.jpg (0.01 MB)
+2025-06-29 04:37:42 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-29 04:37:42 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-29 04:37:42 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lmqruf - Have sex with Leona....
+2025-06-29 04:37:42 - reddit_service - DEBUG - 🖼️ Обнаружена галерея изображений
+2025-06-29 04:37:42 - reddit_service - DEBUG - 📸 Количество изображений в галерее: 4
+2025-06-29 04:37:42 - reddit_service - DEBUG - 🔗 URL изображения #0: https://i.redd.it/q95w47ji1p9f1.jpg
+2025-06-29 04:37:42 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/q95w47ji1p9f1.jpg
+2025-06-29 04:37:42 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/q95w47ji1p9f1.jpg
+2025-06-29 04:37:42 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 04:37:42 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/q95w47ji1p9f1.jpg
+2025-06-29 04:37:43 - reddit_service - INFO - 💾 Сохраняем как: downloads\q95w47ji1p9f1.jpeg
+2025-06-29 04:37:43 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-29 04:37:43 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\q95w47ji1p9f1.jpeg (0.14 MB)
+2025-06-29 04:37:43 - reddit_service - DEBUG - 🔗 URL изображения #1: https://i.redd.it/caoqudji1p9f1.jpg
+2025-06-29 04:37:43 - reddit_service - INFO - 📥 Начинаем скачивание медиа #1 с URL: https://i.redd.it/caoqudji1p9f1.jpg
+2025-06-29 04:37:43 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/caoqudji1p9f1.jpg
+2025-06-29 04:37:43 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 04:37:43 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/caoqudji1p9f1.jpg
+2025-06-29 04:37:43 - reddit_service - INFO - 💾 Сохраняем как: downloads\caoqudji1p9f1.jpeg
+2025-06-29 04:37:43 - reddit_service - DEBUG - ⏬ Загружено: 50.0%
+2025-06-29 04:37:44 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-29 04:37:44 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\caoqudji1p9f1.jpeg (0.14 MB)
+2025-06-29 04:37:44 - reddit_service - DEBUG - 🔗 URL изображения #2: https://i.redd.it/tv5p7cji1p9f1.jpg
+2025-06-29 04:37:44 - reddit_service - INFO - 📥 Начинаем скачивание медиа #2 с URL: https://i.redd.it/tv5p7cji1p9f1.jpg
+2025-06-29 04:37:44 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/tv5p7cji1p9f1.jpg
+2025-06-29 04:37:44 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 04:37:44 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/tv5p7cji1p9f1.jpg
+2025-06-29 04:37:44 - reddit_service - INFO - 💾 Сохраняем как: downloads\tv5p7cji1p9f1.jpeg
+2025-06-29 04:37:44 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-29 04:37:44 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\tv5p7cji1p9f1.jpeg (0.07 MB)
+2025-06-29 04:37:44 - reddit_service - DEBUG - 🔗 URL изображения #3: https://i.redd.it/tjy2mbji1p9f1.jpg
+2025-06-29 04:37:44 - reddit_service - INFO - 📥 Начинаем скачивание медиа #3 с URL: https://i.redd.it/tjy2mbji1p9f1.jpg
+2025-06-29 04:37:44 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/tjy2mbji1p9f1.jpg
+2025-06-29 04:37:59 - reddit_service - ERROR - ❌ Ошибка при скачивании медиа: HTTPSConnectionPool(host='i.redd.it', port=443): Read timed out. (read timeout=15)
+2025-06-29 04:37:59 - reddit_service - ERROR - ❌ Не удалось скачать изображение #3: HTTPSConnectionPool(host='i.redd.it', port=443): Read timed out. (read timeout=15)
+2025-06-29 04:37:59 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 3
+2025-06-29 04:37:59 - reddit_service - INFO - 📊 Получено 2 медиа-постов из 3 всего
+2025-06-29 04:37:59 - orchestrator - INFO - 📰 Пост #1/2: t3_1lmvdp1
+2025-06-29 04:37:59 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-29 04:37:59 - orchestrator - INFO - 🖼️ Обрабатываем изображение...
+2025-06-29 04:37:59 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\media_0.jpg
+2025-06-29 04:37:59 - orchestrator - INFO - 📊 Размер изображения: 0.01 МБ
+2025-06-29 04:37:59 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-29 04:37:59 - orchestrator - INFO - 🏷️ Получено 0 тегов через none
+2025-06-29 04:37:59 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-29 04:38:27 - root - INFO - Сгенерированное описание (172 симв.): Внутри меня бушует огненный шторм. Пальцы ног сжались, мышцы в животе тянут, словно натянутую струну. Каждая волна желания растекается по киске, делая её мокрой и жаждущей.
+2025-06-29 04:38:27 - orchestrator - INFO - ✍️ Описание сгенерировано: 172 символов
+2025-06-29 04:38:27 - orchestrator - INFO - 🏷️ После фильтрации: 0 тегов из 0
+2025-06-29 04:38:27 - orchestrator - INFO - 📤 Отправляем одиночное изображение...
+2025-06-29 04:38:27 - telegram_service - INFO - 📤 Начинаем отправку фото, размер: 0.01 МБ
+2025-06-29 04:38:27 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.01 МБ
+2025-06-29 04:38:27 - telegram_service - INFO - 📏 Ошибка при проверке размеров: cannot identify image file <_io.BytesIO object at 0x000002A37E3D59E0>
+2025-06-29 04:38:27 - telegram_service - ERROR - ❌ Изображение не прошло проверку: Ошибка при проверке размеров: cannot identify image file <_io.BytesIO object at 0x000002A37E3D59E0>
+2025-06-29 04:38:27 - orchestrator - ERROR - ❌ Ошибка при отправке изображения: Invalid image dimensions: Ошибка при проверке размеров: cannot identify image file <_io.BytesIO object at 0x000002A37E3D59E0>
+2025-06-29 04:38:27 - orchestrator - INFO - 🔄 Изображение не может быть отправлено, пропускаем этот пост
+2025-06-29 04:38:27 - orchestrator - WARNING - ⚠️ Пост #1 не удалось отправить, пробуем следующий...
+2025-06-29 04:38:27 - orchestrator - INFO - 📰 Пост #2/2: t3_1lmqruf
+2025-06-29 04:38:27 - orchestrator - INFO - 📋 Тип: gallery, файлов: 3
+2025-06-29 04:38:27 - orchestrator - INFO - 🖼️ Обрабатываем галерею...
+2025-06-29 04:38:27 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\q95w47ji1p9f1.jpeg
+2025-06-29 04:38:27 - orchestrator - INFO - 📊 Размер изображения: 0.14 МБ
+2025-06-29 04:38:27 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-29 04:38:29 - orchestrator - INFO - 🏷️ Получено 1 тегов через clip
+2025-06-29 04:38:29 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-29 04:38:47 - root - INFO - Сгенерированное описание (217 симв.): Мое сердце бешено колотится в груди. Горячая волна крови прокатилась по каждому нерву, собрала все мысли в единый, жаждущий крик. Моя киска пульсирует, требовательно сжимаясь, пронзая желанием до самого края сознания.
+2025-06-29 04:38:47 - orchestrator - INFO - ✍️ Описание сгенерировано: 217 символов
+2025-06-29 04:38:47 - orchestrator - INFO - 🏷️ После фильтрации: 1 тегов из 1
+2025-06-29 04:38:47 - orchestrator - INFO - 📤 Отправляем галерею из 3 изображений...
+2025-06-29 04:38:47 - telegram_service - INFO - 📤 Начинаем отправку медиа-группы из 3 элементов
+2025-06-29 04:38:47 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.14 МБ
+2025-06-29 04:38:47 - telegram_service - DEBUG -    📏 Изображение #1: Размеры 1280x1810 корректны
+2025-06-29 04:38:47 - telegram_service - DEBUG -    📸 Изображение #1: 0.14 МБ
+2025-06-29 04:38:47 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.14 МБ
+2025-06-29 04:38:47 - telegram_service - DEBUG -    📏 Изображение #2: Размеры 1280x1810 корректны
+2025-06-29 04:38:47 - telegram_service - DEBUG -    📸 Изображение #2: 0.14 МБ
+2025-06-29 04:38:47 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.07 МБ
+2025-06-29 04:38:47 - telegram_service - DEBUG -    📏 Изображение #3: Размеры 1280x905 корректны
+2025-06-29 04:38:47 - telegram_service - DEBUG -    📸 Изображение #3: 0.07 МБ
+2025-06-29 04:38:47 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7569844371:AAGfQvbxyinPggXrD89FwPUe6x4-MZp4V7U/sendMediaGroup "HTTP/1.1 200 OK"
+2025-06-29 04:38:47 - telegram_service - INFO - ✅ Медиа-группа успешно отправлена. Сообщений: 3
+2025-06-29 04:38:47 - telegram_service - DEBUG -    Message IDs: [415, 416, 417]
+2025-06-29 04:38:47 - orchestrator - INFO - 💾 Сохраняем изображение #1 в БД...
+2025-06-29 04:38:47 - orchestrator - INFO - 💾 Сохраняем изображение #2 в БД...
+2025-06-29 04:38:47 - orchestrator - INFO - 💾 Сохраняем изображение #3 в БД...
+2025-06-29 04:38:47 - orchestrator - INFO - ✅ Reddit пост полностью обработан
+2025-06-29 04:38:47 - orchestrator - INFO - ✅ Пост #2 из Reddit r/hentai обработан успешно
+2025-06-29 04:38:47 - orchestrator - INFO - ✅ Пост из r/hentai обработан успешно
+2025-06-29 04:38:47 - orchestrator - INFO - ⏱️ Время выполнения цикла: 86.2 сек
+2025-06-29 04:38:47 - orchestrator - INFO - ============================================================
+
+2025-06-29 04:38:47 - orchestrator - INFO - ⏰ Настройка планировщика (интервал: 120 мин)...
+2025-06-29 04:38:47 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-29 04:38:47 - apscheduler.scheduler - INFO - Added job "process_cycle" to job store "default"
+2025-06-29 04:38:47 - apscheduler.scheduler - INFO - Scheduler started
+2025-06-29 04:38:47 - orchestrator - INFO - ✅ Бот запущен и работает!
+2025-06-29 04:38:47 - orchestrator - INFO - 🔄 Ожидание следующего цикла...
+
+2025-06-29 06:38:47 - apscheduler.executors.default - INFO - Running job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-29 08:38:47 MSK)" (scheduled at 2025-06-29 06:38:47.955726+03:00)
+2025-06-29 06:38:47 - orchestrator - INFO - ============================================================
+2025-06-29 06:38:47 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-29 06:38:47 - orchestrator - INFO - ============================================================
+2025-06-29 06:38:47 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-29 06:38:47 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-29 06:38:47 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-29 06:38:48 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1ln1287 - An Ideal Date (Stelle, Aglaea)...
+2025-06-29 06:38:48 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/7n78a3wjbr9f1.jpeg
+2025-06-29 06:38:48 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/7n78a3wjbr9f1.jpeg
+2025-06-29 06:38:48 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/7n78a3wjbr9f1.jpeg
+2025-06-29 06:38:48 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 06:38:48 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/7n78a3wjbr9f1.jpeg
+2025-06-29 06:38:49 - reddit_service - INFO - 💾 Сохраняем как: downloads\7n78a3wjbr9f1.jpeg
+2025-06-29 06:38:49 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-29 06:38:49 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\7n78a3wjbr9f1.jpeg (0.19 MB)
+2025-06-29 06:38:49 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-29 06:38:49 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-29 06:38:49 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lmvdp1 - Summer's getting hotter...
+2025-06-29 06:38:49 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://www.redgifs.com/watch/wideglumumbrellabird
+2025-06-29 06:38:49 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://www.redgifs.com/watch/wideglumumbrellabird
+2025-06-29 06:38:49 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://www.redgifs.com/watch/wideglumumbrellabird
+2025-06-29 06:38:49 - reddit_service - DEBUG - 📋 Content-Type: text/html
+2025-06-29 06:38:49 - reddit_service - DEBUG - 🌐 Обнаружен HTML, парсим страницу...
+2025-06-29 06:38:49 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://www.redgifs.com/watch/wideglumumbrellabird
+2025-06-29 06:38:49 - reddit_service - INFO - 💾 Сохраняем как: downloads\media_0.jpg
+2025-06-29 06:38:49 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\media_0.jpg (0.01 MB)
+2025-06-29 06:38:49 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-29 06:38:49 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-29 06:38:49 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lmojfs - Nah, that meeting can wait...
+2025-06-29 06:38:49 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/mhopg02oko9f1.jpeg
+2025-06-29 06:38:49 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/mhopg02oko9f1.jpeg
+2025-06-29 06:38:49 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/mhopg02oko9f1.jpeg
+2025-06-29 06:38:50 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 06:38:50 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/mhopg02oko9f1.jpeg
+2025-06-29 06:38:50 - reddit_service - INFO - 💾 Сохраняем как: downloads\mhopg02oko9f1.jpeg
+2025-06-29 06:38:50 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-29 06:38:50 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\mhopg02oko9f1.jpeg (0.44 MB)
+2025-06-29 06:38:50 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-29 06:38:50 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-29 06:38:50 - reddit_service - INFO - 📊 Получено 3 медиа-постов из 3 всего
+2025-06-29 06:38:50 - orchestrator - INFO - 📰 Пост #1/3: t3_1ln1287
+2025-06-29 06:38:50 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-29 06:38:50 - orchestrator - INFO - 🖼️ Обрабатываем изображение...
+2025-06-29 06:38:50 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\7n78a3wjbr9f1.jpeg
+2025-06-29 06:38:50 - orchestrator - INFO - 📊 Размер изображения: 0.19 МБ
+2025-06-29 06:38:50 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-29 06:38:52 - orchestrator - INFO - 🏷️ Получено 1 тегов через clip
+2025-06-29 06:38:52 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-29 06:39:17 - root - INFO - Сгенерированное описание (217 симв.): Я - это огонь, горячая волна, пробегающая по венам. Каждый толчок внутри - словно молния, разрядка от заряженных электричеством нервов. Мне так жарко... Киска пульсирует, жаждущая его прикосновения, влажная и готовая.
+2025-06-29 06:39:17 - orchestrator - INFO - ✍️ Описание сгенерировано: 217 символов
+2025-06-29 06:39:17 - orchestrator - INFO - 🏷️ После фильтрации: 1 тегов из 1
+2025-06-29 06:39:17 - orchestrator - INFO - 📤 Отправляем одиночное изображение...
+2025-06-29 06:39:17 - telegram_service - INFO - 📤 Начинаем отправку фото, размер: 0.19 МБ
+2025-06-29 06:39:17 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.19 МБ
+2025-06-29 06:39:17 - telegram_service - INFO - 📏 Размеры 800x1168 корректны
+2025-06-29 06:39:18 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7569844371:AAGfQvbxyinPggXrD89FwPUe6x4-MZp4V7U/sendPhoto "HTTP/1.1 200 OK"
+2025-06-29 06:39:18 - telegram_service - INFO - ✅ Фото успешно отправлено (message_id: 418)
+2025-06-29 06:39:18 - orchestrator - INFO - 💾 Сохраняем в БД...
+2025-06-29 06:39:18 - orchestrator - INFO - ✅ Reddit пост полностью обработан
+2025-06-29 06:39:18 - orchestrator - INFO - ✅ Пост #1 из Reddit r/hentai обработан успешно
+2025-06-29 06:39:18 - orchestrator - INFO - ✅ Пост из r/hentai обработан успешно
+2025-06-29 06:39:18 - orchestrator - INFO - ⏱️ Время выполнения цикла: 30.1 сек
+2025-06-29 06:39:18 - orchestrator - INFO - ============================================================
+
+2025-06-29 06:39:18 - apscheduler.executors.default - INFO - Job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-29 08:38:47 MSK)" executed successfully
+2025-06-29 08:38:47 - apscheduler.executors.default - INFO - Running job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-29 10:38:47 MSK)" (scheduled at 2025-06-29 08:38:47.955726+03:00)
+2025-06-29 08:38:47 - orchestrator - INFO - ============================================================
+2025-06-29 08:38:47 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-29 08:38:47 - orchestrator - INFO - ============================================================
+2025-06-29 08:38:47 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-29 08:38:47 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-29 08:38:47 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-29 08:38:48 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1ln49rl - Feeling horny on beach...
+2025-06-29 08:38:48 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/lkdsp4206s9f1.jpeg
+2025-06-29 08:38:48 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/lkdsp4206s9f1.jpeg
+2025-06-29 08:38:48 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/lkdsp4206s9f1.jpeg
+2025-06-29 08:38:48 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 08:38:48 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/lkdsp4206s9f1.jpeg
+2025-06-29 08:38:48 - reddit_service - INFO - 💾 Сохраняем как: downloads\lkdsp4206s9f1.jpeg
+2025-06-29 08:38:49 - reddit_service - DEBUG - ⏬ Загружено: 25.7%
+2025-06-29 08:38:49 - reddit_service - DEBUG - ⏬ Загружено: 75.5%
+2025-06-29 08:38:49 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-29 08:38:49 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\lkdsp4206s9f1.jpeg (0.49 MB)
+2025-06-29 08:38:49 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-29 08:38:49 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-29 08:38:49 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1ln1287 - An Ideal Date (Stelle, Aglaea)...
+2025-06-29 08:38:49 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/7n78a3wjbr9f1.jpeg
+2025-06-29 08:38:49 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/7n78a3wjbr9f1.jpeg
+2025-06-29 08:38:49 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/7n78a3wjbr9f1.jpeg
+2025-06-29 08:38:49 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 08:38:49 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/7n78a3wjbr9f1.jpeg
+2025-06-29 08:39:08 - reddit_service - ERROR - ❌ Ошибка при скачивании медиа: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+2025-06-29 08:39:08 - reddit_service - DEBUG - ❌ Не удалось скачать медиа: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+2025-06-29 08:39:08 - reddit_service - DEBUG - 📭 Пост не содержит медиа-файлов
+2025-06-29 08:39:08 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lmvdp1 - Summer's getting hotter...
+2025-06-29 08:39:08 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://www.redgifs.com/watch/wideglumumbrellabird
+2025-06-29 08:39:08 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://www.redgifs.com/watch/wideglumumbrellabird
+2025-06-29 08:39:08 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://www.redgifs.com/watch/wideglumumbrellabird
+2025-06-29 08:39:09 - reddit_service - DEBUG - 📋 Content-Type: text/html
+2025-06-29 08:39:09 - reddit_service - DEBUG - 🌐 Обнаружен HTML, парсим страницу...
+2025-06-29 08:39:09 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://www.redgifs.com/watch/wideglumumbrellabird
+2025-06-29 08:39:09 - reddit_service - INFO - 💾 Сохраняем как: downloads\media_0.jpg
+2025-06-29 08:39:09 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\media_0.jpg (0.01 MB)
+2025-06-29 08:39:09 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-29 08:39:09 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-29 08:39:09 - reddit_service - INFO - 📊 Получено 2 медиа-постов из 3 всего
+2025-06-29 08:39:09 - orchestrator - INFO - 📰 Пост #1/2: t3_1ln49rl
+2025-06-29 08:39:09 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-29 08:39:09 - orchestrator - INFO - 🖼️ Обрабатываем изображение...
+2025-06-29 08:39:09 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\lkdsp4206s9f1.jpeg
+2025-06-29 08:39:09 - orchestrator - INFO - 📊 Размер изображения: 0.49 МБ
+2025-06-29 08:39:09 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-29 08:39:20 - orchestrator - INFO - 🏷️ Получено 1 тегов через clip
+2025-06-29 08:39:20 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-29 08:39:43 - root - INFO - Сгенерированное описание (209 симв.): Я - лишь пылающий клубок нервов и страсти. Член внутри меня пульсирует, словно сердце, раскалённое до предела... Каждое движение отражается в каждой клеточке, прокатывается волной удовольствия по позвоночнику.
+2025-06-29 08:39:43 - orchestrator - INFO - ✍️ Описание сгенерировано: 209 символов
+2025-06-29 08:39:43 - orchestrator - INFO - 🏷️ После фильтрации: 1 тегов из 1
+2025-06-29 08:39:43 - orchestrator - INFO - 📤 Отправляем одиночное изображение...
+2025-06-29 08:39:43 - telegram_service - INFO - 📤 Начинаем отправку фото, размер: 0.49 МБ
+2025-06-29 08:39:43 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.49 МБ
+2025-06-29 08:39:43 - telegram_service - INFO - 📏 Размеры 1062x1717 корректны
+2025-06-29 08:39:44 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7569844371:AAGfQvbxyinPggXrD89FwPUe6x4-MZp4V7U/sendPhoto "HTTP/1.1 200 OK"
+2025-06-29 08:39:44 - telegram_service - INFO - ✅ Фото успешно отправлено (message_id: 419)
+2025-06-29 08:39:44 - orchestrator - INFO - 💾 Сохраняем в БД...
+2025-06-29 08:39:44 - orchestrator - INFO - ✅ Reddit пост полностью обработан
+2025-06-29 08:39:44 - orchestrator - INFO - ✅ Пост #1 из Reddit r/hentai обработан успешно
+2025-06-29 08:39:44 - orchestrator - INFO - ✅ Пост из r/hentai обработан успешно
+2025-06-29 08:39:44 - orchestrator - INFO - ⏱️ Время выполнения цикла: 56.8 сек
+2025-06-29 08:39:44 - orchestrator - INFO - ============================================================
+
+2025-06-29 08:39:44 - apscheduler.executors.default - INFO - Job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-29 10:38:47 MSK)" executed successfully
+2025-06-29 10:38:47 - apscheduler.executors.default - INFO - Running job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-29 12:38:47 MSK)" (scheduled at 2025-06-29 10:38:47.955726+03:00)
+2025-06-29 10:38:47 - orchestrator - INFO - ============================================================
+2025-06-29 10:38:47 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-29 10:38:47 - orchestrator - INFO - ============================================================
+2025-06-29 10:38:47 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-29 10:38:47 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-29 10:38:47 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-29 10:38:48 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1ln49rl - Feeling horny on beach...
+2025-06-29 10:38:48 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/lkdsp4206s9f1.jpeg
+2025-06-29 10:38:48 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/lkdsp4206s9f1.jpeg
+2025-06-29 10:38:48 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/lkdsp4206s9f1.jpeg
+2025-06-29 10:39:03 - reddit_service - ERROR - ❌ Ошибка при скачивании медиа: HTTPSConnectionPool(host='i.redd.it', port=443): Read timed out. (read timeout=15)
+2025-06-29 10:39:03 - reddit_service - DEBUG - ❌ Не удалось скачать медиа: HTTPSConnectionPool(host='i.redd.it', port=443): Read timed out. (read timeout=15)
+2025-06-29 10:39:03 - reddit_service - DEBUG - 📭 Пост не содержит медиа-файлов
+2025-06-29 10:39:03 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1ln1287 - An Ideal Date (Stelle, Aglaea)...
+2025-06-29 10:39:03 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/7n78a3wjbr9f1.jpeg
+2025-06-29 10:39:03 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/7n78a3wjbr9f1.jpeg
+2025-06-29 10:39:03 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/7n78a3wjbr9f1.jpeg
+2025-06-29 10:39:03 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 10:39:03 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/7n78a3wjbr9f1.jpeg
+2025-06-29 10:39:23 - reddit_service - ERROR - ❌ Ошибка при скачивании медиа: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+2025-06-29 10:39:23 - reddit_service - DEBUG - ❌ Не удалось скачать медиа: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+2025-06-29 10:39:23 - reddit_service - DEBUG - 📭 Пост не содержит медиа-файлов
+2025-06-29 10:39:23 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1ln12m4 - Just an imouto trying to cool off!...
+2025-06-29 10:39:23 - reddit_service - DEBUG - 🖼️ Обнаружена галерея изображений
+2025-06-29 10:39:23 - reddit_service - DEBUG - 📸 Количество изображений в галерее: 4
+2025-06-29 10:39:23 - reddit_service - DEBUG - 🔗 URL изображения #0: https://i.redd.it/2bi915smbr9f1.jpg
+2025-06-29 10:39:23 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/2bi915smbr9f1.jpg
+2025-06-29 10:39:23 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/2bi915smbr9f1.jpg
+2025-06-29 10:39:23 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 10:39:23 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/2bi915smbr9f1.jpg
+2025-06-29 10:39:23 - reddit_service - INFO - 💾 Сохраняем как: downloads\2bi915smbr9f1.jpeg
+2025-06-29 10:39:24 - reddit_service - DEBUG - ⏬ Загружено: 25.0%
+2025-06-29 10:39:24 - reddit_service - DEBUG - ⏬ Загружено: 50.0%
+2025-06-29 10:39:24 - reddit_service - DEBUG - ⏬ Загружено: 75.0%
+2025-06-29 10:39:24 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-29 10:39:24 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\2bi915smbr9f1.jpeg (0.22 MB)
+2025-06-29 10:39:24 - reddit_service - DEBUG - 🔗 URL изображения #1: https://i.redd.it/mhlkpcvmbr9f1.jpg
+2025-06-29 10:39:24 - reddit_service - INFO - 📥 Начинаем скачивание медиа #1 с URL: https://i.redd.it/mhlkpcvmbr9f1.jpg
+2025-06-29 10:39:24 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/mhlkpcvmbr9f1.jpg
+2025-06-29 10:39:24 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 10:39:24 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/mhlkpcvmbr9f1.jpg
+2025-06-29 10:39:24 - reddit_service - INFO - 💾 Сохраняем как: downloads\mhlkpcvmbr9f1.jpeg
+2025-06-29 10:39:24 - reddit_service - DEBUG - ⏬ Загружено: 75.7%
+2025-06-29 10:39:25 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-29 10:39:25 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\mhlkpcvmbr9f1.jpeg (0.23 MB)
+2025-06-29 10:39:25 - reddit_service - DEBUG - 🔗 URL изображения #2: https://i.redd.it/bvyymfxmbr9f1.jpg
+2025-06-29 10:39:25 - reddit_service - INFO - 📥 Начинаем скачивание медиа #2 с URL: https://i.redd.it/bvyymfxmbr9f1.jpg
+2025-06-29 10:39:25 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/bvyymfxmbr9f1.jpg
+2025-06-29 10:39:32 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 10:39:32 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/bvyymfxmbr9f1.jpg
+2025-06-29 10:39:32 - reddit_service - INFO - 💾 Сохраняем как: downloads\bvyymfxmbr9f1.jpeg
+2025-06-29 10:39:32 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-29 10:39:32 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\bvyymfxmbr9f1.jpeg (0.18 MB)
+2025-06-29 10:39:32 - reddit_service - DEBUG - 🔗 URL изображения #3: https://i.redd.it/vasit9zmbr9f1.jpg
+2025-06-29 10:39:32 - reddit_service - INFO - 📥 Начинаем скачивание медиа #3 с URL: https://i.redd.it/vasit9zmbr9f1.jpg
+2025-06-29 10:39:32 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/vasit9zmbr9f1.jpg
+2025-06-29 10:39:33 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 10:39:33 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/vasit9zmbr9f1.jpg
+2025-06-29 10:39:33 - reddit_service - INFO - 💾 Сохраняем как: downloads\vasit9zmbr9f1.jpeg
+2025-06-29 10:39:33 - reddit_service - DEBUG - ⏬ Загружено: 25.8%
+2025-06-29 10:39:33 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-29 10:39:33 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\vasit9zmbr9f1.jpeg (0.18 MB)
+2025-06-29 10:39:33 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 4
+2025-06-29 10:39:33 - reddit_service - INFO - 📊 Получено 1 медиа-постов из 3 всего
+2025-06-29 10:39:33 - orchestrator - INFO - 📰 Пост #1/1: t3_1ln12m4
+2025-06-29 10:39:33 - orchestrator - INFO - 📋 Тип: gallery, файлов: 4
+2025-06-29 10:39:33 - orchestrator - INFO - 🖼️ Обрабатываем галерею...
+2025-06-29 10:39:33 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\2bi915smbr9f1.jpeg
+2025-06-29 10:39:33 - orchestrator - INFO - 📊 Размер изображения: 0.22 МБ
+2025-06-29 10:39:33 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-29 10:39:35 - orchestrator - INFO - 🏷️ Получено 1 тегов через clip
+2025-06-29 10:39:35 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-29 10:39:59 - root - INFO - Сгенерированное описание (220 симв.): Моя киска горит, как пламя, жаждущее его. Желание растет волнами, пульсируя внизу живота, терзающим каждая секунда воздержания – ебаный ад! Мне нужно почувствовать его внутри, глубоко, чтобы член полностью заполнил меня.
+2025-06-29 10:39:59 - orchestrator - INFO - ✍️ Описание сгенерировано: 220 символов
+2025-06-29 10:39:59 - orchestrator - INFO - 🏷️ После фильтрации: 1 тегов из 1
+2025-06-29 10:39:59 - orchestrator - INFO - 📤 Отправляем галерею из 4 изображений...
+2025-06-29 10:39:59 - telegram_service - INFO - 📤 Начинаем отправку медиа-группы из 4 элементов
+2025-06-29 10:39:59 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.22 МБ
+2025-06-29 10:39:59 - telegram_service - DEBUG -    📏 Изображение #1: Размеры 1069x1500 корректны
+2025-06-29 10:39:59 - telegram_service - DEBUG -    📸 Изображение #1: 0.22 МБ
+2025-06-29 10:39:59 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.23 МБ
+2025-06-29 10:39:59 - telegram_service - DEBUG -    📏 Изображение #2: Размеры 1069x1500 корректны
+2025-06-29 10:39:59 - telegram_service - DEBUG -    📸 Изображение #2: 0.23 МБ
+2025-06-29 10:39:59 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.18 МБ
+2025-06-29 10:39:59 - telegram_service - DEBUG -    📏 Изображение #3: Размеры 1069x1500 корректны
+2025-06-29 10:39:59 - telegram_service - DEBUG -    📸 Изображение #3: 0.18 МБ
+2025-06-29 10:39:59 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.18 МБ
+2025-06-29 10:39:59 - telegram_service - DEBUG -    📏 Изображение #4: Размеры 1069x1500 корректны
+2025-06-29 10:39:59 - telegram_service - DEBUG -    📸 Изображение #4: 0.18 МБ
+2025-06-29 10:40:00 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7569844371:AAGfQvbxyinPggXrD89FwPUe6x4-MZp4V7U/sendMediaGroup "HTTP/1.1 200 OK"
+2025-06-29 10:40:00 - telegram_service - INFO - ✅ Медиа-группа успешно отправлена. Сообщений: 4
+2025-06-29 10:40:00 - telegram_service - DEBUG -    Message IDs: [420, 421, 422, 423]
+2025-06-29 10:40:00 - orchestrator - INFO - 💾 Сохраняем изображение #1 в БД...
+2025-06-29 10:40:00 - orchestrator - INFO - 💾 Сохраняем изображение #2 в БД...
+2025-06-29 10:40:00 - orchestrator - INFO - 💾 Сохраняем изображение #3 в БД...
+2025-06-29 10:40:00 - orchestrator - INFO - 💾 Сохраняем изображение #4 в БД...
+2025-06-29 10:40:00 - orchestrator - INFO - ✅ Reddit пост полностью обработан
+2025-06-29 10:40:00 - orchestrator - INFO - ✅ Пост #1 из Reddit r/hentai обработан успешно
+2025-06-29 10:40:00 - orchestrator - INFO - ✅ Пост из r/hentai обработан успешно
+2025-06-29 10:40:00 - orchestrator - INFO - ⏱️ Время выполнения цикла: 72.8 сек
+2025-06-29 10:40:00 - orchestrator - INFO - ============================================================
+
+2025-06-29 10:40:00 - apscheduler.executors.default - INFO - Job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-29 12:38:47 MSK)" executed successfully
+2025-06-29 12:38:47 - apscheduler.executors.default - INFO - Running job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-29 14:38:47 MSK)" (scheduled at 2025-06-29 12:38:47.955726+03:00)
+2025-06-29 12:38:47 - orchestrator - INFO - ============================================================
+2025-06-29 12:38:47 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-29 12:38:47 - orchestrator - INFO - ============================================================
+2025-06-29 12:38:47 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-29 12:38:47 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-29 12:38:47 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-29 12:38:48 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1ln49rl - Feeling horny on beach...
+2025-06-29 12:38:48 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/lkdsp4206s9f1.jpeg
+2025-06-29 12:38:48 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/lkdsp4206s9f1.jpeg
+2025-06-29 12:38:48 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/lkdsp4206s9f1.jpeg
+2025-06-29 12:38:48 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 12:38:48 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/lkdsp4206s9f1.jpeg
+2025-06-29 12:38:49 - reddit_service - INFO - 💾 Сохраняем как: downloads\lkdsp4206s9f1.jpeg
+2025-06-29 12:39:02 - reddit_service - DEBUG - ⏬ Загружено: 25.7%
+2025-06-29 12:39:42 - reddit_service - ERROR - ❌ Ошибка при скачивании медиа: HTTPSConnectionPool(host='i.redd.it', port=443): Read timed out.
+2025-06-29 12:39:42 - reddit_service - DEBUG - ❌ Не удалось скачать медиа: HTTPSConnectionPool(host='i.redd.it', port=443): Read timed out.
+2025-06-29 12:39:42 - reddit_service - DEBUG - 📭 Пост не содержит медиа-файлов
+2025-06-29 12:39:42 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1ln1287 - An Ideal Date (Stelle, Aglaea)...
+2025-06-29 12:39:42 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/7n78a3wjbr9f1.jpeg
+2025-06-29 12:39:42 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/7n78a3wjbr9f1.jpeg
+2025-06-29 12:39:42 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/7n78a3wjbr9f1.jpeg
+2025-06-29 12:39:43 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 12:39:43 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/7n78a3wjbr9f1.jpeg
+2025-06-29 12:39:44 - reddit_service - INFO - 💾 Сохраняем как: downloads\7n78a3wjbr9f1.jpeg
+2025-06-29 12:39:44 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-29 12:39:44 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\7n78a3wjbr9f1.jpeg (0.19 MB)
+2025-06-29 12:39:44 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-29 12:39:44 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-29 12:39:44 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1ln7cpc - Two gyaru bunny girls ready to pounce and ride the...
+2025-06-29 12:39:44 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/3e9bs57n2t9f1.jpeg
+2025-06-29 12:39:44 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/3e9bs57n2t9f1.jpeg
+2025-06-29 12:39:44 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/3e9bs57n2t9f1.jpeg
+2025-06-29 12:39:52 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 12:39:52 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/3e9bs57n2t9f1.jpeg
+2025-06-29 12:39:52 - reddit_service - INFO - 💾 Сохраняем как: downloads\3e9bs57n2t9f1.jpeg
+2025-06-29 12:39:52 - reddit_service - DEBUG - ⏬ Загружено: 25.0%
+2025-06-29 12:39:52 - reddit_service - DEBUG - ⏬ Загружено: 50.1%
+2025-06-29 12:39:52 - reddit_service - DEBUG - ⏬ Загружено: 75.1%
+2025-06-29 12:39:52 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-29 12:39:52 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\3e9bs57n2t9f1.jpeg (0.12 MB)
+2025-06-29 12:39:52 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-29 12:39:52 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-29 12:39:52 - reddit_service - INFO - 📊 Получено 2 медиа-постов из 3 всего
+2025-06-29 12:39:52 - orchestrator - INFO - 📰 Пост #1/2: t3_1ln1287
+2025-06-29 12:39:52 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-29 12:39:52 - orchestrator - INFO - ⏭️ Пост t3_1ln1287 уже был обработан ранее
+2025-06-29 12:39:52 - orchestrator - INFO - 📰 Пост #2/2: t3_1ln7cpc
+2025-06-29 12:39:52 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-29 12:39:52 - orchestrator - INFO - 🖼️ Обрабатываем изображение...
+2025-06-29 12:39:52 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\3e9bs57n2t9f1.jpeg
+2025-06-29 12:39:52 - orchestrator - INFO - 📊 Размер изображения: 0.12 МБ
+2025-06-29 12:39:52 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-29 12:39:54 - orchestrator - INFO - 🏷️ Получено 1 тегов через clip
+2025-06-29 12:39:54 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-29 12:40:17 - root - INFO - Сгенерированное описание (230 симв.): Мое тело охвачено огнём, киска пульсирует в жадном ожидании. Каждая мышца напряжена, словно перед прыжком, готовая к тому, чтобы тебя почувствовать внутри себя. Х...блядь, я теку от одной только мысли о том, как ты заполнишь меня!
+2025-06-29 12:40:17 - orchestrator - INFO - ✍️ Описание сгенерировано: 230 символов
+2025-06-29 12:40:17 - orchestrator - INFO - 🏷️ После фильтрации: 1 тегов из 1
+2025-06-29 12:40:17 - orchestrator - INFO - 📤 Отправляем одиночное изображение...
+2025-06-29 12:40:17 - telegram_service - INFO - 📤 Начинаем отправку фото, размер: 0.12 МБ
+2025-06-29 12:40:17 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.12 МБ
+2025-06-29 12:40:17 - telegram_service - INFO - 📏 Размеры 850x1325 корректны
+2025-06-29 12:40:18 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7569844371:AAGfQvbxyinPggXrD89FwPUe6x4-MZp4V7U/sendPhoto "HTTP/1.1 200 OK"
+2025-06-29 12:40:18 - telegram_service - INFO - ✅ Фото успешно отправлено (message_id: 424)
+2025-06-29 12:40:18 - orchestrator - INFO - 💾 Сохраняем в БД...
+2025-06-29 12:40:18 - orchestrator - INFO - ✅ Reddit пост полностью обработан
+2025-06-29 12:40:18 - orchestrator - INFO - ✅ Пост #2 из Reddit r/hentai обработан успешно
+2025-06-29 12:40:18 - orchestrator - INFO - ✅ Пост из r/hentai обработан успешно
+2025-06-29 12:40:18 - orchestrator - INFO - ⏱️ Время выполнения цикла: 90.1 сек
+2025-06-29 12:40:18 - orchestrator - INFO - ============================================================
+
+2025-06-29 12:40:18 - apscheduler.executors.default - INFO - Job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-29 14:38:47 MSK)" executed successfully
+2025-06-29 14:38:47 - apscheduler.executors.default - INFO - Running job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-29 16:38:47 MSK)" (scheduled at 2025-06-29 14:38:47.955726+03:00)
+2025-06-29 14:38:47 - orchestrator - INFO - ============================================================
+2025-06-29 14:38:47 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-29 14:38:47 - orchestrator - INFO - ============================================================
+2025-06-29 14:38:47 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-29 14:38:47 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-29 14:38:47 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-29 14:39:03 - reddit_service - ERROR - ❌ Ошибка при запросе к Reddit API: HTTPSConnectionPool(host='www.reddit.com', port=443): Read timed out. (read timeout=15)
+2025-06-29 14:39:03 - orchestrator - INFO - 📭 Новых медиа-постов в r/hentai не найдено
+2025-06-29 14:39:03 - orchestrator - INFO - ⚠️ Подходящих постов в r/hentai не найдено, переходим к следующему...
+2025-06-29 14:39:03 - orchestrator - INFO - 🔍 Проверяем subreddit #2/3: r/ecchi
+2025-06-29 14:39:03 - orchestrator - INFO - 🔍 Проверяем Reddit r/ecchi...
+2025-06-29 14:39:03 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/ecchi
+2025-06-29 14:39:03 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1ln3jns - Brazilian miku showing boobs...
+2025-06-29 14:39:03 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/al5ym32pyr9f1.jpeg
+2025-06-29 14:39:03 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/al5ym32pyr9f1.jpeg
+2025-06-29 14:39:03 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/al5ym32pyr9f1.jpeg
+2025-06-29 14:39:03 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 14:39:03 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/al5ym32pyr9f1.jpeg
+2025-06-29 14:39:04 - reddit_service - INFO - 💾 Сохраняем как: downloads\al5ym32pyr9f1.jpeg
+2025-06-29 14:39:04 - reddit_service - DEBUG - ⏬ Загружено: 25.4%
+2025-06-29 14:39:04 - reddit_service - DEBUG - ⏬ Загружено: 50.8%
+2025-06-29 14:39:04 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-29 14:39:04 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\al5ym32pyr9f1.jpeg (0.40 MB)
+2025-06-29 14:39:04 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-29 14:39:04 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-29 14:39:04 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1ln8v0t - Saori face down Ass up...
+2025-06-29 14:39:04 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/a2e40x90kt9f1.jpeg
+2025-06-29 14:39:04 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/a2e40x90kt9f1.jpeg
+2025-06-29 14:39:04 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/a2e40x90kt9f1.jpeg
+2025-06-29 14:39:19 - reddit_service - ERROR - ❌ Ошибка при скачивании медиа: HTTPSConnectionPool(host='i.redd.it', port=443): Read timed out. (read timeout=15)
+2025-06-29 14:39:19 - reddit_service - DEBUG - ❌ Не удалось скачать медиа: HTTPSConnectionPool(host='i.redd.it', port=443): Read timed out. (read timeout=15)
+2025-06-29 14:39:19 - reddit_service - DEBUG - 📭 Пост не содержит медиа-файлов
+2025-06-29 14:39:19 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lmxfhp - Scarlet [Nikke]...
+2025-06-29 14:39:19 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/b03uk1ssgq9f1.jpeg
+2025-06-29 14:39:19 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/b03uk1ssgq9f1.jpeg
+2025-06-29 14:39:19 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/b03uk1ssgq9f1.jpeg
+2025-06-29 14:39:34 - reddit_service - ERROR - ❌ Ошибка при скачивании медиа: HTTPSConnectionPool(host='i.redd.it', port=443): Read timed out. (read timeout=15)
+2025-06-29 14:39:34 - reddit_service - DEBUG - ❌ Не удалось скачать медиа: HTTPSConnectionPool(host='i.redd.it', port=443): Read timed out. (read timeout=15)
+2025-06-29 14:39:34 - reddit_service - DEBUG - 📭 Пост не содержит медиа-файлов
+2025-06-29 14:39:34 - reddit_service - INFO - 📊 Получено 1 медиа-постов из 3 всего
+2025-06-29 14:39:34 - orchestrator - INFO - 📰 Пост #1/1: t3_1ln3jns
+2025-06-29 14:39:34 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-29 14:39:34 - orchestrator - INFO - 🖼️ Обрабатываем изображение...
+2025-06-29 14:39:34 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\al5ym32pyr9f1.jpeg
+2025-06-29 14:39:34 - orchestrator - INFO - 📊 Размер изображения: 0.40 МБ
+2025-06-29 14:39:34 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-29 14:39:35 - orchestrator - INFO - 🏷️ Получено 1 тегов через clip
+2025-06-29 14:39:35 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-29 14:39:56 - root - INFO - Сгенерированное описание (182 симв.): Горячая волна желания накатывает внутрь, словно ударный прибой. Мой клитор пульсирует в предвкушении, каждое движение твоих пальцев там — огонь. Сжимаю бедра, пытаясь унять эту боль.
+2025-06-29 14:39:56 - orchestrator - INFO - ✍️ Описание сгенерировано: 182 символов
+2025-06-29 14:39:56 - orchestrator - INFO - 🏷️ После фильтрации: 1 тегов из 1
+2025-06-29 14:39:56 - orchestrator - INFO - 📤 Отправляем одиночное изображение...
+2025-06-29 14:39:56 - telegram_service - INFO - 📤 Начинаем отправку фото, размер: 0.40 МБ
+2025-06-29 14:39:56 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.40 МБ
+2025-06-29 14:39:56 - telegram_service - INFO - 📏 Размеры 1392x2048 корректны
+2025-06-29 14:39:57 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7569844371:AAGfQvbxyinPggXrD89FwPUe6x4-MZp4V7U/sendPhoto "HTTP/1.1 200 OK"
+2025-06-29 14:39:57 - telegram_service - INFO - ✅ Фото успешно отправлено (message_id: 425)
+2025-06-29 14:39:57 - orchestrator - INFO - 💾 Сохраняем в БД...
+2025-06-29 14:39:57 - orchestrator - INFO - ✅ Reddit пост полностью обработан
+2025-06-29 14:39:57 - orchestrator - INFO - ✅ Пост #1 из Reddit r/ecchi обработан успешно
+2025-06-29 14:39:57 - orchestrator - INFO - ✅ Пост из r/ecchi обработан успешно
+2025-06-29 14:39:57 - orchestrator - INFO - ⏱️ Время выполнения цикла: 70.0 сек
+2025-06-29 14:39:57 - orchestrator - INFO - ============================================================
+
+2025-06-29 14:39:57 - apscheduler.executors.default - INFO - Job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-29 16:38:47 MSK)" executed successfully
+2025-06-29 16:38:47 - apscheduler.executors.default - INFO - Running job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-29 18:38:47 MSK)" (scheduled at 2025-06-29 16:38:47.955726+03:00)
+2025-06-29 16:38:47 - orchestrator - INFO - ============================================================
+2025-06-29 16:38:47 - orchestrator - INFO - 🚀 НАЧАЛО НОВОГО ЦИКЛА ОБРАБОТКИ
+2025-06-29 16:38:47 - orchestrator - INFO - ============================================================
+2025-06-29 16:38:47 - orchestrator - INFO - 🔍 Проверяем subreddit #1/3: r/hentai
+2025-06-29 16:38:47 - orchestrator - INFO - 🔍 Проверяем Reddit r/hentai...
+2025-06-29 16:38:47 - reddit_service - INFO - 🔍 Получаем 3 последних постов из r/hentai
+2025-06-29 16:38:48 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1ln49rl - Feeling horny on beach...
+2025-06-29 16:38:48 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/lkdsp4206s9f1.jpeg
+2025-06-29 16:38:48 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/lkdsp4206s9f1.jpeg
+2025-06-29 16:38:48 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/lkdsp4206s9f1.jpeg
+2025-06-29 16:38:48 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 16:38:48 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/lkdsp4206s9f1.jpeg
+2025-06-29 16:39:08 - reddit_service - ERROR - ❌ Ошибка при скачивании медиа: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+2025-06-29 16:39:08 - reddit_service - DEBUG - ❌ Не удалось скачать медиа: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+2025-06-29 16:39:08 - reddit_service - DEBUG - 📭 Пост не содержит медиа-файлов
+2025-06-29 16:39:08 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1lnbrl3 - Getting caught in the act....
+2025-06-29 16:39:08 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/g9j394j1ju9f1.jpeg
+2025-06-29 16:39:08 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/g9j394j1ju9f1.jpeg
+2025-06-29 16:39:08 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/g9j394j1ju9f1.jpeg
+2025-06-29 16:39:08 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 16:39:08 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/g9j394j1ju9f1.jpeg
+2025-06-29 16:39:08 - reddit_service - INFO - 💾 Сохраняем как: downloads\g9j394j1ju9f1.jpeg
+2025-06-29 16:39:09 - reddit_service - DEBUG - ⏬ Загружено: 100.0%
+2025-06-29 16:39:09 - reddit_service - INFO - ✅ Файл успешно скачан: downloads\g9j394j1ju9f1.jpeg (0.26 MB)
+2025-06-29 16:39:09 - reddit_service - DEBUG - 📋 Тип медиа: image
+2025-06-29 16:39:09 - reddit_service - DEBUG - ✅ Пост обработан успешно. Файлов скачано: 1
+2025-06-29 16:39:09 - reddit_service - DEBUG - 📰 Обрабатываем пост: t3_1ln7cpc - Two gyaru bunny girls ready to pounce and ride the...
+2025-06-29 16:39:09 - reddit_service - DEBUG - 📎 Обычный медиа-пост: https://i.redd.it/3e9bs57n2t9f1.jpeg
+2025-06-29 16:39:09 - reddit_service - INFO - 📥 Начинаем скачивание медиа #0 с URL: https://i.redd.it/3e9bs57n2t9f1.jpeg
+2025-06-29 16:39:09 - reddit_service - DEBUG - 🔍 Выполняем GET запрос к https://i.redd.it/3e9bs57n2t9f1.jpeg
+2025-06-29 16:39:09 - reddit_service - DEBUG - 📋 Content-Type: image/jpeg
+2025-06-29 16:39:09 - reddit_service - DEBUG - ⬇️ Скачиваем файл по URL: https://i.redd.it/3e9bs57n2t9f1.jpeg
+2025-06-29 16:39:28 - reddit_service - ERROR - ❌ Ошибка при скачивании медиа: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+2025-06-29 16:39:28 - reddit_service - DEBUG - ❌ Не удалось скачать медиа: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+2025-06-29 16:39:28 - reddit_service - DEBUG - 📭 Пост не содержит медиа-файлов
+2025-06-29 16:39:28 - reddit_service - INFO - 📊 Получено 1 медиа-постов из 3 всего
+2025-06-29 16:39:28 - orchestrator - INFO - 📰 Пост #1/1: t3_1lnbrl3
+2025-06-29 16:39:28 - orchestrator - INFO - 📋 Тип: image, файлов: 1
+2025-06-29 16:39:28 - orchestrator - INFO - 🖼️ Обрабатываем изображение...
+2025-06-29 16:39:28 - orchestrator - INFO - 🤖 Анализируем первое изображение через AI: downloads\g9j394j1ju9f1.jpeg
+2025-06-29 16:39:28 - orchestrator - INFO - 📊 Размер изображения: 0.26 МБ
+2025-06-29 16:39:28 - orchestrator - INFO - 🔮 Запускаем анализ через AI...
+2025-06-29 16:39:30 - orchestrator - INFO - 🏷️ Получено 1 тегов через clip
+2025-06-29 16:39:30 - orchestrator - INFO - 💭 Генерируем описание через LM Studio...
+2025-06-29 16:39:52 - root - INFO - Сгенерированное описание (229 симв.): Каждый толчок члена внутри разжигает меня, словно огненный взрыв в центре. Киска сжимается так, что болит от желания. Охренительно хочется, чтобы ты взял меня жёстче... Слышу своё сердце – оно бьётся как бешеное, на грани вырыва.
+2025-06-29 16:39:52 - orchestrator - INFO - ✍️ Описание сгенерировано: 229 символов
+2025-06-29 16:39:52 - orchestrator - INFO - 🏷️ После фильтрации: 1 тегов из 1
+2025-06-29 16:39:52 - orchestrator - INFO - 📤 Отправляем одиночное изображение...
+2025-06-29 16:39:52 - telegram_service - INFO - 📤 Начинаем отправку фото, размер: 0.26 МБ
+2025-06-29 16:39:52 - telegram_service - DEBUG - 📏 Изображение уже подходящего размера: 0.26 МБ
+2025-06-29 16:39:52 - telegram_service - INFO - 📏 Размеры 1451x2048 корректны
+2025-06-29 16:39:53 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7569844371:AAGfQvbxyinPggXrD89FwPUe6x4-MZp4V7U/sendPhoto "HTTP/1.1 200 OK"
+2025-06-29 16:39:53 - telegram_service - INFO - ✅ Фото успешно отправлено (message_id: 426)
+2025-06-29 16:39:53 - orchestrator - INFO - 💾 Сохраняем в БД...
+2025-06-29 16:39:53 - orchestrator - INFO - ✅ Reddit пост полностью обработан
+2025-06-29 16:39:53 - orchestrator - INFO - ✅ Пост #1 из Reddit r/hentai обработан успешно
+2025-06-29 16:39:53 - orchestrator - INFO - ✅ Пост из r/hentai обработан успешно
+2025-06-29 16:39:53 - orchestrator - INFO - ⏱️ Время выполнения цикла: 65.7 сек
+2025-06-29 16:39:53 - orchestrator - INFO - ============================================================
+
+2025-06-29 16:39:53 - apscheduler.executors.default - INFO - Job "process_cycle (trigger: interval[2:00:00], next run at: 2025-06-29 18:38:47 MSK)" executed successfully

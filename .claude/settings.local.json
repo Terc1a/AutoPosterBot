@@ -7,7 +7,8 @@
       "Bash(pip3 install:*)",
       "Bash(ls:*)",
       "Bash(sqlite3:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(rg:*)"
     ],
     "deny": []
   }

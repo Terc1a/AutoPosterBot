@@ -25,7 +25,11 @@ async def interrogate_deepbooru(image_bytes: bytes) -> Tuple[List[str], str]:
                     if resp.status == 200:
                         data = await resp.json()
                         caption = data.get("caption", "")
-                        tags = caption.split()
+                        # Правильно парсим теги - SD может возвращать теги через запятую
+                        if "," in caption:
+                            tags = [tag.strip() for tag in caption.split(",") if tag.strip()]
+                        else:
+                            tags = [tag.strip() for tag in caption.split() if tag.strip()]
                         return tags, model_name
     except Exception as e:
         logging.error(f"interrogate_deepbooru error: {e}")

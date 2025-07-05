@@ -146,8 +146,16 @@ def filter_tags(tags: List[str]) -> List[str]:
     """Фильтрует теги, исключая ненужные"""
     filtered = []
     for tag in tags:
+        # Очищаем тег от лишних символов
+        clean_tag = tag.strip()
+        
+        # Удаляем смайлики и специальные символы в начале тега
+        clean_tag = clean_tag.lstrip('#:').strip()
+        if not clean_tag:
+            continue
+            
         # Нормализуем тег для проверки
-        tag_normalized = tag.lower().replace(' ', '_').replace('-', '_')
+        tag_normalized = clean_tag.lower().replace(' ', '_').replace('-', '_')
 
         # Проверяем точное совпадение
         if tag_normalized not in EXCLUDED_TAGS:
@@ -168,7 +176,7 @@ def filter_tags(tags: List[str]) -> List[str]:
                     break
 
             if not skip:
-                filtered.append(tag)
+                filtered.append(clean_tag)
 
     # Возвращаем только действительно значимые теги
     return filtered[:10]  # Ограничиваем максимум 10 тегами
@@ -273,8 +281,11 @@ async def process_single_reddit_post(post: dict) -> bool:
     # Фильтруем теги для публикации
     filtered_tags = filter_tags(tags)
     logger.info(f"🏷️ После фильтрации: {len(filtered_tags)} тегов из {len(tags)}")
+    logger.debug(f"📝 Отфильтрованные теги: {filtered_tags}")
 
-    caption = f"{desc}\n\n" + " ".join(f"#{t}" for t in filtered_tags[:10])
+    # Убираем пустые теги и создаем хештеги
+    hashtags = [f"#{t}" for t in filtered_tags[:10] if t.strip()]
+    caption = f"{desc}\n\n" + " ".join(hashtags)
 
     # Отправляем в Telegram
     if post['is_gallery'] and len(post['media_paths']) > 1:
@@ -308,7 +319,7 @@ async def process_single_reddit_post(post: dict) -> bool:
                 image_url=f"{post['post_id']}_image_{i}",
                 image_data=img_data,
                 description=desc if i == 0 else f"Изображение {i + 1} из галереи",
-                tags=",".join(tags),
+                tags="|".join(tag.strip() for tag in tags if tag.strip()),
                 published_at=datetime.now().isoformat(),
                 interrogate_model=method if i == 0 else "gallery_item",
                 interrogate_method=method if i == 0 else "gallery_item",
@@ -332,7 +343,7 @@ async def process_single_reddit_post(post: dict) -> bool:
             image_url=post["post_id"],
             image_data=img_bytes,
             description=desc,
-            tags=",".join(tags),
+            tags="|".join(tag.strip() for tag in tags if tag.strip()),
             published_at=datetime.now().isoformat(),
             interrogate_model=method,
             interrogate_method=method,
@@ -417,7 +428,11 @@ async def process_cycle():
 
                 # В подписи используем только отфильтрованные оригинальные теги
                 filtered_tags = filter_tags(original_tags)
-                caption = f"{desc}\n\n" + " ".join(f"#{t}" for t in filtered_tags[:10])
+                logger.debug(f"📝 Отфильтрованные теги: {filtered_tags}")
+                
+                # Убираем пустые теги и создаем хештеги
+                hashtags = [f"#{t}" for t in filtered_tags[:10] if t.strip()]
+                caption = f"{desc}\n\n" + " ".join(hashtags)
 
                 logger.info("📤 Отправляем в Telegram...")
                 try:
@@ -428,7 +443,7 @@ async def process_cycle():
                         image_url=item["url"],
                         image_data=img_bytes,
                         description=desc,
-                        tags=",".join(all_tags),
+                        tags="|".join(tag.strip() for tag in all_tags if tag.strip()),
                         published_at=datetime.now().isoformat(),
                         interrogate_model=method,
                         interrogate_method=method,

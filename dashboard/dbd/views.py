@@ -79,12 +79,28 @@ def index(request):
         ).fetchone()
         
         # Последние посты для маркировки
-        recent_posts = cursor.execute("""
+        recent_posts_raw = cursor.execute("""
             SELECT id, description, tags, created_at, marked
             FROM post_logs 
             ORDER BY created_at DESC 
             LIMIT 20
         """).fetchall()
+        
+        # Обрабатываем теги для отображения
+        recent_posts = []
+        for post in recent_posts_raw:
+            # Конвертируем теги из формата "tag1|tag2|tag3" в читаемый вид
+            tags_display = ""
+            if post[2]:  # если теги есть
+                if "|" in post[2]:  # новый формат с разделителем |
+                    tags_list = [tag.strip() for tag in post[2].split("|") if tag.strip()]
+                    tags_display = ", ".join(tags_list[:5])  # показываем первые 5 тегов
+                    if len(tags_list) > 5:
+                        tags_display += f" (+{len(tags_list) - 5})"
+                else:  # старый формат с запятыми
+                    tags_display = post[2]
+            
+            recent_posts.append((post[0], post[1], tags_display, post[3], post[4]))
         
         # Данные для графика (последние 7 дней)
         activity_data = cursor.execute("""
