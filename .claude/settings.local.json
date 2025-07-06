@@ -8,7 +8,15 @@
       "Bash(ls:*)",
       "Bash(sqlite3:*)",
       "Bash(rm:*)",
-      "Bash(rg:*)"
+      "Bash(rg:*)",
+      "Bash(source:*)",
+      "WebFetch(domain:core.telegram.org)",
+      "WebFetch(domain:docs.python-telegram-bot.org)",
+      "Bash(pip install:*)",
+      "Bash(.venv/Scripts/python.exe orchestrator.py:*)",
+      "Bash(.venv/Scripts/python.exe get_channel_id.py:*)",
+      "Bash(pkill:*)",
+      "Bash(.venv/Scripts/python.exe:*)"
     ],
     "deny": []
   }

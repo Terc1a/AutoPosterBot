@@ -14,7 +14,7 @@ logger = logging.getLogger('telegram_service')
 logger.setLevel(logging.DEBUG)
 
 # Константы для сжатия изображений
-MAX_FILE_SIZE_MB = 50  # максимальный размер файла для Telegram
+MAX_FILE_SIZE_MB = 10  # максимальный размер файла для Telegram фото
 MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024
 
 
@@ -72,15 +72,15 @@ def compress_image(image_bytes: bytes, max_size_mb: float = MAX_FILE_SIZE_MB) ->
             original_width, original_height = img.size
             
             # Начальное качество
-            quality = 95
+            quality = 85
             
-            while quality > 10:
+            while quality > 5:
                 # Создаем копию изображения для сжатия
                 temp_img = img.copy()
                 
-                # Если качество меньше 70, начинаем уменьшать разрешение
+                # Если качество меньше 70, начинаем уменьшать разрешение более агрессивно
                 if quality < 70:
-                    scale_factor = quality / 70
+                    scale_factor = quality / 85  # Изменили базу для более агрессивного сжатия
                     new_width = int(original_width * scale_factor)
                     new_height = int(original_height * scale_factor)
                     temp_img = temp_img.resize((new_width, new_height), Image.Resampling.LANCZOS)
@@ -98,8 +98,13 @@ def compress_image(image_bytes: bytes, max_size_mb: float = MAX_FILE_SIZE_MB) ->
                     logger.info(f"✅ Изображение сжато: {len(image_bytes) / 1024 / 1024:.2f} МБ -> {current_size_mb:.2f} МБ (качество {quality}%)")
                     return compressed_bytes
                 
-                # Уменьшаем качество
-                quality -= 10
+                # Уменьшаем качество более агрессивно
+                if quality > 50:
+                    quality -= 10
+                elif quality > 20:
+                    quality -= 5
+                else:
+                    quality -= 2
             
             # Если даже минимальное качество не помогло, возвращаем что есть
             logger.warning(f"⚠️ Не удалось сжать изображение до {max_size_mb} МБ, возвращаем с минимальным качеством")
@@ -138,6 +143,7 @@ async def send_photo(image_bytes: bytes, caption: str = None):
             write_timeout=120,
             connect_timeout=60
         )
+        
         logger.info(f"✅ Фото успешно отправлено (message_id: {message.message_id})")
         return message
     except Exception as e:
@@ -157,10 +163,11 @@ async def send_video(file_path: str):
             message = await bot.send_video(
                 chat_id=CHANNEL_ID,
                 video=f,
-                read_timeout=300,  # 5 минут на чтение
-                write_timeout=300,  # 5 минут на отправку
-                connect_timeout=60  # 1 минута на подключение
+                read_timeout=300,
+                write_timeout=300,
+                connect_timeout=60
             )
+        
         logger.info(f"✅ Видео успешно отправлено (message_id: {message.message_id})")
         return message
     except Exception as e:
@@ -181,10 +188,11 @@ async def send_animation(file_path: str, caption: str = None):
                 chat_id=CHANNEL_ID,
                 animation=f,
                 caption=caption[:1024] if caption else None,
-                read_timeout=300,  # 5 минут на чтение
-                write_timeout=300,  # 5 минут на отправку
-                connect_timeout=60  # 1 минута на подключение
+                read_timeout=300,
+                write_timeout=300,
+                connect_timeout=60
             )
+        
         logger.info(f"✅ Анимация успешно отправлена (message_id: {message.message_id})")
         return message
     except Exception as e:
@@ -253,4 +261,89 @@ async def send_media_group(media_items: List[Dict]):
 
     except Exception as e:
         logger.error(f"❌ Ошибка при отправке медиа-группы: {e}")
+        raise
+
+
+async def send_scheduled_post(scheduled_post: dict) -> int:
+    """
+    Отправляет отложенный пост в Telegram
+    
+    Args:
+        scheduled_post: словарь с данными отложенного поста
+        
+    Returns:
+        int: message_id отправленного сообщения
+    """
+    logger.info(f"📤 Отправляем отложенный пост: {scheduled_post['post_id']}")
+    
+    media_type = scheduled_post['media_type']
+    media_data = scheduled_post['media_data']
+    caption = scheduled_post.get('caption', '')
+    
+    try:
+        if media_type == 'video':
+            logger.info("🎥 Отправляем видео")
+            bio = BytesIO(media_data)
+            bio.name = "video.mp4"
+            bio.seek(0)
+            
+            message = await bot.send_video(
+                chat_id=CHANNEL_ID,
+                video=bio,
+                caption=caption[:1024] if caption else None,
+                read_timeout=300,
+                write_timeout=300,
+                connect_timeout=60
+            )
+            
+        elif media_type == 'gif':
+            logger.info("🎞️ Отправляем GIF")
+            bio = BytesIO(media_data)
+            bio.name = "animation.gif"
+            bio.seek(0)
+            
+            message = await bot.send_animation(
+                chat_id=CHANNEL_ID,
+                animation=bio,
+                caption=caption[:1024] if caption else None,
+                read_timeout=300,
+                write_timeout=300,
+                connect_timeout=60
+            )
+            
+        elif media_type in ['image', 'gallery']:
+            logger.info(f"🖼️ Отправляем {'галерею' if media_type == 'gallery' else 'изображение'}")
+            
+            # Сжимаем изображение если необходимо
+            compressed_bytes = compress_image(media_data)
+            
+            # Проверяем размеры изображения
+            is_valid, validation_msg = validate_image_dimensions(compressed_bytes)
+            logger.info(f"📏 {validation_msg}")
+            
+            if not is_valid:
+                logger.error(f"❌ Изображение не прошло проверку: {validation_msg}")
+                raise ValueError(f"Invalid image dimensions: {validation_msg}")
+            
+            bio = BytesIO(compressed_bytes)
+            bio.name = "image.jpg"
+            bio.seek(0)
+            
+            message = await bot.send_photo(
+                chat_id=CHANNEL_ID,
+                photo=bio,
+                caption=caption[:1024] if caption else None,
+                read_timeout=120,
+                write_timeout=120,
+                connect_timeout=60
+            )
+            
+        else:
+            raise ValueError(f"Неподдерживаемый тип медиа: {media_type}")
+            
+        logger.info(f"✅ Отложенный пост отправлен (message_id: {message.message_id})")
+        return message.message_id
+        
+    except Exception as e:
+        logger.error(f"❌ Ошибка при отправке отложенного поста: {e}")
         raise

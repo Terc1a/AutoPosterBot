@@ -44,7 +44,7 @@ def index(request):
         
         # Посты за сутки
         posts_today = cursor.execute(
-            "SELECT COUNT(*) FROM post_logs WHERE date(created_at) = date('now')"
+            "SELECT COUNT(*) FROM post_logs WHERE date(created_at) = date('now', 'localtime')"
         ).fetchone()[0]
         
         # Общее количество постов
@@ -78,6 +78,22 @@ def index(request):
             "SELECT created_at FROM post_logs ORDER BY created_at DESC LIMIT 1"
         ).fetchone()
         
+        # Статистика отложенных постов (если таблица существует)
+        scheduled_stats = {'pending': 0, 'sent_today': 0}
+        cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='scheduled_posts'")
+        if cursor.fetchone():
+            # Ожидающие отправки
+            pending_count = cursor.execute(
+                "SELECT COUNT(*) FROM scheduled_posts WHERE status = 'pending'"
+            ).fetchone()[0]
+            
+            # Отправленные сегодня
+            sent_today = cursor.execute(
+                "SELECT COUNT(*) FROM scheduled_posts WHERE status = 'sent' AND date(sent_at) = date('now', 'localtime')"
+            ).fetchone()[0]
+            
+            scheduled_stats = {'pending': pending_count, 'sent_today': sent_today}
+        
         # Последние посты для маркировки
         recent_posts_raw = cursor.execute("""
             SELECT id, description, tags, created_at, marked
@@ -104,10 +120,10 @@ def index(request):
         
         # Данные для графика (последние 7 дней)
         activity_data = cursor.execute("""
-            SELECT date(created_at) as date, COUNT(*) as count 
+            SELECT date(created_at, 'localtime') as date, COUNT(*) as count 
             FROM post_logs 
-            WHERE created_at >= date('now', '-7 days')
-            GROUP BY date(created_at)
+            WHERE created_at >= date('now', 'localtime', '-7 days')
+            GROUP BY date(created_at, 'localtime')
             ORDER BY date
         """).fetchall()
         
@@ -128,6 +144,8 @@ def index(request):
             'tagged_posts': tag_stats[0] if tag_stats else 0,
             'avg_tag_length': round(tag_stats[1], 1) if tag_stats and tag_stats[1] else 0,
             'recent_posts': recent_posts,
+            'scheduled_pending': scheduled_stats['pending'],
+            'scheduled_sent_today': scheduled_stats['sent_today'],
         }
         
     except sqlite3.OperationalError as e:
@@ -147,6 +165,8 @@ def index(request):
             'tagged_posts': 0,
             'avg_tag_length': 0,
             'recent_posts': [],
+            'scheduled_pending': 0,
+            'scheduled_sent_today': 0,
         }
     finally:
         conn.close()
@@ -172,3 +192,84 @@ def mark_post(request):
         return JsonResponse({'success': True})
     except Exception as e:
         return JsonResponse({'success': False, 'error': str(e)})
+
+
+def scheduled_posts(request):
+    """Страница с отложенными постами"""
+    db_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "telegram_bot.db")
+    conn = sqlite3.connect(db_path)
+    cursor = conn.cursor()
+    
+    try:
+        # Проверяем существование таблицы scheduled_posts
+        cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='scheduled_posts'")
+        table_exists = cursor.fetchone()
+        
+        if not table_exists:
+            context = {
+                'error': 'Таблица scheduled_posts не найдена. Запустите orchestrator.py для создания структуры БД.',
+                'scheduled_posts': [],
+                'stats': {'total': 0, 'pending': 0, 'sent': 0, 'failed': 0}
+            }
+        else:
+            # Получаем статистику отложенных постов
+            stats = cursor.execute("""
+                SELECT 
+                    COUNT(*) as total,
+                    SUM(CASE WHEN status = 'pending' THEN 1 ELSE 0 END) as pending,
+                    SUM(CASE WHEN status = 'sent' THEN 1 ELSE 0 END) as sent,
+                    SUM(CASE WHEN status = 'failed' THEN 1 ELSE 0 END) as failed
+                FROM scheduled_posts
+            """).fetchone()
+            
+            stats_dict = {
+                'total': stats[0] if stats else 0,
+                'pending': stats[1] if stats else 0,
+                'sent': stats[2] if stats else 0,
+                'failed': stats[3] if stats else 0
+            }
+            
+            # Получаем все отложенные посты
+            posts_raw = cursor.execute("""
+                SELECT id, post_id, title, media_type, scheduled_time, status, 
+                       source, error_message, created_at, sent_at, message_id,
+                       LENGTH(media_data) as media_size
+                FROM scheduled_posts
+                ORDER BY scheduled_time DESC
+                LIMIT 50
+            """).fetchall()
+            
+            # Обрабатываем данные для отображения
+            scheduled_posts_list = []
+            for post in posts_raw:
+                scheduled_posts_list.append({
+                    'id': post[0],
+                    'post_id': post[1],
+                    'title': post[2][:50] + '...' if post[2] and len(post[2]) > 50 else post[2],
+                    'media_type': post[3],
+                    'scheduled_time': post[4],
+                    'status': post[5],
+                    'source': post[6],
+                    'error_message': post[7],
+                    'created_at': post[8],
+                    'sent_at': post[9],
+                    'message_id': post[10],
+                    'media_size_mb': round(post[11] / (1024*1024), 2) if post[11] else 0
+                })
+            
+            context = {
+                'scheduled_posts': scheduled_posts_list,
+                'stats': stats_dict,
+                'error': None
+            }
+            
+    except sqlite3.OperationalError as e:
+        context = {
+            'error': f"Ошибка базы данных: {str(e)}",
+            'scheduled_posts': [],
+            'stats': {'total': 0, 'pending': 0, 'sent': 0, 'failed': 0}
+        }
+    finally:
+        conn.close()
+    
+    return render(request, "dbd/scheduled_posts.html", context)

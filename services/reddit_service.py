@@ -68,15 +68,24 @@ def download_media(url: str, folder: str = "downloads", index: int = 0) -> str:
         logger.debug(f"⬇️ Скачиваем файл по URL: {url}")
         file_resp = requests.get(url, headers=headers, stream=True, timeout=30)
         file_resp.raise_for_status()
+        
+        # Проверяем Content-Type окончательного ответа
+        final_ctype = file_resp.headers.get("Content-Type", "").lower()
+        logger.debug(f"📋 Final Content-Type: {final_ctype}")
+        
+        # Если это все еще HTML, то ошибка
+        if "text/html" in final_ctype:
+            logger.error(f"❌ Финальный URL все еще возвращает HTML: {url}")
+            raise ValueError(f"URL returns HTML instead of media: {url}")
 
-        # Определяем расширение файла
-        if "image/jpeg" in ctype or "image/jpg" in ctype:
+        # Определяем расширение файла используя финальный content-type
+        if "image/jpeg" in final_ctype or "image/jpg" in final_ctype:
             ext = "jpeg"
-        elif "image/png" in ctype:
+        elif "image/png" in final_ctype:
             ext = "png"
-        elif "image/gif" in ctype:
+        elif "image/gif" in final_ctype:
             ext = "gif"
-        elif "video/mp4" in ctype:
+        elif "video/mp4" in final_ctype:
             ext = "mp4"
         else:
             # Пытаемся извлечь из URL
@@ -102,18 +111,30 @@ def download_media(url: str, folder: str = "downloads", index: int = 0) -> str:
         # Скачиваем с прогрессом
         total_size = int(file_resp.headers.get('content-length', 0))
         downloaded = 0
+        content_data = b""
 
+        # Сначала собираем все данные в память для проверки
+        for chunk in file_resp.iter_content(chunk_size=8192):
+            if chunk:
+                content_data += chunk
+                downloaded += len(chunk)
+                if total_size > 0:
+                    progress = (downloaded / total_size) * 100
+                    if progress % 25 < 1:  # Логируем каждые 25%
+                        logger.debug(f"⏬ Загружено: {progress:.1f}%")
+
+        # Проверяем, что скачали действительно изображение/видео, а не HTML
+        if len(content_data) > 100:
+            if content_data.startswith(b'<html') or content_data.startswith(b'<!DOCTYPE'):
+                logger.error(f"❌ Скачан HTML вместо медиа-файла")
+                logger.error(f"🔍 Начало файла: {content_data[:200].decode('utf-8', errors='ignore')}")
+                raise ValueError(f"Downloaded HTML instead of media from {url}")
+        
+        # Если все ок, сохраняем файл
         with open(filepath, "wb") as f:
-            for chunk in file_resp.iter_content(chunk_size=8192):
-                if chunk:
-                    f.write(chunk)
-                    downloaded += len(chunk)
-                    if total_size > 0:
-                        progress = (downloaded / total_size) * 100
-                        if progress % 25 < 1:  # Логируем каждые 25%
-                            logger.debug(f"⏬ Загружено: {progress:.1f}%")
+            f.write(content_data)
 
-        size_mb = os.path.getsize(filepath) / 1024 / 1024
+        size_mb = len(content_data) / 1024 / 1024
         logger.info(f"✅ Файл успешно скачан: {filepath} ({size_mb:.2f} MB)")
         return filepath
 
@@ -122,7 +143,7 @@ def download_media(url: str, folder: str = "downloads", index: int = 0) -> str:
         raise
 
 
-def process_reddit_post_data(post: Dict) -> Optional[Dict]:
+def process_reddit_post_data(post: Dict, subreddit: str = "") -> Optional[Dict]:
     """
     Обрабатывает данные одного поста Reddit и возвращает словарь с медиа-информацией.
     
@@ -212,6 +233,7 @@ def process_reddit_post_data(post: Dict) -> Optional[Dict]:
         result = {
             "post_id": post_id,
             "title": title,
+            "subreddit": subreddit,  # Добавляем информацию о subreddit
             "media_type": media_type,
             "media_paths": media_paths,
             "is_gallery": is_gallery
@@ -223,13 +245,13 @@ def process_reddit_post_data(post: Dict) -> Optional[Dict]:
         return None
 
 
-def fetch_latest_posts(subreddit: str, limit: int = 5) -> List[Dict]:
+def fetch_latest_posts(subreddit: str, limit: int = 8) -> List[Dict]:
     """
     Возвращает список последних постов из subreddit.
     
     Args:
         subreddit: название subreddit
-        limit: количество постов для получения (по умолчанию 5)
+        limit: количество постов для получения (по умолчанию 8)
         
     Returns:
         List[Dict]: список постов в том же формате, что и fetch_latest
@@ -250,7 +272,7 @@ def fetch_latest_posts(subreddit: str, limit: int = 5) -> List[Dict]:
 
         posts = []
         for child in children:
-            post_data = process_reddit_post_data(child["data"])
+            post_data = process_reddit_post_data(child["data"], subreddit)
             if post_data:  # Только если пост содержит медиа
                 posts.append(post_data)
         
